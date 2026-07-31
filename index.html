@@ -251,6 +251,37 @@
   .livegrid .v { font-family: var(--mono); font-size: 20px; font-variant-numeric: tabular-nums; margin-top: 2px; }
   .livenote { margin: 12px 0 0; font-size: 12.5px; color: var(--ink-soft); }
   .unrec { color: var(--ink-soft); font-style: italic; opacity: 0.75; }
+  .backbar { display:flex; align-items:center; gap:12px; margin-bottom:18px; }
+  .back { font-size:15px; font-weight:600; padding:8px 18px; border-radius:6px;
+          background:var(--paper-2); border:1px solid var(--rule); cursor:pointer;
+          color:var(--ink); transition:background .14s; }
+  .back:hover { background:var(--contour); }
+  .filterbar { font-size:12.5px; color:var(--ink-soft); }
+  .nolaunch-block { display:inline-block; margin:4px 0; padding:6px 12px;
+                    background:rgba(201,143,26,.18); border-left:3px solid var(--flag-amber);
+                    border-radius:4px; font-size:13px; font-weight:600; color:#8A5D10; }
+  .notes-hint { font-size:11.5px; color:var(--ink-soft); margin:6px 0 0; }
+  .low-water-warn { margin:8px 0 0; padding:8px 14px; background:rgba(201,143,26,.12);
+                    border-left:3px solid var(--flag-amber); border-radius:4px;
+                    font-size:13px; line-height:1.5; }
+  .gear-tab { padding:20px 0; }
+  .gear-tab h2 { font-size:18px; margin:0 0 6px; }
+  .gear-tab .intro { font-size:14px; color:var(--ink-soft); margin:0 0 24px; }
+  .gear-section { margin:0 0 28px; }
+  .gear-section h3 { font-size:12px; letter-spacing:.1em; text-transform:uppercase;
+                     color:var(--chan); margin:0 0 10px; }
+  .gear-link { display:block; padding:12px 0; border-bottom:1px solid var(--rule);
+               text-decoration:none; color:var(--ink); }
+  .gear-link:hover .gear-name { color:var(--chan); }
+  .gear-name { font-weight:600; font-size:14px; }
+  .gear-desc { font-size:13px; color:var(--ink-soft); margin:2px 0 0; }
+  .gear-aff  { font-size:11px; color:var(--ink-soft); opacity:.65; margin:3px 0 0; }
+  .support-block { margin:32px 0 0; padding:18px; background:var(--paper-2);
+                   border-radius:8px; text-align:center; }
+  .support-block p { font-size:14px; color:var(--ink-soft); margin:0 0 12px; }
+  .btn-support { display:inline-block; padding:10px 22px; background:var(--chan);
+                 color:#fff; border-radius:6px; text-decoration:none;
+                 font-weight:600; font-size:14px; }
   .nolaunch { display: inline-block; margin-bottom: 6px; font-size: 11px;
               letter-spacing: .06em; text-transform: uppercase; color: #8A5D10;
               background: rgba(201,143,26,.14); border-radius: 3px; padding: 3px 7px; }
@@ -344,11 +375,50 @@
     <div class="masthead-inner">
       <div class="eyebrow">SUP · Kayak · Canoe</div>
       <h1>Put-In</h1>
+      <nav style="display:flex;gap:0;margin-top:10px;border-bottom:2px solid rgba(255,255,255,.2);">
+        <button id="tab-spots" style="padding:6px 16px;background:none;border:none;color:#fff;font-weight:600;font-size:13px;letter-spacing:.06em;cursor:pointer;border-bottom:3px solid #fff;margin-bottom:-2px;">SPOTS</button>
+        <button id="tab-gear"  style="padding:6px 16px;background:none;border:none;color:#fff;font-weight:600;font-size:13px;letter-spacing:.06em;cursor:pointer;opacity:.55;border-bottom:3px solid transparent;margin-bottom:-2px;">GEAR &amp; KIT</button>
+      </nav>
       <p>Search a spot, see everything that matters before you load the car.</p>
     </div>
   </header>
 
   <main class="wrap">
+    <div id="gear-view" hidden style="padding:0 4px">
+      <div class="gear-tab">
+        <h2>Gear &amp; kit</h2>
+        <p class="intro">Carrie's picks. Affiliate links help keep Put-In free.</p>
+        <div class="gear-section">
+          <h3>SUP boards</h3>
+          <a class="gear-link" href="#" target="_blank" rel="noopener sponsored">
+            <div class="gear-name">Add your board pick here</div>
+            <div class="gear-desc">Edit the gear section in index.html to add your affiliate links.</div>
+            <div class="gear-aff">affiliate link</div>
+          </a>
+        </div>
+        <div class="gear-section">
+          <h3>Safety</h3>
+          <a class="gear-link" href="#" target="_blank" rel="noopener sponsored">
+            <div class="gear-name">PFD, white light, whistle</div>
+            <div class="gear-desc">NC law requires a white light between sunset and sunrise on any paddle craft.</div>
+            <div class="gear-aff">affiliate link</div>
+          </a>
+        </div>
+        <div class="gear-section">
+          <h3>Accessories</h3>
+          <a class="gear-link" href="#" target="_blank" rel="noopener sponsored">
+            <div class="gear-name">Dry bag, paddle, leash&#8230;</div>
+            <div class="gear-desc">Replace these placeholders with gear you actually own and recommend.</div>
+            <div class="gear-aff">affiliate link</div>
+          </a>
+        </div>
+        <div class="support-block">
+          <p>Put-In is free. If it saves you a wasted drive, consider buying the builder a coffee.</p>
+          <a class="btn-support" href="https://buymeacoffee.com/" target="_blank" rel="noopener">&#9749; Buy me a coffee</a>
+        </div>
+      </div>
+    </div>
+
     <div id="list-view">
       <div class="searchrow">
         <div class="searchfield">
@@ -359,9 +429,25 @@
 
       <div class="filters" id="filters" role="group" aria-label="Filter spots"></div>
 
-      <div class="resultcount">
-        <div class="eyebrow" id="count">—</div>
-        <button class="linkbtn" id="clear" type="button">Clear filters</button>
+      <div class="resultcount" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+        <div style="display:flex;align-items:center;gap:5px">
+          <label for="sortby" style="font-size:12px;color:var(--ink-soft)">Sort</label>
+          <select id="sortby" style="font-size:12.5px;padding:3px 6px;border:1px solid var(--rule);border-radius:4px;background:var(--paper);color:var(--ink)">
+            <option value="name">A–Z</option>
+            <option value="county">County</option>
+            <option value="water">Water body</option>
+          </select>
+        </div>
+        <div style="display:flex;align-items:center;gap:5px">
+          <label for="countysel" style="font-size:12px;color:var(--ink-soft)">County</label>
+          <select id="countysel" style="font-size:12.5px;padding:3px 6px;border:1px solid var(--rule);border-radius:4px;background:var(--paper);color:var(--ink)">
+            <option value="">All</option>
+          </select>
+        </div>
+        <div style="flex:1;display:flex;align-items:center;justify-content:flex-end;gap:10px">
+          <div class="eyebrow" id="count">—</div>
+          <button class="linkbtn" id="clear" type="button">Clear filters</button>
+        </div>
       </div>
 
       <div class="cards" id="cards"></div>
@@ -450,6 +536,7 @@
       flowLow: r.flow_low_cfs || null, flowHigh: r.flow_high_cfs || null,
       floodStage: r.flood_stage_ft || null,
       accessType: r.access_type || null,
+      carryYards: r.carry_yards !== undefined ? Number(r.carry_yards) : null,
       swimming: r.swimming_allowed || null, swimArea: r.swim_area_here || null,
       privateLaunch: r.private_launch || null, rentals: r.rentals || null,
       wq: r.wq_monitor_org || null, wqUrl: r.wq_org_url || null,
@@ -462,7 +549,7 @@
   const FILTERS = [
     { id:"flat",     label:"Flatwater only", test: s => s.rapids && s.rapids[1] === 0 },
     { id:"nomotors", label:"No motors",      test: s => s.motors === false },
-    { id:"shortcarry", label:"Short carry",  test: s => s.walk && /under|short|steps from|feet|ft\b/i.test(s.walk) },
+    { id:"longcarry", label:"Long carry",   test: s => s.carryYards !== null && s.carryYards >= 150 },
     { id:"camping",  label:"Camping",        test: s => s.camping === true },
     { id:"dogs",     label:"Dog friendly",   test: s => s.dogs === true },
     { id:"park",     label:"In a park",      test: s => s.park === true },
@@ -584,7 +671,14 @@
       '<div class="row"><dt>' + esc(k) + '</dt><dd>' + v + '</dd></div>').join("") + '</dl>';
 
     $("detail-view").innerHTML =
-      '<button class="back" type="button" id="back">\u2190 All spots</button>' +
+      '<div class="backbar">' +
+        '<button class="back" type="button" id="back">\u2190 All spots</button>' +
+        (state.filters.length || state.q
+          ? '<span class="filterbar">Filtered: ' +
+            (state.q ? '\u201c' + esc(state.q) + '\u201d ' : '') +
+            state.filters.join(' + ') + '</span>'
+          : '') +
+      '</div>' +
 
       '<div class="detail-head">' +
         '<div class="eyebrow">' + esc(s.type) + ' &middot; ' + esc(classLabel(s.rapids)) + '</div>' +
@@ -603,6 +697,10 @@
             '<div><div class="k">Gage height</div><div class="v">\u2014</div></div>' +
           '</div>' +
           '<p class="livenote" id="livenote">Checking the National Weather Service and USGS\u2026</p>' +
+          (s.flowLow ? '<div class="low-water-warn" id="lowwarn" style="display:none">' +
+            '\u26a0\ufe0f <b>Low water:</b> below ' + esc(String(s.flowLow)) +
+            ' this spot may be too shallow to paddle. Check the gage before you go.' +
+            '</div>' : '') +
         '</div>' +
       '</section>' +
 
@@ -645,12 +743,18 @@
       '<section class="block">' +
         '<span class="eyebrow">Getting there and in</span>' +
         rows([
+          ["Carry from parking", s.carryYards !== null
+              ? esc(String(s.carryYards) + " yards" + (s.carryYards >= 880 ? " (about half a mile or more)" : ""))
+              : fact(null)],
           ["Walk to water", fact(s.walk)],
           ["Parking", fact(s.parking)],
           ["Launch type", fact(s.launch)],
           ["Accessible launch", s.adaText ? esc(s.adaText) : tri(s.ada)],
           ["Run by", fact(s.accessType)],
-          ["Own boat allowed", fact(s.privateLaunch)],
+          ["Rentals available", s.rentals ? "Yes" : '<span class="unrec">Not recorded yet</span>'],
+          ["Private boats", s.privateLaunch && /^no/i.test(s.privateLaunch)
+              ? '<span class="nolaunch-block">⚠️ No private boats allowed here</span>'
+              : fact(s.privateLaunch)],
           ["Gate hours", fact(s.hours)],
           ["Fee or permit", fact(s.fee)],
           ["Restrooms", tri(s.restrooms)],
@@ -682,6 +786,14 @@
         ]) +
       '</section>' +
 
+      '<section class="block">' +
+        '<span class="eyebrow">Worth knowing</span>' +
+        '<p style="margin:0;font-size:14.5px">' + fact(s.why) + '</p>' +
+        (s.source ? '<p class="prov">Checked against <a href="' + esc(s.source) +
+          '" target="_blank" rel="noopener">the managing agency</a>' +
+          (s.verified ? ' on ' + esc(s.verified) : '') + '.</p>' : '') +
+      '</section>' +
+
       '<section class="block hazblock">' +
         '<span class="eyebrow">Hazards</span>' +
         rows([
@@ -693,18 +805,11 @@
           'Scout anything you have not paddled before.</p>' +
       '</section>' +
 
-      '<section class="block">' +
-        '<span class="eyebrow">Worth knowing</span>' +
-        '<p style="margin:0;font-size:14.5px">' + fact(s.why) + '</p>' +
-        (s.source ? '<p class="prov">Checked against <a href="' + esc(s.source) +
-          '" target="_blank" rel="noopener">the managing agency</a>' +
-          (s.verified ? ' on ' + esc(s.verified) : '') + '.</p>' : '') +
-      '</section>' +
-
       '<section class="block" style="border-bottom:none">' +
         '<span class="eyebrow">Your notes <span id="saved" class="savedflag"></span></span>' +
         '<textarea class="notes" id="notes" placeholder="Last visit, put-in quirks, where to park, who you went with\u2026">' +
           esc(state.notes[s.id] || "") + '</textarea>' +
+        '<p class="notes-hint">Saved on this device only. Clearing browser data will erase them.</p>' +
       '</section>';
 
     $("list-view").hidden = true;
@@ -763,7 +868,15 @@
           const val  = ts.values[0].value[0] && ts.values[0].value[0].value;
           if (!val || !c.length) return;
           if (code === "00010") { c[2].textContent = (parseFloat(val) * 9/5 + 32).toFixed(0) + "\u00B0"; got = true; }
-          if (code === "00065") { c[3].textContent = parseFloat(val).toFixed(1) + " ft"; got = true; }
+          if (code === "00065") {
+            const ht = parseFloat(val);
+            c[3].textContent = ht.toFixed(1) + " ft"; got = true;
+            const w = $("lowwarn");
+            if (w && s.flowLow) {
+              const thr = parseFloat(String(s.flowLow));
+              if (!isNaN(thr) && ht <= thr) w.style.display = "";
+            }
+          }
         });
       } catch (e) { /* fall through */ }
     }
@@ -993,6 +1106,24 @@
     try {
       renderFilters();
       renderKey();
+
+      const counties=[...new Set(SPOTS.map(x=>x.county).filter(Boolean))].sort();
+      const csel=$("countysel");
+      counties.forEach(c=>{const o=document.createElement("option");o.value=o.textContent=c;csel.appendChild(o);});
+      csel.addEventListener("change",()=>{state.county=csel.value;renderList();});
+      $("sortby").addEventListener("change",()=>{state.sortby=$("sortby").value;renderList();});
+
+      $("tab-spots").addEventListener("click",()=>{
+        $("tab-spots").style.opacity="1";$("tab-spots").style.borderBottomColor="#fff";
+        $("tab-gear").style.opacity=".55";$("tab-gear").style.borderBottomColor="transparent";
+        $("list-view").hidden=false;$("gear-view").hidden=true;
+      });
+      $("tab-gear").addEventListener("click",()=>{
+        $("tab-gear").style.opacity="1";$("tab-gear").style.borderBottomColor="#fff";
+        $("tab-spots").style.opacity=".55";$("tab-spots").style.borderBottomColor="transparent";
+        $("list-view").hidden=true;$("gear-view").hidden=false;$("detail-view").hidden=true;
+      });
+
       renderList();
       const c = $("count");
       if (c && payload.generated) c.title = "Data generated " + payload.generated;
