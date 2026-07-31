@@ -559,7 +559,8 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.ncparks.gov/state-parks/falls-lake-state-recreation-area",
    "private_launch": "Campers only",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "carry_yards": 300
   },
   {
    "spot_id": "falls-beaverdam",
@@ -718,7 +719,8 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.ncparks.gov/state-parks/falls-lake-state-recreation-area",
    "private_launch": "Campers only",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "carry_yards": 1760
   },
   {
    "spot_id": "haw-glencoe",
@@ -865,7 +867,8 @@
    "verification_source": "https://www.wake.gov/departments-government/parks-recreation-open-space/all-parks-trails/harris-lake-county-park/harris-lake-visitor-information",
    "private_launch": "Yes, cartop craft only",
    "rentals": "None in the park",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "carry_yards": 150
   },
   {
    "spot_id": "lake-james-hidden-cove",
@@ -1522,7 +1525,8 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.ncparks.gov/park-features/lake-james-state-park-catawba-river-access",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "carry_yards": 1760
   },
   {
    "spot_id": "lake-james-paddys-creek",
@@ -2076,7 +2080,8 @@
    "notes_public": "Parking for paddle-in campers, with steep riverside slopes on the hiking approach.",
    "last_verified": "2026-07-30",
    "verification_source": "https://www.ncparks.gov/park-features/pilot-mountain-state-park-ivy-bluff-access",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "carry_yards": 880
   },
   {
    "spot_id": "pilot-shoals",
@@ -2399,6 +2404,7 @@
    "managing_agency": "Alamance Parks, Haw River Trail",
    "agency_url": "https://www.hawrivertrail.org/paddle-trail-overview",
    "launch_type": "Dock, with a life jacket loaner station",
+   "walk_to_water": "Carry your boat from the car to the dock, then park in the main lot or at the Boy Scout camp nearby. Short carry, described as very manageable.",
    "parking_spaces": "Limited pull-off parking",
    "fee_permit": "None",
    "hours": "8am to 9pm",
@@ -2416,7 +2422,8 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.hawrivertrail.org/paddle-trail-overview",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "carry_yards": 30
   },
   {
    "spot_id": "haw-shallow-ford",
@@ -2650,7 +2657,8 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://raleighnc.gov/river-access",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "carry_yards": 880
   },
   {
    "spot_id": "whitewater-center",
