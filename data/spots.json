@@ -1,6 +1,6 @@
 {
  "generated": "2026-07-31",
- "count": 40,
+ "count": 55,
  "note": "A blank field means nobody has verified it yet. It does not mean no. This matters most for hazards and dams.",
  "sources": [
   "NC State Parks",
@@ -11,6 +11,63 @@
   "Eno River Association"
  ],
  "spots": [
+  {
+   "spot_id": "bass-lake-holly-springs",
+   "name": "Bass Lake Park",
+   "water_body": "Bass Lake",
+   "water_type": "Flatwater",
+   "town": "Holly Springs",
+   "county": "Wake",
+   "latitude": 35.642571,
+   "longitude": -78.80522,
+   "managing_agency": "Town of Holly Springs Parks and Recreation",
+   "agency_url": "https://www.hollyspringsnc.gov",
+   "hours": "8am to 8pm",
+   "part_of_park": "Y",
+   "park_name": "Bass Lake Park",
+   "camping_available": "N",
+   "dogs_allowed": "Yes, leashed",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "photo_status": "Pending",
+   "notes_public": "A small 50 acre lake with a two mile loop trail around it. Rentals do not include boards, so bring your own.",
+   "last_verified": "2026-07-30",
+   "verification_source": "https://triangleonthecheap.com/boat-rental-triangle/",
+   "rentals": "Canoes and rowboats, plus a Gheenoe with a trolling motor. Hirers must be 16 or over. Seven days a week from Memorial Day to Labor Day. No paddleboards listed.",
+   "access_type": "Public agency"
+  },
+  {
+   "spot_id": "blythe-landing",
+   "name": "Blythe Landing Park",
+   "water_body": "Lake Norman",
+   "water_type": "Flatwater",
+   "town": "Huntersville",
+   "county": "Mecklenburg",
+   "latitude": 35.434212,
+   "longitude": -80.907516,
+   "managing_agency": "Mecklenburg County Park and Recreation",
+   "agency_url": "https://parkandrec.mecknc.gov/Activities/boating-paddling",
+   "launch_type": "Six boat ramps",
+   "parking_spaces": "218 spaces for boat trailers",
+   "fee_permit": "Launch fee applies. Season passes available.",
+   "restrooms": "Y",
+   "hours": "8am to 8pm",
+   "motorized_allowed": "Yes",
+   "part_of_park": "Y",
+   "park_name": "Blythe Landing Park",
+   "camping_available": "N",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "wq_monitor_org": "Catawba Riverkeeper",
+   "wq_org_url": "https://www.catawbariverkeeper.org",
+   "photo_status": "Pending",
+   "notes_public": "A busy trailer ramp with 218 trailer spaces, so expect motorboats. The nonprofit sailing centre on site is the interesting part for paddlers, offering the cheapest membership route onto this lake.",
+   "last_verified": "2026-07-30",
+   "verification_source": "https://parkandrec.mecknc.gov/Activities/boating-paddling",
+   "private_launch": "Yes for private boats. Only county-approved hire companies may launch commercially.",
+   "rentals": "Lake Norman Community Sailing, a nonprofit sailing centre, runs from here and its family membership covers kayaking and paddleboarding as well as sailing.",
+   "access_type": "Public agency"
+  },
   {
    "spot_id": "haw-bynum-dam",
    "name": "Bynum Dam Access, US 15-501",
@@ -41,7 +98,8 @@
    "photo_status": "Pending",
    "notes_public": "Flat for about a mile upstream of the dam, which makes this the gentlest water on the Lower Haw. Stay above the dam.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.lowerhaw.org/activities"
+   "verification_source": "https://www.lowerhaw.org/activities",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "haw-bynum-mill",
@@ -72,7 +130,38 @@
    "photo_status": "Pending",
    "notes_public": "160 Bynum Church Road. This is the only developed, official paddle launch State Parks maintains in the whole state natural area. Everything else here is undeveloped.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.lowerhaw.org/activities"
+   "verification_source": "https://www.lowerhaw.org/activities",
+   "access_type": "Public agency"
+  },
+  {
+   "spot_id": "copperhead-island",
+   "name": "Copperhead Island",
+   "water_body": "Lake Wylie",
+   "water_type": "Flatwater",
+   "town": "Charlotte",
+   "county": "Mecklenburg",
+   "latitude": 35.108447,
+   "longitude": -81.025085,
+   "managing_agency": "Mecklenburg County Park and Recreation",
+   "agency_url": "https://parkandrec.mecknc.gov/Activities/boating-paddling",
+   "launch_type": "Four boat ramps",
+   "fee_permit": "Launch fee applies",
+   "hours": "6:30am to 8pm",
+   "motorized_allowed": "Yes",
+   "part_of_park": "Y",
+   "park_name": "Copperhead Island Park",
+   "camping_available": "Y",
+   "camping_type": "Six tent sites",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "wq_monitor_org": "Catawba Riverkeeper",
+   "wq_org_url": "https://www.catawbariverkeeper.org",
+   "photo_status": "Pending",
+   "notes_public": "A 14 acre island park across the water from McDowell Nature Preserve. Quiet in the morning, busier once the trailers arrive. Six tent sites make it one of very few paddle-and-camp options this close to Charlotte.",
+   "last_verified": "2026-07-30",
+   "verification_source": "https://parkandrec.mecknc.gov/Activities/boating-paddling",
+   "private_launch": "Yes",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "eno-red-mill",
@@ -92,7 +181,8 @@
    "photo_status": "Pending",
    "notes_public": "Off Red Mill Road near Teknika Parkway in eastern Durham County. Deep flatwater, described as the most accessible launch on the Eno. Two miles upstream to the Little River confluence, two miles down to Falls Lake.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.enoriver.org/wp-content/uploads/2022/04/Paddling-the-Eno-River-long-version.pdf"
+   "verification_source": "https://www.enoriver.org/wp-content/uploads/2022/04/Paddling-the-Eno-River-long-version.pdf",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "eno-cole-mill",
@@ -117,7 +207,8 @@
    "photo_status": "Pending",
    "notes_public": "Six miles of trail and a Cole Mill Road gauge nearby, so you can check the level for this exact stretch before driving out.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.ncparks.gov/state-parks/eno-river-state-park"
+   "verification_source": "https://www.ncparks.gov/state-parks/eno-river-state-park",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "eno-fews-ford",
@@ -147,7 +238,8 @@
    "photo_status": "Pending",
    "notes_public": "Visitor centre access with the largest trail network in the park. The park itself describes the Eno as swift but often shallow, which makes paddling here level-dependent rather than reliable.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.ncparks.gov/state-parks/eno-river-state-park"
+   "verification_source": "https://www.ncparks.gov/state-parks/eno-river-state-park",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "falls-beaverdam",
@@ -171,7 +263,9 @@
    "photo_status": "Pending",
    "notes_public": "The park lists Beaverdam as non-gas boating, which is why it stays calm on a summer weekend. Accessible fishing and swim beach.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.ncparks.gov/park-features/falls-lake-state-recreation-area-beaverdam-access-0"
+   "verification_source": "https://www.ncparks.gov/park-features/falls-lake-state-recreation-area-beaverdam-access-0",
+   "private_launch": "Yes, at public ramps and designated launch sites only",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "hanging-rock-dan",
@@ -191,7 +285,8 @@
    "photo_status": "Pending",
    "notes_public": "Dedicated paddling access on the Dan, linked to the main park area by the Indian Creek Trail.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.ncparks.gov/park-features/hanging-rock-state-park-dan-river-access"
+   "verification_source": "https://www.ncparks.gov/park-features/hanging-rock-state-park-dan-river-access",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "jordan-crosswinds",
@@ -205,17 +300,24 @@
    "managing_agency": "NC State Parks",
    "agency_url": "https://www.ncparks.gov/state-parks/jordan-lake-state-recreation-area",
    "launch_type": "Concrete ramp",
+   "fee_permit": "Per vehicle on weekends and holidays in April, May and September, and daily from Memorial Day to Labor Day",
    "motorized_allowed": "Yes",
    "part_of_park": "Y",
    "park_name": "Jordan Lake State Recreation Area",
    "camping_available": "Y",
    "camping_type": "Drive-in",
+   "dogs_allowed": "Yes, leashed to 6 ft. Not allowed on swim beaches or inside buildings.",
    "rapids_class_min": 0,
    "rapids_class_max": 0,
    "photo_status": "Pending",
    "notes_public": "Boat ramp and swim beach are for campers only. A privately owned marina sits nearby.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.ncparks.gov/park-features/jordan-lake-state-recreation-area-crosswinds-campground"
+   "verification_source": "https://www.ncparks.gov/park-features/jordan-lake-state-recreation-area-crosswinds-campground",
+   "swimming_allowed": "Designated areas only",
+   "swim_area_here": "Yes, campers only",
+   "private_launch": "Yes, at public ramps and designated launch sites only",
+   "rentals": "Privately owned marina nearby hires fishing boats, kayaks and paddleboards",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "jordan-ebenezer",
@@ -229,17 +331,23 @@
    "managing_agency": "NC State Parks",
    "agency_url": "https://www.ncparks.gov/state-parks/jordan-lake-state-recreation-area",
    "launch_type": "Concrete ramp",
+   "fee_permit": "Per vehicle on weekends and holidays in April, May and September, and daily from Memorial Day to Labor Day",
    "hours": "24-hour boat ramp",
    "motorized_allowed": "Yes",
    "part_of_park": "Y",
    "park_name": "Jordan Lake State Recreation Area",
    "camping_available": "N",
+   "dogs_allowed": "Yes, leashed to 6 ft. Not allowed on swim beaches or inside buildings.",
    "rapids_class_min": 0,
    "rapids_class_max": 0,
    "photo_status": "Pending",
    "notes_public": "Named by the park as the best access for windsurfing, which tells you it catches wind. Accessible swim beach and picnic shelters on site.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.ncparks.gov/park-features/jordan-lake-state-recreation-area-ebenezer-church-access"
+   "verification_source": "https://www.ncparks.gov/park-features/jordan-lake-state-recreation-area-ebenezer-church-access",
+   "swimming_allowed": "Designated areas only",
+   "swim_area_here": "Yes, designated",
+   "private_launch": "Yes, at public ramps and designated launch sites only",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "jordan-new-hope-overlook",
@@ -253,17 +361,23 @@
    "managing_agency": "NC State Parks",
    "agency_url": "https://www.ncparks.gov/state-parks/jordan-lake-state-recreation-area",
    "launch_type": "Concrete ramp",
+   "fee_permit": "Per vehicle on weekends and holidays in April, May and September, and daily from Memorial Day to Labor Day",
    "motorized_allowed": "Yes",
    "part_of_park": "Y",
    "park_name": "Jordan Lake State Recreation Area",
    "camping_available": "Y",
    "camping_type": "Walk-in",
+   "dogs_allowed": "Yes, leashed to 6 ft. Not allowed on swim beaches or inside buildings.",
    "rapids_class_min": 0,
    "rapids_class_max": 0,
    "photo_status": "Pending",
    "notes_public": "Day-use ramps plus short hike-in backpack camping. The quietest corner of the lake.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.ncparks.gov/park-features/jordan-lake-state-recreation-area-new-hope-overlook-access"
+   "verification_source": "https://www.ncparks.gov/park-features/jordan-lake-state-recreation-area-new-hope-overlook-access",
+   "swimming_allowed": "Designated areas only",
+   "swim_area_here": "No",
+   "private_launch": "Yes, at public ramps and designated launch sites only",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "jordan-parkers-creek",
@@ -277,17 +391,23 @@
    "managing_agency": "NC State Parks",
    "agency_url": "https://www.ncparks.gov/state-parks/jordan-lake-state-recreation-area",
    "launch_type": "Concrete ramp",
+   "fee_permit": "Per vehicle on weekends and holidays in April, May and September, and daily from Memorial Day to Labor Day",
    "motorized_allowed": "Yes",
    "part_of_park": "Y",
    "park_name": "Jordan Lake State Recreation Area",
    "camping_available": "Y",
    "camping_type": "Drive-in",
+   "dogs_allowed": "Yes, leashed to 6 ft. Not allowed on swim beaches or inside buildings.",
    "rapids_class_min": 0,
    "rapids_class_max": 0,
    "photo_status": "Pending",
    "notes_public": "Tent, trailer and RV sites with some hookups, plus walk-up only loops and group camping. Swim beach and picnic shelters.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.ncparks.gov/park-features/jordan-lake-state-recreation-area-parkers-creek-access"
+   "verification_source": "https://www.ncparks.gov/park-features/jordan-lake-state-recreation-area-parkers-creek-access",
+   "swimming_allowed": "Designated areas only",
+   "swim_area_here": "Yes, designated",
+   "private_launch": "Yes, at public ramps and designated launch sites only",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "jordan-poplar-point",
@@ -301,17 +421,23 @@
    "managing_agency": "NC State Parks",
    "agency_url": "https://www.ncparks.gov/state-parks/jordan-lake-state-recreation-area",
    "launch_type": "Concrete ramp",
+   "fee_permit": "Per vehicle on weekends and holidays in April, May and September, and daily from Memorial Day to Labor Day",
    "motorized_allowed": "Yes",
    "part_of_park": "Y",
    "park_name": "Jordan Lake State Recreation Area",
    "camping_available": "Y",
    "camping_type": "Drive-in",
+   "dogs_allowed": "Yes, leashed to 6 ft. Not allowed on swim beaches or inside buildings.",
    "rapids_class_min": 0,
    "rapids_class_max": 0,
    "photo_status": "Pending",
    "notes_public": "Campers-only boat ramp and docks. Walk-up loops mean you can sometimes get a site without booking.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.ncparks.gov/park-features/jordan-lake-state-recreation-area-poplar-point-campground"
+   "verification_source": "https://www.ncparks.gov/park-features/jordan-lake-state-recreation-area-poplar-point-campground",
+   "swimming_allowed": "Designated areas only",
+   "swim_area_here": "Yes, designated",
+   "private_launch": "Yes, at public ramps and designated launch sites only",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "jordan-seaforth",
@@ -325,17 +451,23 @@
    "managing_agency": "NC State Parks",
    "agency_url": "https://www.ncparks.gov/state-parks/jordan-lake-state-recreation-area",
    "launch_type": "Concrete ramp",
+   "fee_permit": "Per vehicle on weekends and holidays in April, May and September, and daily from Memorial Day to Labor Day",
    "hours": "8am to 8pm daily",
    "motorized_allowed": "Yes",
    "part_of_park": "Y",
    "park_name": "Jordan Lake State Recreation Area",
    "camping_available": "N",
+   "dogs_allowed": "Yes, leashed to 6 ft. Not allowed on swim beaches or inside buildings.",
    "rapids_class_min": 0,
    "rapids_class_max": 0,
    "photo_status": "Pending",
    "notes_public": "Wide open view of the lake, which is scenic and also means very little shelter from wind.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.ncparks.gov/park-features/jordan-lake-state-recreation-area-seaforth-access"
+   "verification_source": "https://www.ncparks.gov/park-features/jordan-lake-state-recreation-area-seaforth-access",
+   "swimming_allowed": "Designated areas only",
+   "swim_area_here": "Yes, designated",
+   "private_launch": "Yes, at public ramps and designated launch sites only",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "jordan-vista-point",
@@ -349,17 +481,23 @@
    "managing_agency": "NC State Parks",
    "agency_url": "https://www.ncparks.gov/state-parks/jordan-lake-state-recreation-area",
    "launch_type": "Concrete ramp",
+   "fee_permit": "Per vehicle on weekends and holidays in April, May and September, and daily from Memorial Day to Labor Day",
    "motorized_allowed": "Yes",
    "part_of_park": "Y",
    "park_name": "Jordan Lake State Recreation Area",
    "camping_available": "Y",
    "camping_type": "Drive-in",
+   "dogs_allowed": "Yes, leashed to 6 ft. Not allowed on swim beaches or inside buildings.",
    "rapids_class_min": 0,
    "rapids_class_max": 0,
    "photo_status": "Pending",
    "notes_public": "Group camping only, both RV and tent. Sailboat launch and swim beach.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.ncparks.gov/park-features/jordan-lake-state-recreation-area-vista-point-access"
+   "verification_source": "https://www.ncparks.gov/park-features/jordan-lake-state-recreation-area-vista-point-access",
+   "swimming_allowed": "Designated areas only",
+   "swim_area_here": "Yes, designated",
+   "private_launch": "Yes, at public ramps and designated launch sites only",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "jordan-white-oak",
@@ -373,17 +511,23 @@
    "managing_agency": "NC State Parks",
    "agency_url": "https://www.ncparks.gov/state-parks/jordan-lake-state-recreation-area",
    "launch_type": "Concrete ramp",
+   "fee_permit": "Per vehicle on weekends and holidays in April, May and September, and daily from Memorial Day to Labor Day",
    "hours": "9am to 5pm weekdays. Closed Saturday and Sunday.",
    "motorized_allowed": "Yes",
    "part_of_park": "Y",
    "park_name": "Jordan Lake State Recreation Area",
    "camping_available": "N",
+   "dogs_allowed": "Yes, leashed to 6 ft. Not allowed on swim beaches or inside buildings.",
    "rapids_class_min": 0,
    "rapids_class_max": 0,
    "photo_status": "Pending",
    "notes_public": "Open for day use in peak season only when the rental facility is not booked, so call ahead before driving out.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.ncparks.gov/park-features/jordan-lake-state-recreation-area-white-oak-recreation-area"
+   "verification_source": "https://www.ncparks.gov/park-features/jordan-lake-state-recreation-area-white-oak-recreation-area",
+   "swimming_allowed": "Designated areas only",
+   "swim_area_here": "Yes, when not reserved",
+   "private_launch": "Yes, at public ramps and designated launch sites only",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "kerr-bullocksville",
@@ -406,7 +550,9 @@
    "photo_status": "Pending",
    "notes_public": "Accessible fishing pier, concession stand and a short hiking loop. No boat ramp listed by the park.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.ncparks.gov/park-features/kerr-lake-state-recreation-area-bullocksville-access"
+   "verification_source": "https://www.ncparks.gov/park-features/kerr-lake-state-recreation-area-bullocksville-access",
+   "private_launch": "Yes, at public ramps and designated launch sites only",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "kerr-county-line",
@@ -433,7 +579,9 @@
    "photo_status": "Pending",
    "notes_public": "Open sailing water with camping and group sites.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.ncparks.gov/park-features/kerr-lake-state-recreation-area-county-line-access"
+   "verification_source": "https://www.ncparks.gov/park-features/kerr-lake-state-recreation-area-county-line-access",
+   "private_launch": "Yes, at public ramps and designated launch sites only",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "kerr-henderson-point",
@@ -458,7 +606,9 @@
    "photo_status": "Pending",
    "notes_public": "Accessible fishing pier and a swim area. Good sailing water, which means it is open and can get choppy.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.ncparks.gov/park-features/kerr-lake-state-recreation-area-henderson-point-access"
+   "verification_source": "https://www.ncparks.gov/park-features/kerr-lake-state-recreation-area-henderson-point-access",
+   "private_launch": "Yes, at public ramps and designated launch sites only",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "kerr-hibernia",
@@ -483,7 +633,9 @@
    "photo_status": "Pending",
    "notes_public": "Longest trail in the park runs from here, along with a swim area and group camping.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.ncparks.gov/park-features/kerr-lake-state-recreation-area-hibernia-access"
+   "verification_source": "https://www.ncparks.gov/park-features/kerr-lake-state-recreation-area-hibernia-access",
+   "private_launch": "Yes, at public ramps and designated launch sites only",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "kerr-jc-cooper",
@@ -508,7 +660,9 @@
    "photo_status": "Pending",
    "notes_public": "Ramp and dock are campers only. Sits within the Satterwhite Point access.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.ncparks.gov/park-features/kerr-lake-state-recreation-area-jc-cooper-campground"
+   "verification_source": "https://www.ncparks.gov/park-features/kerr-lake-state-recreation-area-jc-cooper-campground",
+   "private_launch": "Yes, at public ramps and designated launch sites only",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "kerr-kimball-point",
@@ -531,7 +685,9 @@
    "photo_status": "Pending",
    "notes_public": "Swim beach and camping. Named by the park as good sailing water, so read the wind before you go.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.ncparks.gov/park-features/kerr-lake-state-recreation-area-kimball-point-access"
+   "verification_source": "https://www.ncparks.gov/park-features/kerr-lake-state-recreation-area-kimball-point-access",
+   "private_launch": "Yes, at public ramps and designated launch sites only",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "kerr-nutbush",
@@ -556,7 +712,9 @@
    "photo_status": "Pending",
    "notes_public": "Two ramps, one sized for fishing tournaments. Expect heavy trailer traffic on tournament weekends.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.ncparks.gov/park-features/kerr-lake-state-recreation-area-nutbush-bridge-access"
+   "verification_source": "https://www.ncparks.gov/park-features/kerr-lake-state-recreation-area-nutbush-bridge-access",
+   "private_launch": "Yes, at public ramps and designated launch sites only",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "kerr-satterwhite",
@@ -581,7 +739,91 @@
    "photo_status": "Pending",
    "notes_public": "Visitor centre, the park's only designated swim beach, and a privately owned marina. The busiest access on the lake.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.ncparks.gov/park-features/kerr-lake-state-recreation-area-satterwhite-point-access"
+   "verification_source": "https://www.ncparks.gov/park-features/kerr-lake-state-recreation-area-satterwhite-point-access",
+   "swimming_allowed": "Designated areas only",
+   "swim_area_here": "Yes, the only designated swim beach in the park",
+   "private_launch": "Yes, at public ramps and designated launch sites only",
+   "access_type": "Public agency"
+  },
+  {
+   "spot_id": "lake-benson",
+   "name": "Lake Benson Boat House",
+   "water_body": "Lake Benson",
+   "water_type": "Flatwater",
+   "town": "Garner",
+   "county": "Wake",
+   "latitude": 35.672612,
+   "longitude": -78.632616,
+   "managing_agency": "Town of Garner Parks and Recreation",
+   "agency_url": "https://www.garnernc.gov",
+   "hours": "Saturday and Sunday only, 7am to 3pm",
+   "part_of_park": "Y",
+   "park_name": "Lake Benson Park",
+   "camping_available": "N",
+   "dogs_allowed": "No, pets are not permitted on boathouse craft",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "photo_status": "Pending",
+   "notes_public": "Worth reading twice before you drive out. You cannot put your own boat on this lake at all, only boathouse craft, and the boathouse opens weekends only. A shallow, quiet lake if you are happy in a hired kayak.",
+   "last_verified": "2026-07-30",
+   "verification_source": "https://www.garnernc.gov",
+   "private_launch": "No. Boathouse craft only.",
+   "rentals": "Jon boats, kayaks and canoes from the boathouse. Trolling motor available.",
+   "access_type": "Public agency"
+  },
+  {
+   "spot_id": "lake-crabtree",
+   "name": "Lake Crabtree County Park",
+   "water_body": "Lake Crabtree",
+   "water_type": "Flatwater",
+   "town": "Morrisville",
+   "county": "Wake",
+   "latitude": 35.843908,
+   "longitude": -78.795222,
+   "managing_agency": "Wake County Parks, Recreation and Open Space",
+   "agency_url": "https://www.wake.gov/departments-government/parks-recreation-open-space/parks/lake-crabtree-county-park",
+   "hours": "8am to 9pm",
+   "part_of_park": "Y",
+   "park_name": "Lake Crabtree County Park",
+   "camping_available": "N",
+   "dogs_allowed": "Yes, leashed",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "photo_status": "Pending",
+   "notes_public": "Free boat hire, which is rare, and that includes paddleboards. Demand is heavy at weekends and in good weather, so paddlers advise arriving about half an hour before opening.",
+   "last_verified": "2026-07-30",
+   "verification_source": "https://triangleonthecheap.com/boat-rental-triangle/",
+   "private_launch": "Yes, year-round launch area",
+   "rentals": "Canoes, kayaks, rowboats, pedal boats and paddleboards, free of charge with valid ID",
+   "access_type": "Public agency"
+  },
+  {
+   "spot_id": "lake-johnson",
+   "name": "Lake Johnson Park",
+   "water_body": "Lake Johnson",
+   "water_type": "Flatwater",
+   "town": "Raleigh",
+   "county": "Wake",
+   "latitude": 35.762394,
+   "longitude": -78.714265,
+   "managing_agency": "City of Raleigh Parks and Recreation",
+   "agency_url": "https://raleighnc.gov/parks-and-recreation/places/lake-johnson-park",
+   "walk_to_water": "Paddlers report hauling boats from the far end of the car park when the near lot fills.",
+   "parking_spaces": "Two car parks, both of which fill early at weekends",
+   "hours": "7am to 8pm",
+   "part_of_park": "Y",
+   "park_name": "Lake Johnson Park",
+   "camping_available": "N",
+   "dogs_allowed": "Yes, leashed",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "photo_status": "Pending",
+   "notes_public": "A 150 acre lake close to NC State, calm and well liked by beginners. Parking is the real constraint. Arrive early at a weekend or you will be carrying your board a long way.",
+   "last_verified": "2026-07-30",
+   "verification_source": "https://raleighnc.gov/parks-and-recreation/places/lake-johnson-park",
+   "private_launch": "Yes",
+   "rentals": "Kayaks and paddleboards from WakeRack lockers by the Waterfront Center. Pedal boats, canoes and fishing boats through the park.",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "lake-michie",
@@ -607,7 +849,8 @@
    "photo_status": "Pending",
    "notes_public": "One of the very few launches in the region with an ADA accessible boat house, dock and canoe/kayak launch. Non-motorized only, covering canoes, kayaks, paddleboards and sailboats, so it stays quiet.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.dprplaymore.org/455/Lake-Michie"
+   "verification_source": "https://www.dprplaymore.org/455/Lake-Michie",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "lake-norman-sp",
@@ -632,7 +875,122 @@
    "photo_status": "Pending",
    "notes_public": "Largest manmade lake in the state with 520 miles of shoreline. Boat rentals, swim beach and cabins. Check the DEQ algal bloom dashboard here in summer.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.ncparks.gov/park-features/lake-norman-state-park"
+   "verification_source": "https://www.ncparks.gov/park-features/lake-norman-state-park",
+   "private_launch": "Yes, at public ramps and designated launch sites only",
+   "rentals": "Boat hire on site",
+   "access_type": "Public agency"
+  },
+  {
+   "spot_id": "lake-norman-ymca",
+   "name": "Lake Norman YMCA Lake Access",
+   "water_body": "Lake Norman",
+   "water_type": "Flatwater",
+   "town": "Cornelius",
+   "county": "Mecklenburg",
+   "latitude": 35.494148,
+   "longitude": -80.860466,
+   "managing_agency": "YMCA of Greater Charlotte",
+   "agency_url": "https://www.ymcacharlotte.org/locations/lake-norman-ymca",
+   "restrooms": "Y",
+   "hours": "Lake access is seasonal and limited, historically summer Saturdays only. Ring before going.",
+   "part_of_park": "N",
+   "camping_available": "N",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "wq_monitor_org": "Catawba Riverkeeper",
+   "wq_org_url": "https://www.catawbariverkeeper.org",
+   "photo_status": "Pending",
+   "notes_public": "A supervised cove with lifeguards on the water and life jackets required, which makes it one of the gentlest introductions to a board anywhere on Lake Norman. Equipment is free but you need a Y membership, and lake access hours are far shorter than the building's.",
+   "last_verified": "2026-07-30",
+   "verification_source": "https://www.ymcacharlotte.org/locations/lake-norman-ymca",
+   "swimming_allowed": "Yes, in the supervised cove",
+   "swim_area_here": "Yes, lifeguarded",
+   "private_launch": "Members only. Nationwide YMCA memberships are accepted.",
+   "rentals": "Canoes, kayaks and paddleboards provided free to members, plus inflatables in the cove",
+   "access_type": "Nonprofit, membership required"
+  },
+  {
+   "spot_id": "lake-wheeler",
+   "name": "Lake Wheeler Park",
+   "water_body": "Lake Wheeler",
+   "water_type": "Flatwater",
+   "town": "Raleigh",
+   "county": "Wake",
+   "latitude": 35.694852,
+   "longitude": -78.69936,
+   "managing_agency": "City of Raleigh Parks and Recreation",
+   "agency_url": "https://raleighnc.gov/parks-and-recreation/places/lake-wheeler-park",
+   "launch_type": "Ramp for trailered and hand-carried boats",
+   "fee_permit": "Daily or annual launch pass required, about $6 a day for non-residents",
+   "hours": "6am to 8pm. Boats must be off the water 30 minutes before sunset or closing, whichever is first.",
+   "motorized_allowed": "Yes, no jet skis. 40 mph limit, and skiing and tubing are permitted.",
+   "part_of_park": "Y",
+   "park_name": "Lake Wheeler Park",
+   "camping_available": "N",
+   "dogs_allowed": "Yes, leashed at all times",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "photo_status": "Pending",
+   "notes_public": "A 650 acre water supply lake, and the clearest example of flat water that is not swimmable. Swimming and wading are both banned, and motorboats can run at 40 mph with skiers behind them. Fine for a confident paddler, a poor choice for a first time on a board.",
+   "last_verified": "2026-07-30",
+   "verification_source": "https://raleighnc.gov/parks-and-recreation/places/lake-wheeler-park",
+   "swimming_allowed": "No. Swimming and wading are both prohibited.",
+   "swim_area_here": "No",
+   "private_launch": "Yes, with a launch pass",
+   "rentals": "Kayaks and paddleboards from WakeRack self-service lockers near the Waterfront Center, booked online",
+   "access_type": "Public agency"
+  },
+  {
+   "spot_id": "latta-preserve",
+   "name": "Latta Nature Preserve",
+   "water_body": "Mountain Island Lake",
+   "water_type": "Flatwater",
+   "town": "Huntersville",
+   "county": "Mecklenburg",
+   "latitude": 35.358119,
+   "longitude": -80.907135,
+   "managing_agency": "Mecklenburg County Park and Recreation",
+   "agency_url": "https://parkandrec.mecknc.gov/Activities/boating-paddling",
+   "launch_type": "Dedicated kayak launches",
+   "part_of_park": "Y",
+   "park_name": "Latta Nature Preserve",
+   "camping_available": "N",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "wq_monitor_org": "Catawba Riverkeeper",
+   "wq_org_url": "https://www.catawbariverkeeper.org",
+   "photo_status": "Pending",
+   "notes_public": "Mountain Island Lake is smaller and far less trafficked than Lake Norman, with much less motor traffic. Forested and undeveloped, and a good choice when the big lake is churned up.",
+   "last_verified": "2026-07-30",
+   "verification_source": "https://parkandrec.mecknc.gov/Activities/boating-paddling",
+   "private_launch": "Yes",
+   "rentals": "Mountain Island Lake Paddle Company will deliver boards and kayaks to the launches",
+   "access_type": "Public agency"
+  },
+  {
+   "spot_id": "little-river-durham",
+   "name": "Little River Fishing Facility",
+   "water_body": "Little River Reservoir",
+   "water_type": "Flatwater",
+   "town": "Durham",
+   "county": "Durham",
+   "latitude": 36.126858,
+   "longitude": -78.871525,
+   "managing_agency": "Durham Parks and Recreation",
+   "agency_url": "https://www.dprplaymore.org",
+   "hours": "6:30am to 6pm Monday, Friday, Saturday and Sunday. Closed Tuesday, Wednesday and Thursday.",
+   "part_of_park": "Y",
+   "park_name": "Little River Reservoir",
+   "camping_available": "N",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "photo_status": "Pending",
+   "notes_public": "Rental only, like Lake Benson. You cannot launch your own boat here, and it is shut three days a week. Restrooms on site, no bait sold.",
+   "last_verified": "2026-07-30",
+   "verification_source": "https://www.dprplaymore.org",
+   "private_launch": "No. Hired craft only, and private trolling motors are not permitted.",
+   "rentals": "Kayaks, canoes and jon boats with trolling motors. Bring your own battery.",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "mayo-anglin-mill",
@@ -649,7 +1007,8 @@
    "photo_status": "Pending",
    "notes_public": "Mayo Beach and the Boiling Hole are here. No restrooms, so plan around that.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.ncparks.gov/park-features/mayo-river-state-park-anglin-mill-access"
+   "verification_source": "https://www.ncparks.gov/park-features/mayo-river-state-park-anglin-mill-access",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "mayo-mayodan",
@@ -669,7 +1028,38 @@
    "photo_status": "Pending",
    "notes_public": "Put in on the Mayo and paddle down into the Dan.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.ncparks.gov/park-features/mayo-river-state-park-mayodan-access"
+   "verification_source": "https://www.ncparks.gov/park-features/mayo-river-state-park-mayodan-access",
+   "access_type": "Public agency"
+  },
+  {
+   "spot_id": "mcdowell-nature",
+   "name": "McDowell Nature Preserve",
+   "water_body": "Lake Wylie",
+   "water_type": "Flatwater",
+   "town": "Charlotte",
+   "county": "Mecklenburg",
+   "latitude": 35.096486,
+   "longitude": -81.023954,
+   "managing_agency": "Mecklenburg County Park and Recreation",
+   "agency_url": "https://parkandrec.mecknc.gov/Activities/boating-paddling",
+   "launch_type": "Landing near the waterfront deck",
+   "fee_permit": "Free entry",
+   "restrooms": "Y",
+   "part_of_park": "Y",
+   "park_name": "McDowell Nature Preserve",
+   "camping_available": "Y",
+   "camping_type": "Drive-in, small RV area with electric and water",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "wq_monitor_org": "Catawba Riverkeeper",
+   "wq_org_url": "https://www.catawbariverkeeper.org",
+   "photo_status": "Pending",
+   "notes_public": "One of the few Mecklenburg sites that explicitly welcomes your own board, launching from the landing by the waterfront deck. Nature centre, forested trails and quiet lake views.",
+   "last_verified": "2026-07-30",
+   "verification_source": "https://parkandrec.mecknc.gov/Activities/boating-paddling",
+   "private_launch": "Yes, bring your own canoe, kayak or paddleboard",
+   "rentals": "None for hire, but guided programmes provide boats",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "medoc-mountain",
@@ -690,7 +1080,9 @@
    "photo_status": "Pending",
    "notes_public": "The park calls this one of the cleanest streams in the region. Quiet paddling with almost no boat traffic.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.ncparks.gov/park-features/medoc-mountain-state-park"
+   "verification_source": "https://www.ncparks.gov/park-features/medoc-mountain-state-park",
+   "private_launch": "Yes, at public ramps and designated launch sites only",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "morrow-mountain",
@@ -714,7 +1106,42 @@
    "photo_status": "Pending",
    "notes_public": "Sits where Lake Tillery meets the Yadkin, under the Uwharrie peaks. Boat rentals on site and bald eagles overhead.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.ncparks.gov/park-features/morrow-mountain-state-park"
+   "verification_source": "https://www.ncparks.gov/park-features/morrow-mountain-state-park",
+   "private_launch": "Yes, at public ramps and designated launch sites only",
+   "rentals": "Boat hire on site",
+   "access_type": "Public agency"
+  },
+  {
+   "spot_id": "mt-holly-landing",
+   "name": "Mt Holly Boat Landing",
+   "water_body": "Catawba River",
+   "water_type": "River",
+   "town": "Mount Holly",
+   "county": "Gaston",
+   "latitude": 35.298493,
+   "longitude": -81.004771,
+   "managing_agency": "Privately owned, Aquatic Adventures operates from here",
+   "agency_url": "https://www.aquaticadventuresclt.com",
+   "parking_spaces": "Room for cars and trailers",
+   "fee_permit": "About $2 per person to launch a boat, canoe or kayak",
+   "restrooms": "Portable toilet only",
+   "part_of_park": "N",
+   "camping_available": "N",
+   "route_name": "Mountain Island Lake Dam downstream",
+   "route_miles": 2.75,
+   "rapids_class_min": 0,
+   "rapids_class_max": 1,
+   "hazards": "Sits just below the Mountain Island Lake dam. Flow changes when the dam releases.",
+   "hazard_last_checked": "2026-07-30",
+   "wq_monitor_org": "Catawba Riverkeeper",
+   "wq_org_url": "https://www.catawbariverkeeper.org",
+   "photo_status": "Pending",
+   "notes_public": "Private land, and worth every bit of the two dollars. Just south of the Mountain Island dam on a wide, quiet stretch. The run downstream is about 2.75 miles through tree-lined water with almost no development or boat traffic. Rocks show through when the current is up.",
+   "last_verified": "2026-07-30",
+   "verification_source": "https://www.gogastonnc.org/places/aquatic-adventures",
+   "private_launch": "Yes, for a small per person fee",
+   "rentals": "Kayaks and paddleboards on site. Aquatic Adventures runs guided trips and full moon paddles from here.",
+   "access_type": "Private business"
   },
   {
    "spot_id": "haw-old-bynum-bridge",
@@ -745,7 +1172,8 @@
    "photo_status": "Pending",
    "notes_public": "Parking on the east side of Bynum Road. Downstream from here to US 64 is rated by the state natural area for intermediate to advanced paddlers only.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.lowerhaw.org/activities"
+   "verification_source": "https://www.lowerhaw.org/activities",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "pilot-ivy-bluff",
@@ -766,7 +1194,8 @@
    "photo_status": "Pending",
    "notes_public": "Parking for paddle-in campers, with steep riverside slopes on the hiking approach.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.ncparks.gov/park-features/pilot-mountain-state-park-ivy-bluff-access"
+   "verification_source": "https://www.ncparks.gov/park-features/pilot-mountain-state-park-ivy-bluff-access",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "pilot-shoals",
@@ -782,7 +1211,42 @@
    "photo_status": "Pending",
    "notes_public": "Paddling launch for the Yadkin, doubling as a fishing access.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.ncparks.gov/park-features/pilot-mountain-state-park-shoals-fishing-area"
+   "verification_source": "https://www.ncparks.gov/park-features/pilot-mountain-state-park-shoals-fishing-area",
+   "access_type": "Public agency"
+  },
+  {
+   "spot_id": "ramsey-creek",
+   "name": "Ramsey Creek Park",
+   "water_body": "Lake Norman",
+   "water_type": "Flatwater",
+   "town": "Cornelius",
+   "county": "Mecklenburg",
+   "latitude": 35.46458,
+   "longitude": -80.898753,
+   "managing_agency": "Mecklenburg County Park and Recreation",
+   "agency_url": "https://parkandrec.mecknc.gov/Activities/boating-paddling",
+   "launch_type": "Four boat ramps",
+   "fee_permit": "Launch fee applies",
+   "restrooms": "Y",
+   "ada_launch": "No, but there is an ADA compliant fishing pier",
+   "hours": "8am to 8pm",
+   "motorized_allowed": "Yes",
+   "part_of_park": "Y",
+   "park_name": "Ramsey Creek Park",
+   "camping_available": "N",
+   "dogs_allowed": "Yes, there is a dog park at the entrance",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "wq_monitor_org": "Catawba Riverkeeper",
+   "wq_org_url": "https://www.catawbariverkeeper.org",
+   "photo_status": "Pending",
+   "notes_public": "A seasonal lifeguarded beach, four ramps and a dog park. The shoreline is rocky, so water shoes help. Check beach dates before relying on it.",
+   "last_verified": "2026-07-30",
+   "verification_source": "https://parkandrec.mecknc.gov/Activities/boating-paddling",
+   "swimming_allowed": "Yes, at the seasonal beach",
+   "swim_area_here": "Yes, lifeguarded in season",
+   "private_launch": "Yes",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "raven-rock",
@@ -803,7 +1267,9 @@
    "photo_status": "Pending",
    "notes_public": "The park explicitly names rapids on the Cape Fear here, plus the remains of the Northington Lock and Dam. Scout before you run it and check the class rating against current flow.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.ncparks.gov/park-features/raven-rock-state-park"
+   "verification_source": "https://www.ncparks.gov/park-features/raven-rock-state-park",
+   "private_launch": "Yes, at public ramps and designated launch sites only",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "haw-robeson-creek-ramp",
@@ -832,7 +1298,8 @@
    "photo_status": "Pending",
    "notes_public": "A full trailer ramp run by the Wildlife Resources Commission, so expect motorboats. Paddle about a mile down Robeson Creek to reach the Haw.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.lowerhaw.org/activities"
+   "verification_source": "https://www.lowerhaw.org/activities",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "haw-robeson-creek-canoe",
@@ -862,7 +1329,8 @@
    "photo_status": "Pending",
    "notes_public": "Despite the name this launch is on the Haw, not on Robeson Creek. Flat for a short way upstream and flat for a long way downstream all the way to Jordan Lake, which makes it the best board-friendly put-in on the Lower Haw.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.lowerhaw.org/activities"
+   "verification_source": "https://www.lowerhaw.org/activities",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "haw-south-bynum",
@@ -893,7 +1361,61 @@
    "photo_status": "Pending",
    "notes_public": "Formerly Bynum Beach Canoe Access. Parking is extremely limited and roadside parking on Bynum Beach Road is expressly prohibited, so plan on the bridge walk with your board.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.lowerhaw.org/activities"
+   "verification_source": "https://www.lowerhaw.org/activities",
+   "access_type": "Public agency"
+  },
+  {
+   "spot_id": "tailrace-marina",
+   "name": "Tailrace Marina",
+   "water_body": "Catawba River",
+   "water_type": "River",
+   "town": "Mount Holly",
+   "county": "Gaston",
+   "latitude": 35.272818,
+   "longitude": -81.014885,
+   "managing_agency": "Tailrace Marina",
+   "agency_url": "https://www.tailracemarina.com",
+   "restrooms": "Y",
+   "hours": "9:30am to 4:30pm daily",
+   "part_of_park": "N",
+   "camping_available": "N",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "wq_monitor_org": "Catawba Riverkeeper",
+   "wq_org_url": "https://www.catawbariverkeeper.org",
+   "photo_status": "Pending",
+   "notes_public": "Near the mouth of Dutchman's Creek where it meets Lake Wylie. Online booking and waivers mean you can be on the water quickly. A long-standing Catawba Riverkeeper Riversweep site.",
+   "last_verified": "2026-07-30",
+   "verification_source": "https://www.gogastonnc.org/post/paddling-the-catawba-and-south-fork-rivers-and-lakes-in-gaston-county",
+   "rentals": "Kayaks, paddleboards, canoes and pontoons. An annual kayak membership covers a guest.",
+   "access_type": "Private business"
+  },
+  {
+   "spot_id": "whitewater-center",
+   "name": "U.S. National Whitewater Center",
+   "water_body": "Catawba River",
+   "water_type": "River",
+   "town": "Charlotte",
+   "county": "Mecklenburg",
+   "latitude": 35.271212,
+   "longitude": -81.005838,
+   "managing_agency": "U.S. National Whitewater Center",
+   "agency_url": "https://whitewater.org",
+   "fee_permit": "Around $39 for a day of flatwater kayaking and paddleboarding, plus about $13 to park",
+   "hours": "10am to 7pm",
+   "part_of_park": "N",
+   "camping_available": "N",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "wq_monitor_org": "Catawba Riverkeeper",
+   "wq_org_url": "https://www.catawbariverkeeper.org",
+   "photo_status": "Pending",
+   "notes_public": "The flatwater paddling here is on the Catawba and Long Creek and is separate from the artificial whitewater channel. Everything is an added fee, so read the pricing before you go.",
+   "last_verified": "2026-07-30",
+   "verification_source": "https://www.charlotteonthecheap.com/boat-rental-charlotte/",
+   "private_launch": "Unknown, the site is built around its own hire fleet",
+   "rentals": "Flatwater kayaks and paddleboards included in the activity pass. Life jacket provided.",
+   "access_type": "Nonprofit, day pass required"
   },
   {
    "spot_id": "haw-us64",
@@ -925,7 +1447,8 @@
    "photo_status": "Pending",
    "notes_public": "Experts only heading downstream toward Robeson Creek. The classic Lower Haw whitewater run starts here and it is not a beginner stretch.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.lowerhaw.org/activities"
+   "verification_source": "https://www.lowerhaw.org/activities",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "eno-west-point",
@@ -951,7 +1474,8 @@
    "photo_status": "Pending",
    "notes_public": "Enter above the dam behind the mill and paddle roughly three quarters of a mile up to Sennet Hole. The dam holds deep water year round, so this is one of the few Eno spots that does not depend on rain.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.froghollowoutdoors.com/durham-flyer-finding-eno-river-treasures-by-water"
+   "verification_source": "https://www.froghollowoutdoors.com/durham-flyer-finding-eno-river-treasures-by-water",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "umstead-crabtree-creek",
@@ -973,7 +1497,10 @@
    "photo_status": "Pending",
    "notes_public": "Big Lake and Sycamore Lake, with boat rentals on site. Nine miles from downtown Raleigh and it feels much further.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.ncparks.gov/park-features/william-b-umstead-state-park-crabtree-creek-access"
+   "verification_source": "https://www.ncparks.gov/park-features/william-b-umstead-state-park-crabtree-creek-access",
+   "private_launch": "Yes, at public ramps and designated launch sites only",
+   "rentals": "Boat hire on site",
+   "access_type": "Public agency"
   },
   {
    "spot_id": "umstead-reedy-creek",
@@ -992,7 +1519,9 @@
    "photo_status": "Pending",
    "notes_public": "Small lake with a millstone marker from an old grist mill. Group campsites and a stone-deck picnic shelter.",
    "last_verified": "2026-07-30",
-   "verification_source": "https://www.ncparks.gov/park-features/william-b-umstead-state-park-reedy-creek-access"
+   "verification_source": "https://www.ncparks.gov/park-features/william-b-umstead-state-park-reedy-creek-access",
+   "private_launch": "Yes, at public ramps and designated launch sites only",
+   "access_type": "Public agency"
   }
  ]
 }
