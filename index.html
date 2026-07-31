@@ -635,10 +635,11 @@
     }
 
     $("cards").innerHTML = found.map(s => {
-      const tags = [s.type, s.motors ? "Motors allowed" : "No motors"];
+      const tags = [s.type];
+      if (s.motors === true) tags.push("Motors allowed");
+      if (s.motors === false) tags.push("No motors");
       if (s.camping) tags.push("Camping");
       if (s.park) tags.push("In a park");
-      tags.push(s.drive + " away");
       return (
         '<button class="card" type="button" data-open="' + s.id + '">' +
           '<div class="gauge" aria-hidden="true"></div>' +
@@ -766,8 +767,6 @@
         '<span class="eyebrow">The paddle</span>' +
         rows([
           ["Route", fact(s.route)],
-          ["Exposure", fact(s.exposure)],
-          ["Shade", fact(s.shade)],
           ["Motorized boats", s.motorText ? esc(s.motorText) : tri(s.motors)]
         ]) +
       '</section>' +
