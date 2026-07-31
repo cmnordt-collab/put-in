@@ -251,6 +251,8 @@
   .livegrid .v { font-family: var(--mono); font-size: 20px; font-variant-numeric: tabular-nums; margin-top: 2px; }
   .livenote { margin: 12px 0 0; font-size: 12.5px; color: var(--ink-soft); }
   .unrec { color: var(--ink-soft); font-style: italic; opacity: 0.75; }
+  .classbadge.unk { background: transparent; color: var(--ink-soft);
+                    border: 1px dashed var(--rule); }
   .hazblock { background: rgba(201, 143, 26, 0.05); margin-inline: -22px; padding-inline: 22px; }
   .hazfoot { margin: 10px 0 0; font-size: 12px; line-height: 1.5; color: var(--ink-soft); }
   .prov { margin: 10px 0 0; font-size: 11.5px; color: var(--ink-soft); }
@@ -369,7 +371,7 @@
       </div>
 
       <p class="disclaimer">
-        Starter records, entered by hand. Confirm access rules, fees, and closures with the managing
+        Every spot here is checked against its managing agency and carries the source. Blank fields mean unverified, not absent. Confirm access rules, fees, and closures with the managing
         agency before you go. Conditions change fast, and a rating is never a substitute for scouting.
       </p>
     </div>
@@ -492,11 +494,13 @@
 
   // ---------------------------------------------------------------- helpers
   function classLabel(r) {
+    if (!r) return "Difficulty not recorded";
     if (r[1] === 0) return "Flatwater";
     const roman = n => ["","I","II","III","IV","V","VI"][n];
     return r[0] === r[1] ? "Class " + roman(r[0]) : "Class " + roman(r[0]) + "\u2013" + roman(r[1]);
   }
   function badge(r) {
+    if (!r) return '<span class="classbadge unk" title="Nobody has rated this yet">?</span>';
     if (r[1] === 0) return '<span class="classbadge flat">FLAT</span>';
     const cls = r[1] >= 4 ? "c4" : r[1] === 3 ? "c3" : "";
     const roman = n => ["","I","II","III","IV","V","VI"][n];
@@ -959,13 +963,9 @@
   (async function init() {
     await loadSaved();
     $("cards").innerHTML = '<p class="loading">Loading spots\u2026</p>';
+    let payload;
     try {
-      const payload = await loadSpots();
-      renderFilters();
-      renderKey();
-      renderList();
-      const c = $("count");
-      if (c && payload.generated) c.title = "Data generated " + payload.generated;
+      payload = await loadSpots();
     } catch (err) {
       $("cards").innerHTML =
         '<div class="loadfail"><b>The spot data did not load.</b>' +
@@ -973,6 +973,20 @@
         'pages from reading neighbouring files when the address starts with <code>file://</code>. ' +
         'It works normally once the site is hosted, or you can run <code>python3 -m http.server</code> ' +
         'inside this folder and open <code>http://localhost:8000</code>.<br><br>' +
+        'Technical detail: ' + esc(err.message) + '</div>';
+      return;
+    }
+    try {
+      renderFilters();
+      renderKey();
+      renderList();
+      const c = $("count");
+      if (c && payload.generated) c.title = "Data generated " + payload.generated;
+    } catch (err) {
+      $("cards").innerHTML =
+        '<div class="loadfail"><b>The data loaded, but something went wrong drawing it.</b>' +
+        'That is a fault in this page rather than anything to do with your files. ' +
+        String(SPOTS.length) + ' spots were read successfully.<br><br>' +
         'Technical detail: ' + esc(err.message) + '</div>';
     }
   })();
