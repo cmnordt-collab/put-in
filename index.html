@@ -557,7 +557,8 @@
           '<div class="gauge" aria-hidden="true"></div>' +
           '<div>' +
             '<h3>' + esc(s.name) + '</h3>' +
-            '<p class="sub">' + esc(s.water) + ' &middot; ' + esc(s.town) + ', ' + esc(s.county) + ' County</p>' +
+            '<p class="sub">' + [s.water, s.town, s.county ? s.county + ' County' : null]
+              .filter(Boolean).map(esc).join(' &middot; ') + '</p>' +
             (s.privateLaunch && /^no/i.test(s.privateLaunch)
               ? '<div class="nolaunch">No private boats. Hire only.</div>' : '') +
             '<div class="taglist">' + badge(s.rapids) +
