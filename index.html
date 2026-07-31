@@ -251,6 +251,9 @@
   .livegrid .v { font-family: var(--mono); font-size: 20px; font-variant-numeric: tabular-nums; margin-top: 2px; }
   .livenote { margin: 12px 0 0; font-size: 12.5px; color: var(--ink-soft); }
   .unrec { color: var(--ink-soft); font-style: italic; opacity: 0.75; }
+  .nolaunch { display: inline-block; margin-bottom: 6px; font-size: 11px;
+              letter-spacing: .06em; text-transform: uppercase; color: #8A5D10;
+              background: rgba(201,143,26,.14); border-radius: 3px; padding: 3px 7px; }
   .classbadge.unk { background: transparent; color: var(--ink-soft);
                     border: 1px dashed var(--rule); }
   .hazblock { background: rgba(201, 143, 26, 0.05); margin-inline: -22px; padding-inline: 22px; }
@@ -339,7 +342,7 @@
       </g>
     </svg>
     <div class="masthead-inner">
-      <div class="eyebrow">Board · Kayak · Canoe</div>
+      <div class="eyebrow">SUP · Kayak · Canoe</div>
       <h1>Put-In</h1>
       <p>Search a spot, see everything that matters before you load the car.</p>
     </div>
@@ -446,6 +449,9 @@
       hazardChecked: r.hazard_last_checked || null,
       flowLow: r.flow_low_cfs || null, flowHigh: r.flow_high_cfs || null,
       floodStage: r.flood_stage_ft || null,
+      accessType: r.access_type || null,
+      swimming: r.swimming_allowed || null, swimArea: r.swim_area_here || null,
+      privateLaunch: r.private_launch || null, rentals: r.rentals || null,
       wq: r.wq_monitor_org || null, wqUrl: r.wq_org_url || null,
       agency: r.managing_agency || null, agencyUrl: r.agency_url || null,
       why: r.notes_public || null,
@@ -552,6 +558,8 @@
           '<div>' +
             '<h3>' + esc(s.name) + '</h3>' +
             '<p class="sub">' + esc(s.water) + ' &middot; ' + esc(s.town) + ', ' + esc(s.county) + ' County</p>' +
+            (s.privateLaunch && /^no/i.test(s.privateLaunch)
+              ? '<div class="nolaunch">No private boats. Hire only.</div>' : '') +
             '<div class="taglist">' + badge(s.rapids) +
               tags.map(t => '<span class="tag">' + esc(t) + '</span>').join("") +
             '</div>' +
@@ -640,6 +648,8 @@
           ["Parking", fact(s.parking)],
           ["Launch type", fact(s.launch)],
           ["Accessible launch", s.adaText ? esc(s.adaText) : tri(s.ada)],
+          ["Run by", fact(s.accessType)],
+          ["Own boat allowed", fact(s.privateLaunch)],
           ["Gate hours", fact(s.hours)],
           ["Fee or permit", fact(s.fee)],
           ["Restrooms", tri(s.restrooms)],
@@ -662,6 +672,9 @@
         rows([
           ["Camping", s.campingType ? esc(s.campingType) : tri(s.camping)],
           ["Dogs", s.dogText ? esc(s.dogText) : tri(s.dogs)],
+          ["Swimming", fact(s.swimming)],
+          ["Swim area here", fact(s.swimArea)],
+          ["Hire on site", fact(s.rentals)],
           ["Managed by", s.agency ? (s.agencyUrl
               ? '<a href="' + esc(s.agencyUrl) + '" target="_blank" rel="noopener">' + esc(s.agency) + '</a>'
               : esc(s.agency)) : fact(null)]
@@ -773,7 +786,7 @@
       ).join("") +
       '<p class="keyfoot">This is the International Scale of River Difficulty. A rapid\u2019s class is not fixed. ' +
       'It rises with flow, so a Class II at summer levels can run as a Class III after heavy rain. ' +
-      'For board and canoe paddling, Class I and II are the realistic range.</p>';
+      'For SUP and canoe paddling, Class I and II are the realistic range.</p>';
   }
 
   // ---------------------------------------------------------------- events
