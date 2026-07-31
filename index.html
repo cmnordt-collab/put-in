@@ -620,10 +620,10 @@
     $("detail-view").innerHTML =
       '<div class="backbar">' +
         '<button class="back" type="button" id="back">\u2190 All spots</button>' +
-        (state.filters.length || state.q
+        (state.active.size || state.q
           ? '<span class="filterbar">Filtered: ' +
             (state.q ? '\u201c' + esc(state.q) + '\u201d ' : '') +
-            state.filters.join(' + ') + '</span>'
+            [...state.active].join(' + ') + '</span>'
           : '') +
       '</div>' +
 
