@@ -624,7 +624,18 @@
 
   // ---------------------------------------------------------------- render: list
   function renderList() {
-    const found = SPOTS.filter(matches);
+    let found = SPOTS.filter(matches);
+
+    const county = state.county || "";
+    if (county) found = found.filter(s => s.county === county);
+
+    const sortby = state.sortby || "name";
+    found.sort((a, b) => {
+      const ka = sortby==="county" ? (a.county||"") : sortby==="water" ? (a.water||"") : a.name;
+      const kb = sortby==="county" ? (b.county||"") : sortby==="water" ? (b.water||"") : b.name;
+      return ka.localeCompare(kb);
+    });
+
     $("count").textContent = found.length + (found.length === 1 ? " spot" : " spots");
 
     if (!found.length) {
