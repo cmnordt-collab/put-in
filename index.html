@@ -375,50 +375,11 @@
     <div class="masthead-inner">
       <div class="eyebrow">SUP · Kayak · Canoe</div>
       <h1>Put-In</h1>
-      <nav style="display:flex;gap:0;margin-top:10px;border-bottom:2px solid rgba(255,255,255,.2);">
-        <button id="tab-spots" style="padding:6px 16px;background:none;border:none;color:#fff;font-weight:600;font-size:13px;letter-spacing:.06em;cursor:pointer;border-bottom:3px solid #fff;margin-bottom:-2px;">SPOTS</button>
-        <button id="tab-gear"  style="padding:6px 16px;background:none;border:none;color:#fff;font-weight:600;font-size:13px;letter-spacing:.06em;cursor:pointer;opacity:.55;border-bottom:3px solid transparent;margin-bottom:-2px;">GEAR &amp; KIT</button>
-      </nav>
       <p>Search a spot, see everything that matters before you load the car.</p>
     </div>
   </header>
 
   <main class="wrap">
-    <div id="gear-view" hidden style="padding:0 4px">
-      <div class="gear-tab">
-        <h2>Gear &amp; kit</h2>
-        <p class="intro">Carrie's picks. Affiliate links help keep Put-In free.</p>
-        <div class="gear-section">
-          <h3>SUP boards</h3>
-          <a class="gear-link" href="#" target="_blank" rel="noopener sponsored">
-            <div class="gear-name">Add your board pick here</div>
-            <div class="gear-desc">Edit the gear section in index.html to add your affiliate links.</div>
-            <div class="gear-aff">affiliate link</div>
-          </a>
-        </div>
-        <div class="gear-section">
-          <h3>Safety</h3>
-          <a class="gear-link" href="#" target="_blank" rel="noopener sponsored">
-            <div class="gear-name">PFD, white light, whistle</div>
-            <div class="gear-desc">NC law requires a white light between sunset and sunrise on any paddle craft.</div>
-            <div class="gear-aff">affiliate link</div>
-          </a>
-        </div>
-        <div class="gear-section">
-          <h3>Accessories</h3>
-          <a class="gear-link" href="#" target="_blank" rel="noopener sponsored">
-            <div class="gear-name">Dry bag, paddle, leash&#8230;</div>
-            <div class="gear-desc">Replace these placeholders with gear you actually own and recommend.</div>
-            <div class="gear-aff">affiliate link</div>
-          </a>
-        </div>
-        <div class="support-block">
-          <p>Put-In is free. If it saves you a wasted drive, consider buying the builder a coffee.</p>
-          <a class="btn-support" href="https://buymeacoffee.com/" target="_blank" rel="noopener">&#9749; Buy me a coffee</a>
-        </div>
-      </div>
-    </div>
-
     <div id="list-view">
       <div class="searchrow">
         <div class="searchfield">
@@ -429,25 +390,9 @@
 
       <div class="filters" id="filters" role="group" aria-label="Filter spots"></div>
 
-      <div class="resultcount" style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-        <div style="display:flex;align-items:center;gap:5px">
-          <label for="sortby" style="font-size:12px;color:var(--ink-soft)">Sort</label>
-          <select id="sortby" style="font-size:12.5px;padding:3px 6px;border:1px solid var(--rule);border-radius:4px;background:var(--paper);color:var(--ink)">
-            <option value="name">A–Z</option>
-            <option value="county">County</option>
-            <option value="water">Water body</option>
-          </select>
-        </div>
-        <div style="display:flex;align-items:center;gap:5px">
-          <label for="countysel" style="font-size:12px;color:var(--ink-soft)">County</label>
-          <select id="countysel" style="font-size:12.5px;padding:3px 6px;border:1px solid var(--rule);border-radius:4px;background:var(--paper);color:var(--ink)">
-            <option value="">All</option>
-          </select>
-        </div>
-        <div style="flex:1;display:flex;align-items:center;justify-content:flex-end;gap:10px">
-          <div class="eyebrow" id="count">—</div>
-          <button class="linkbtn" id="clear" type="button">Clear filters</button>
-        </div>
+      <div class="resultcount">
+        <div class="eyebrow" id="count">—</div>
+        <button class="linkbtn" id="clear" type="button">Clear filters</button>
       </div>
 
       <div class="cards" id="cards"></div>
@@ -624,18 +569,8 @@
 
   // ---------------------------------------------------------------- render: list
   function renderList() {
-    let found = SPOTS.filter(matches);
-
-    const county = state.county || "";
-    if (county) found = found.filter(s => s.county === county);
-
-    const sortby = state.sortby || "name";
-    found.sort((a, b) => {
-      const ka = sortby==="county" ? (a.county||"") : sortby==="water" ? (a.water||"") : a.name;
-      const kb = sortby==="county" ? (b.county||"") : sortby==="water" ? (b.water||"") : b.name;
-      return ka.localeCompare(kb);
-    });
-
+    const found = SPOTS.filter(matches);
+    found.sort((a, b) => a.name.localeCompare(b.name));
     $("count").textContent = found.length + (found.length === 1 ? " spot" : " spots");
 
     if (!found.length) {
@@ -1116,23 +1051,6 @@
     try {
       renderFilters();
       renderKey();
-
-      const counties=[...new Set(SPOTS.map(x=>x.county).filter(Boolean))].sort();
-      const csel=$("countysel");
-      counties.forEach(c=>{const o=document.createElement("option");o.value=o.textContent=c;csel.appendChild(o);});
-      csel.addEventListener("change",()=>{state.county=csel.value;renderList();});
-      $("sortby").addEventListener("change",()=>{state.sortby=$("sortby").value;renderList();});
-
-      $("tab-spots").addEventListener("click",()=>{
-        $("tab-spots").style.opacity="1";$("tab-spots").style.borderBottomColor="#fff";
-        $("tab-gear").style.opacity=".55";$("tab-gear").style.borderBottomColor="transparent";
-        $("list-view").hidden=false;$("gear-view").hidden=true;
-      });
-      $("tab-gear").addEventListener("click",()=>{
-        $("tab-gear").style.opacity="1";$("tab-gear").style.borderBottomColor="#fff";
-        $("tab-spots").style.opacity=".55";$("tab-spots").style.borderBottomColor="transparent";
-        $("list-view").hidden=true;$("gear-view").hidden=false;$("detail-view").hidden=true;
-      });
 
       renderList();
       const c = $("count");
