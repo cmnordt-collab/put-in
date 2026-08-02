@@ -323,10 +323,11 @@
 
   .wqline { display: flex; align-items: center; gap: 9px; font-size: 14px; }
   .wqblock { display:flex; flex-direction:column; gap:10px; }
-  .btn-swimguide { display:inline-block; padding:9px 16px; background:var(--chan);
-                   color:#fff; border-radius:6px; text-decoration:none; font-weight:600;
-                   font-size:13.5px; align-self:flex-start; }
-  .btn-swimguide:hover { opacity:.88; }
+  .btn-swimguide { display:inline-block; padding:10px 18px; background:var(--chan);
+                   color:#000; border:none; border-radius:6px;
+                   text-decoration:none; font-weight:700; font-size:13.5px;
+                   align-self:flex-start; }
+  .btn-swimguide:hover { opacity:.85; }
   .wq-credit { font-size:13px; color:var(--ink-soft); }
   .wq-credit a { color:var(--chan); }
   .dot { width: 11px; height: 11px; border-radius: 50%; flex: none; }
@@ -742,7 +743,7 @@
           '<a class="btn-swimguide" href="https://swimguide.org/search?q=' +
             encodeURIComponent((s.water||s.name)) +
             '" target="_blank" rel="noopener">Check current water quality on Swim Guide</a>' +
-          (s.wq ? '<p class="wq-credit">Monitoring provided by ' +
+          (s.wq ? '<p class="wq-credit">Monitoring Provided By: ' +
             (s.wqUrl ? '<a href="' + esc(s.wqUrl) + '" target="_blank" rel="noopener">' +
             esc(s.wq) + '</a>' : esc(s.wq)) + '.</p>'
                 : '<p class="wq-credit">No monitoring partner recorded for this spot yet.</p>') +
