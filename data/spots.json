@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-01",
- "count": 156,
+ "generated": "2026-08-02",
+ "count": 180,
  "note": "A blank field means nobody has verified it yet. It does not mean no. This matters most for hazards and dams.",
  "sources": [
   "NC State Parks",
@@ -31,7 +31,7 @@
    "dogs_allowed": "Yes, leashed",
    "rapids_class_min": 0,
    "rapids_class_max": 0,
-   "hazards": "Alligators, black bears and red wolves all present in this refuge. Do not approach wildlife. The canal system is extensive — carry a map and a compass as trails look similar. Blackwater canals can be disorienting.",
+   "hazards": "Alligators, black bears and red wolves all present in this refuge. Do not approach wildlife. The canal system is extensive — carry a map and a compass as trails look similar. Blackwater canals can be disorienting. Cell service is extremely limited — one of the most remote areas on the East Coast. Download offline maps, charge your device fully, and tell someone your float plan before launching.",
    "hazard_last_checked": "2026-08-01",
    "wq_monitor_org": "Sound Rivers",
    "wq_org_url": "https://soundrivers.org",
@@ -40,7 +40,9 @@
    "last_verified": "2026-08-01",
    "verification_source": "https://www.fws.gov/refuge/alligator-river",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Coast",
+   "cell_signal": "Very limited. The refuge is one of the most remote areas on the East Coast. Most carriers lose signal in the interior. Download offline maps before you go and tell someone your plans."
   },
   {
    "spot_id": "neuse-anderson-point",
@@ -71,7 +73,40 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://raleighnc.gov/river-access",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
+  },
+  {
+   "spot_id": "avalon-beach-ramp-kdh",
+   "name": "Avalon Beach Boat Ramp",
+   "water_body": "Kitty Hawk Bay",
+   "water_type": "Flatwater",
+   "town": "Kill Devil Hills",
+   "county": "Dare",
+   "latitude": 36.0358188,
+   "longitude": -75.6862075,
+   "managing_agency": "NC Wildlife Resources Commission",
+   "agency_url": "https://www.ncwildlife.org",
+   "launch_type": "Two lanes with courtesy docks",
+   "parking_spaces": "About 20 paved trailer spaces",
+   "fee_permit": "None",
+   "restrooms": "None",
+   "hours": "Daylight",
+   "motorized_allowed": "Yes",
+   "part_of_park": "N",
+   "camping_available": "N",
+   "dogs_allowed": "Yes, leashed",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "hazards": "Tidal sound waters. Currents stronger than they look, especially on a running tide. Wind builds quickly on open sound water. Check forecast before going out.",
+   "hazard_last_checked": "2026-08-01",
+   "photo_status": "Pending",
+   "notes_public": "One of the most popular sunset spots on the OBX — reviewers call it a favourite for locals. Sound water access with decent parking. Good base for exploring Kitty Hawk Bay. No restrooms but otherwise clean and well maintained.",
+   "last_verified": "2026-08-01",
+   "verification_source": "https://www.saltchef.com/catch_fish/NC/Dare/boat_ramps.html",
+   "private_launch": "Yes",
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "badin-lake-ramp",
@@ -101,7 +136,40 @@
    "last_verified": "2026-07-31",
    "verification_source": "https://www.ncwildlife.org",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
+  },
+  {
+   "spot_id": "bald-head-island-ferry",
+   "name": "Bald Head Island Ferry Access",
+   "water_body": "Cape Fear River / Smith Island",
+   "water_type": "Flatwater",
+   "town": "Southport",
+   "county": "Brunswick",
+   "latitude": 33.9302183,
+   "longitude": -77.9972617,
+   "managing_agency": "Bald Head Island Limited",
+   "agency_url": "https://www.baldheadisland.com",
+   "fee_permit": "Ferry fare applies, currently about $30 round trip per person",
+   "restrooms": "Y on the island",
+   "hours": "Ferry runs daily, check schedule at baldheadisland.com",
+   "motorized_allowed": "No, the island is golf cart only",
+   "part_of_park": "N",
+   "camping_available": "N",
+   "dogs_allowed": "Yes, leashed",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "hazards": "Cape Fear inlet is one of the most powerful on the East Coast. Paddling directly to Bald Head from Southport is only for experienced coastal kayakers with knowledge of tidal currents. The ferry is the safe option for most.",
+   "hazard_last_checked": "2026-08-01",
+   "photo_status": "Pending",
+   "notes_public": "A car-free barrier island with 14 miles of undeveloped beach and the oldest lighthouse in NC, Old Baldy, built in 1817. No cars allowed on the island. The Dutchman Creek ramp is the put-in for experienced paddlers making the crossing. Most visitors take the ferry. Worth knowing the ICW and the Cape Fear inlet current is extremely powerful — this crossing has taken lives.",
+   "last_verified": "2026-08-01",
+   "verification_source": "https://www.baldheadisland.com",
+   "swimming_allowed": "Yes, ocean beach",
+   "swim_area_here": "Yes, 14 miles of undeveloped beach",
+   "private_launch": "Yes",
+   "access_type": "Private ferry, open to public",
+   "region": "Coast"
   },
   {
    "spot_id": "bass-lake-holly-springs",
@@ -126,7 +194,43 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://triangleonthecheap.com/boat-rental-triangle/",
    "rentals": "Canoes and rowboats, plus a Gheenoe with a trolling motor. Hirers must be 16 or over. Seven days a week from Memorial Day to Labor Day. No paddleboards listed.",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
+  },
+  {
+   "spot_id": "black-river-beattys-bridge",
+   "name": "Beatty's Bridge Access, Black River",
+   "water_body": "Black River",
+   "water_type": "River",
+   "town": "Ivanhoe",
+   "county": "Pender",
+   "latitude": 34.5533187,
+   "longitude": -78.2544491,
+   "managing_agency": "Informal / roadside access",
+   "agency_url": "https://www.nature.org/en-us/get-involved/how-to-help/places-we-protect/black-river-preserve/",
+   "walk_to_water": "Steep path down the south bank just west of the bridge. Carry your boat down.",
+   "parking_spaces": "Roadside parking just west of the bridge",
+   "fee_permit": "None",
+   "restrooms": "None",
+   "hours": "Open 24 hours",
+   "motorized_allowed": "No, too shallow for motors",
+   "part_of_park": "N",
+   "camping_available": "N",
+   "dogs_allowed": "Yes, leashed",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "hazards": "Informal access with steep bank. Not suitable for motorboats. Fallen logs and strainers appear seasonally and are not mapped.",
+   "hazard_last_checked": "2026-08-01",
+   "wq_monitor_org": "Winyah Rivers Alliance",
+   "wq_org_url": "https://www.winyahrivers.org",
+   "photo_status": "Pending",
+   "notes_public": "The take-out for the classic Ivanhoe run and the gateway to Three Sisters Swamp, where the second oldest known living tree in the world grows. Access is informal — a steep sandy bank west of the bridge with roadside parking. The Nature Conservancy has protected land along this stretch. Water is shallow here and motorboats cannot access. A reviewer described the atmosphere as 'incredible' and found swimming at a sandy beach under the bridge.",
+   "last_verified": "2026-08-01",
+   "verification_source": "https://www.nature.org/en-us/get-involved/how-to-help/places-we-protect/black-river-preserve/",
+   "private_launch": "Yes",
+   "access_type": "Informal access, no facilities",
+   "region": "Coast",
+   "cell_signal": "Limited to none. Very remote."
   },
   {
    "spot_id": "lake-norman-beattys-ford",
@@ -158,7 +262,8 @@
    "swimming_allowed": "Yes, small beach area",
    "swim_area_here": "Yes, sandy shoreline area",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "lake-hickory-big-os",
@@ -186,7 +291,8 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.ncwildlife.org",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "lake-james-black-bear",
@@ -216,7 +322,8 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.ncwildlife.org",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Mountains"
   },
   {
    "spot_id": "blythe-landing",
@@ -248,7 +355,43 @@
    "verification_source": "https://parkandrec.mecknc.gov/Activities/boating-paddling",
    "private_launch": "Yes for private boats. Only county-approved hire companies may launch commercially.",
    "rentals": "Lake Norman Community Sailing, a nonprofit sailing centre, runs from here and its family membership covers kayaking and paddleboarding as well as sailing.",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
+  },
+  {
+   "spot_id": "bob-perry-ramp-kitty-hawk",
+   "name": "Bob Perry Road Boat Ramp",
+   "water_body": "Jean Guite Creek / Kitty Hawk Bay",
+   "water_type": "Flatwater",
+   "town": "Kitty Hawk",
+   "county": "Dare",
+   "latitude": 36.0644798,
+   "longitude": -75.7222595,
+   "managing_agency": "Dare County",
+   "agency_url": "https://www.darenc.com",
+   "launch_type": "Wide single lane ramp with courtesy dock, plus a hand-carry kayak dock",
+   "parking_spaces": "18 paved trailer spaces plus additional parking, picnic tables and grills",
+   "fee_permit": "None",
+   "restrooms": "Portable toilets April to November",
+   "ada_launch": "Yes, NCWRC lists this as universally accessible",
+   "hours": "Daylight hours",
+   "motorized_allowed": "Yes",
+   "part_of_park": "N",
+   "camping_available": "N",
+   "dogs_allowed": "Yes, leashed",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "hazards": "Tidal sound waters. Currents stronger than they look, especially on a running tide. Wind builds quickly on open sound water. Check forecast before going out.",
+   "hazard_last_checked": "2026-08-01",
+   "wq_monitor_org": "NC Coastal Federation",
+   "wq_org_url": "https://www.nccoast.org",
+   "photo_status": "Pending",
+   "notes_public": "Gateway to Kitty Hawk Woods Coastal Reserve. Paddle north through Jean Guite Creek into the reserve's maritime forest and marsh, or south to reach Kitty Hawk Bay. Local outfitters run guided tours north to a covered bridge and south through an atoll to a mini-cape on state land. The 2019 living shoreline installation makes this one of the most ecologically interesting launches on the OBX. One couple got engaged here.",
+   "last_verified": "2026-08-01",
+   "verification_source": "https://www.deq.nc.gov/about/divisions/nc-coastal-reserve/reserve-sites/kitty-hawk-woods-reserve",
+   "private_launch": "Yes",
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "brices-creek-croatan",
@@ -277,7 +420,8 @@
    "last_verified": "2026-08-01",
    "verification_source": "https://www.fs.usda.gov/croatan",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "haw-brooks-bridge",
@@ -309,7 +453,8 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.hawrivertrail.org/paddle-trail-overview",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "wilson-creek-brown-mountain",
@@ -335,7 +480,8 @@
    "verification_source": "https://brownmountainbeachresort.com",
    "private_launch": "Guests only",
    "rentals": "Kayaks, paddleboards, floating docks and tubes provided free to guests",
-   "access_type": "Private business, guests only"
+   "access_type": "Private business, guests only",
+   "region": "Mountains"
   },
   {
    "spot_id": "neuse-buffaloe",
@@ -366,7 +512,8 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://raleighnc.gov/river-access",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "haw-bynum-dam",
@@ -399,7 +546,8 @@
    "notes_public": "Flat for about a mile upstream of the dam, which makes this the gentlest water on the Lower Haw. Stay above the dam.",
    "last_verified": "2026-07-30",
    "verification_source": "https://www.lowerhaw.org/activities",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "haw-bynum-mill",
@@ -431,7 +579,8 @@
    "notes_public": "160 Bynum Church Road. This is the only developed, official paddle launch State Parks maintains in the whole state natural area. Everything else here is undeveloped.",
    "last_verified": "2026-07-30",
    "verification_source": "https://www.lowerhaw.org/activities",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "cahooque-creek-landing",
@@ -461,7 +610,8 @@
    "last_verified": "2026-08-01",
    "verification_source": "https://www.fs.usda.gov/croatan",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "cane-creek-park-union",
@@ -493,7 +643,8 @@
    "swim_area_here": "Yes, lifeguarded beach in summer",
    "private_launch": "Yes",
    "rentals": "Canoes, kayaks, paddleboards and pedal boats",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "cane-creek-reservoir",
@@ -524,7 +675,71 @@
    "swim_area_here": "No",
    "private_launch": "Yes, kayaks and canoes only. Paddleboards explicitly prohibited.",
    "rentals": "Kayaks, canoes and flat-bottomed boats available for hire on site",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
+  },
+  {
+   "spot_id": "carolina-beach-sp",
+   "name": "Carolina Beach State Park",
+   "water_body": "Cape Fear River / ICW",
+   "water_type": "Flatwater",
+   "town": "Carolina Beach",
+   "county": "New Hanover",
+   "latitude": 34.045936,
+   "longitude": -77.9138889,
+   "managing_agency": "NC State Parks",
+   "agency_url": "https://www.ncparks.gov/state-parks/carolina-beach-state-park",
+   "fee_permit": "None",
+   "restrooms": "Y, clean bath houses",
+   "hours": "7am to 9pm",
+   "motorized_allowed": "Yes",
+   "part_of_park": "Y",
+   "park_name": "Carolina Beach State Park",
+   "camping_available": "Y",
+   "camping_type": "Drive-in with full hookups, cabins and primitive sites",
+   "dogs_allowed": "Yes, leashed",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "hazards": "Cape Fear River currents and maritime traffic at the marina. Tidal waters. Currents stronger than they appear. Check tide tables and plan accordingly.",
+   "hazard_last_checked": "2026-08-01",
+   "wq_monitor_org": "Cape Fear River Watch",
+   "wq_org_url": "https://www.cfrw.org",
+   "photo_status": "Pending",
+   "notes_public": "Home to the Venus flytrap in its only native habitat in the world. The marina sits on the ICW with a boat launch and kayak rentals available as early as 7am. Miles of flat trails through maritime forest. Campsites, cabins and RV hookups. Ferry to Southport is close. A genuinely complete destination.",
+   "last_verified": "2026-08-01",
+   "verification_source": "https://www.ncparks.gov/state-parks/carolina-beach-state-park",
+   "private_launch": "Yes",
+   "access_type": "Public agency",
+   "region": "Coast"
+  },
+  {
+   "spot_id": "carolina-beach-annie-drive",
+   "name": "Carolina Beach Wildlife Boat Ramp",
+   "water_body": "Carolina Beach Inlet / ICW",
+   "water_type": "Flatwater",
+   "town": "Carolina Beach",
+   "county": "New Hanover",
+   "latitude": 34.057329,
+   "longitude": -77.892095,
+   "managing_agency": "NC Wildlife Resources Commission",
+   "agency_url": "https://www.ncwildlife.org",
+   "fee_permit": "None",
+   "hours": "Open 24 hours",
+   "motorized_allowed": "Yes",
+   "part_of_park": "N",
+   "camping_available": "N",
+   "dogs_allowed": "Yes, leashed",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "hazards": "ICW and inlet currents. Adjacent to Snow's Cut, Masonboro Island and the open ICW. Tidal waters. Currents stronger than they appear. Check tide tables and plan accordingly.",
+   "hazard_last_checked": "2026-08-01",
+   "photo_status": "Pending",
+   "notes_public": "Put-in for Snow's Cut to the west, the southern tip of Masonboro Island to the north, or the Intracoastal Waterway to the east. A versatile launch for experienced coastal paddlers.",
+   "last_verified": "2026-08-01",
+   "verification_source": "https://www.ncwildlife.org",
+   "private_launch": "Yes",
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "copperhead-island",
@@ -554,7 +769,8 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://parkandrec.mecknc.gov/Activities/boating-paddling",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "harris-crosspoint",
@@ -580,7 +796,8 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.ncwildlife.org",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "deep-river-park",
@@ -608,7 +825,8 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://en.wikipedia.org/wiki/Deep_River_Park,_North_Carolina",
    "private_launch": "Yes",
-   "access_type": "Private park, open to the public"
+   "access_type": "Private park, open to the public",
+   "region": "Piedmont"
   },
   {
    "spot_id": "deep-river-franklinville",
@@ -635,7 +853,41 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.piedmonttrails.org/deep-river-state-trail/",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
+  },
+  {
+   "spot_id": "dram-tree-park",
+   "name": "Dram Tree Park Boat Ramp",
+   "water_body": "Cape Fear River",
+   "water_type": "Flatwater",
+   "town": "Wilmington",
+   "county": "New Hanover",
+   "latitude": 34.2278305,
+   "longitude": -77.9496861,
+   "managing_agency": "City of Wilmington",
+   "agency_url": "https://www.wilmingtonnc.gov",
+   "launch_type": "Two concrete ramps",
+   "fee_permit": "None",
+   "hours": "6am to 6pm",
+   "motorized_allowed": "Yes",
+   "part_of_park": "Y",
+   "park_name": "Dram Tree Park",
+   "camping_available": "N",
+   "dogs_allowed": "Yes, leashed",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "hazards": "Strong Cape Fear River currents and heavy maritime traffic. This is not a beginner paddling route. The river is wide and tidal — plan around the tide. Cargo vessels and large ferries use this stretch. Tidal waters. Currents stronger than they appear. Check tide tables and plan accordingly.",
+   "hazard_last_checked": "2026-08-01",
+   "wq_monitor_org": "Cape Fear River Watch",
+   "wq_org_url": "https://www.cfrw.org",
+   "photo_status": "Pending",
+   "notes_public": "Downtown Wilmington's primary public boat ramp, under the Cape Fear Memorial Bridge. Scenic views of the USS North Carolina battleship across the river. The Cape Fear here is a working river — experienced paddlers only. Wheelchair access to a riverfront view. Free parking.",
+   "last_verified": "2026-08-01",
+   "verification_source": "https://www.wilmingtonnc.gov",
+   "private_launch": "Yes",
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "duck-town-park-soundside",
@@ -663,7 +915,39 @@
    "last_verified": "2026-08-01",
    "verification_source": "https://www.townofduck.com",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Coast"
+  },
+  {
+   "spot_id": "dutchman-creek-southport",
+   "name": "Dutchman Creek Boat Ramp",
+   "water_body": "Dutchman Creek / Cape Fear River",
+   "water_type": "Flatwater",
+   "town": "Southport",
+   "county": "Brunswick",
+   "latitude": 33.9280018,
+   "longitude": -78.0597798,
+   "managing_agency": "NC Wildlife Resources Commission",
+   "agency_url": "https://www.ncwildlife.org",
+   "launch_type": "Three single ramps with a separate T-dock",
+   "parking_spaces": "Good on regular days, crowded on holidays",
+   "fee_permit": "None",
+   "hours": "Open 24 hours",
+   "motorized_allowed": "Yes",
+   "part_of_park": "N",
+   "camping_available": "N",
+   "dogs_allowed": "Yes, leashed",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "hazards": "Access to the back side of Bald Head Island and the Cape Fear inlet. Strong tidal currents at the inlet and heavy maritime traffic in the channel. Not suitable for inexperienced coastal paddlers. Tidal coastal waters. Check tide tables and weather before launching.",
+   "hazard_last_checked": "2026-08-01",
+   "photo_status": "Pending",
+   "notes_public": "Put-in for the back side of Bald Head Island via the ICW. Clean and well maintained, with a separate passenger drop-off dock. Southern hospitality noted in multiple reviews — strangers help each other launch and nobody blocks others in. Keep Cape Fear current in mind.",
+   "last_verified": "2026-08-01",
+   "verification_source": "https://www.ncwildlife.org",
+   "private_launch": "Yes",
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "lake-gaston-eaton-ferry",
@@ -690,7 +974,8 @@
    "verification_source": "https://www.eatonferrymarina.com",
    "private_launch": "Yes",
    "rentals": "Pontoon boats, ski boats and fishing boats. Military discount available.",
-   "access_type": "Private marina, open to the public"
+   "access_type": "Private marina, open to the public",
+   "region": "Coast"
   },
   {
    "spot_id": "eno-red-mill",
@@ -711,7 +996,8 @@
    "notes_public": "Off Red Mill Road near Teknika Parkway in eastern Durham County. Deep flatwater, described as the most accessible launch on the Eno. Two miles upstream to the Little River confluence, two miles down to Falls Lake.",
    "last_verified": "2026-07-30",
    "verification_source": "https://www.enoriver.org/wp-content/uploads/2022/04/Paddling-the-Eno-River-long-version.pdf",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "eno-red-mill-ncwrc",
@@ -742,7 +1028,8 @@
    "last_verified": "2026-07-31",
    "verification_source": "https://www.ncwildlife.org",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "eno-cabelands",
@@ -774,7 +1061,8 @@
    "last_verified": "2026-07-31",
    "verification_source": "https://www.ncparks.gov/state-parks/eno-river-state-park",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "eno-cole-mill",
@@ -800,7 +1088,8 @@
    "notes_public": "Six miles of trail and a Cole Mill Road gauge nearby, so you can check the level for this exact stretch before driving out.",
    "last_verified": "2026-07-30",
    "verification_source": "https://www.ncparks.gov/state-parks/eno-river-state-park",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "eno-cole-mill-access",
@@ -833,7 +1122,8 @@
    "last_verified": "2026-07-31",
    "verification_source": "https://www.ncparks.gov/state-parks/eno-river-state-park",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "eno-fews-ford",
@@ -864,7 +1154,8 @@
    "notes_public": "Visitor centre access with the largest trail network in the park. The park itself describes the Eno as swift but often shallow, which makes paddling here level-dependent rather than reliable.",
    "last_verified": "2026-07-30",
    "verification_source": "https://www.ncparks.gov/state-parks/eno-river-state-park",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "eno-pleasant-green",
@@ -897,7 +1188,8 @@
    "last_verified": "2026-07-31",
    "verification_source": "https://www.ncparks.gov/state-parks/eno-river-state-park",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "eno-pump-station",
@@ -930,7 +1222,8 @@
    "last_verified": "2026-07-31",
    "verification_source": "https://www.ncparks.gov/state-parks/eno-river-state-park",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "neuse-falls-dam",
@@ -960,7 +1253,8 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://raleighnc.gov/river-access",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "falls-bw-wells",
@@ -992,7 +1286,8 @@
    "verification_source": "https://www.ncparks.gov/state-parks/falls-lake-state-recreation-area",
    "private_launch": "Campers only",
    "access_type": "Public agency",
-   "carry_yards": 300
+   "carry_yards": 300,
+   "region": "Piedmont"
   },
   {
    "spot_id": "falls-beaverdam",
@@ -1018,7 +1313,8 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.ncparks.gov/park-features/falls-lake-state-recreation-area-beaverdam-access-0",
    "private_launch": "Yes, at public ramps and designated launch sites only",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "falls-hwy50",
@@ -1050,7 +1346,8 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.ncparks.gov/state-parks/falls-lake-state-recreation-area",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "falls-rolling-view",
@@ -1085,7 +1382,8 @@
    "swim_area_here": "Yes, a lake beach",
    "private_launch": "Yes",
    "rentals": "A privately owned marina next door hires kayaks, canoes and paddleboards, and has a concession stand, slips and storage.",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "falls-sandling",
@@ -1119,7 +1417,8 @@
    "swimming_allowed": "Yes, in the designated area",
    "swim_area_here": "Yes, a sizeable swim beach",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "falls-shinleaf",
@@ -1152,7 +1451,8 @@
    "verification_source": "https://www.ncparks.gov/state-parks/falls-lake-state-recreation-area",
    "private_launch": "Campers only",
    "access_type": "Public agency",
-   "carry_yards": 1760
+   "carry_yards": 1760,
+   "region": "Piedmont"
   },
   {
    "spot_id": "farmer-lake",
@@ -1180,7 +1480,8 @@
    "verification_source": "https://www.caswellcountync.gov",
    "private_launch": "Yes",
    "rentals": "Kayaks available for hire on site",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "flanners-beach",
@@ -1210,7 +1511,8 @@
    "verification_source": "https://www.recreation.gov/camping/campgrounds/232457",
    "swimming_allowed": "Unknown, reviewer uncertain",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "fort-fisher-sra",
@@ -1244,7 +1546,8 @@
    "swimming_allowed": "Yes, ocean beach",
    "swim_area_here": "Yes, ocean beach, surf fishing and swimming",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "fort-macon-sp",
@@ -1278,7 +1581,8 @@
    "swimming_allowed": "Yes, an ocean beach",
    "swim_area_here": "Yes, lifeguarded ocean beach in season",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "french-broad-river-park-asheville",
@@ -1309,7 +1613,8 @@
    "last_verified": "2026-07-31",
    "verification_source": "https://frenchbroadpaddle.com",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Mountains"
   },
   {
    "spot_id": "glenburnie-park-nb",
@@ -1340,7 +1645,8 @@
    "last_verified": "2026-08-01",
    "verification_source": "https://www.newbern.com/boating-new-bern.html",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "haw-glencoe",
@@ -1371,7 +1677,8 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.hawrivertrail.org/paddle-trail-overview",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "goose-creek-sp",
@@ -1406,7 +1713,8 @@
    "swimming_allowed": "Yes, a river beach area",
    "swim_area_here": "Yes, sandy river beach",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "gorges-frozen-creek",
@@ -1437,7 +1745,9 @@
    "last_verified": "2026-07-31",
    "verification_source": "https://www.ncparks.gov/state-parks/gorges-state-park",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Mountains",
+   "cell_signal": "None at the far end of the park."
   },
   {
    "spot_id": "haw-graham",
@@ -1470,7 +1780,8 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.hawrivertrail.org/paddle-trail-overview",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "haw-great-bend",
@@ -1503,7 +1814,41 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.hawrivertrail.org/paddle-trail-overview",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
+  },
+  {
+   "spot_id": "greenfield-lake",
+   "name": "Greenfield Lake Boathouse",
+   "water_body": "Greenfield Lake",
+   "water_type": "Flatwater",
+   "town": "Wilmington",
+   "county": "New Hanover",
+   "latitude": 34.2137717,
+   "longitude": -77.9440411,
+   "managing_agency": "City of Wilmington / Cape Fear River Watch",
+   "agency_url": "https://www.cfrw.org",
+   "fee_permit": "None",
+   "hours": "Wednesday to Sunday 11am to 5pm. Closed Monday and Tuesday.",
+   "motorized_allowed": "No",
+   "part_of_park": "Y",
+   "park_name": "Greenfield Lake Park",
+   "camping_available": "N",
+   "dogs_allowed": "Yes, leashed",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "hazards": "Alligators present and regularly sighted. Reviewers report two at a time, small and mid-size. They keep their distance but do not approach or feed them.",
+   "hazard_last_checked": "2026-08-01",
+   "wq_monitor_org": "Cape Fear River Watch",
+   "wq_org_url": "https://www.cfrw.org",
+   "photo_status": "Pending",
+   "notes_public": "A mile-long cypress-lined lake ten minutes from downtown Wilmington, draped with Spanish moss. Described by multiple sources as one of the prettiest paddles in the city. No currents, no tides, no motor boats — genuinely beginner-friendly. Come early on weekends, the boathouse gets busy by noon. Cape Fear River Watch runs the rentals, which keeps prices reasonable.",
+   "last_verified": "2026-08-01",
+   "verification_source": "https://www.cfrw.org",
+   "private_launch": "Yes",
+   "rentals": "Single kayaks, tandem kayaks, paddleboards, canoes and paddleboats. Operated by Cape Fear River Watch.",
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "tar-town-common",
@@ -1533,7 +1878,8 @@
    "last_verified": "2026-07-31",
    "verification_source": "https://soundrivers.org/port-terminal-kayak-launch-now-open-for-launching/",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "hammocks-beach-ferry",
@@ -1566,7 +1912,8 @@
    "swimming_allowed": "Yes, Bear Island has an undeveloped ocean beach",
    "swim_area_here": "No, swim beach is on Bear Island across the water",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "hanging-rock-dan",
@@ -1587,7 +1934,8 @@
    "notes_public": "Dedicated paddling access on the Dan, linked to the main park area by the Indian Creek Trail.",
    "last_verified": "2026-07-30",
    "verification_source": "https://www.ncparks.gov/park-features/hanging-rock-state-park-dan-river-access",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Mountains"
   },
   {
    "spot_id": "french-broad-hap-simpson",
@@ -1619,7 +1967,8 @@
    "last_verified": "2026-07-31",
    "verification_source": "https://frenchbroadpaddle.com",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Mountains"
   },
   {
    "spot_id": "harris-lake-park",
@@ -1649,7 +1998,8 @@
    "private_launch": "Yes, cartop craft only",
    "rentals": "None in the park",
    "access_type": "Public agency",
-   "carry_yards": 150
+   "carry_yards": 150,
+   "region": "Piedmont"
   },
   {
    "spot_id": "french-broad-headwaters",
@@ -1682,7 +2032,8 @@
    "verification_source": "https://headwatersoutfitters.com",
    "private_launch": "Customers only, via private river access 1 mile from shop",
    "rentals": "Canoes, kayaks. Self-guided 3-hour and 4 and 7-hour trips on Tuesdays. River trips cancelled at 3ft on the Rosman USGS gauge.",
-   "access_type": "Private outfitter"
+   "access_type": "Private outfitter",
+   "region": "Mountains"
   },
   {
    "spot_id": "lake-james-hidden-cove",
@@ -1712,7 +2063,37 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.ncparks.gov/state-parks/lake-james-state-park",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Mountains"
+  },
+  {
+   "spot_id": "holden-beach-ramp",
+   "name": "Holden Beach Public Boat Ramp",
+   "water_body": "Lockwood Folly River",
+   "water_type": "Flatwater",
+   "town": "Holden Beach",
+   "county": "Brunswick",
+   "latitude": 33.9162475,
+   "longitude": -78.267491,
+   "managing_agency": "NC Wildlife Resources Commission",
+   "agency_url": "https://www.ncwildlife.org",
+   "parking_spaces": "Limited free spaces fill by 5am on fishing tournament weekends. Paid parking nearby.",
+   "fee_permit": "None",
+   "motorized_allowed": "Yes",
+   "part_of_park": "N",
+   "camping_available": "N",
+   "dogs_allowed": "Yes, leashed",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "hazards": "Ramps are slippery and flanked by sharp metal and oyster beds. Reviewer specifically warned of serious injury risk from a small slip. Very steep at low tide. Beginners should use a different access. Tidal waters. Currents stronger than they appear. Check tide tables and plan accordingly.",
+   "hazard_last_checked": "2026-08-01",
+   "photo_status": "Pending",
+   "notes_public": "Main public ramp on the Lockwood Folly River at Holden Beach. Charter boats dominate the free parking by 5am on tournament weekends. Ocean Isle Beach ramp is recommended as safer with more and free parking.",
+   "last_verified": "2026-08-01",
+   "verification_source": "https://www.ncwildlife.org",
+   "private_launch": "Yes",
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "harris-hollemans-crossing",
@@ -1738,7 +2119,39 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.ncwildlife.org",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
+  },
+  {
+   "spot_id": "black-river-ivanhoe",
+   "name": "Ivanhoe Boating Access Area",
+   "water_body": "Black River",
+   "water_type": "River",
+   "town": "Ivanhoe",
+   "county": "Sampson",
+   "latitude": 34.6039144,
+   "longitude": -78.241219,
+   "managing_agency": "NC Wildlife Resources Commission",
+   "agency_url": "https://www.ncwildlife.org",
+   "launch_type": "Concrete ramp",
+   "fee_permit": "None",
+   "hours": "Open 24 hours",
+   "motorized_allowed": "Yes",
+   "part_of_park": "N",
+   "camping_available": "N",
+   "dogs_allowed": "Yes, leashed",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "wq_monitor_org": "Winyah Rivers Alliance",
+   "wq_org_url": "https://www.winyahrivers.org",
+   "photo_status": "Pending",
+   "notes_public": "The main put-in for the Black River, one of the most extraordinary paddling rivers in North Carolina. The river holds the oldest known trees east of the Rocky Mountains — ancient bald cypress in the Three Sisters Swamp, some more than 2,600 years old. Named an Outstanding Resource Water by the state in 1994. Peaceful, mild current, no bugs reported on weekdays. The most popular section runs 7.6 miles from here to Beatty's Bridge. Mahanaim Adventures runs guided tours from this access.",
+   "last_verified": "2026-08-01",
+   "verification_source": "https://www.visitsampsonnc.com/partners/black-river-ivanhoe-boat-ramp/",
+   "private_launch": "Yes",
+   "access_type": "Public agency",
+   "region": "Coast",
+   "cell_signal": "Limited. Rural Sampson County."
   },
   {
    "spot_id": "jockeys-ridge-soundside",
@@ -1773,7 +2186,8 @@
    "swimming_allowed": "Yes, though a bacteria advisory was posted as of August 2026",
    "swim_area_here": "Yes, sound beach — but check current advisories before swimming",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "jones-lake-sp",
@@ -1807,7 +2221,8 @@
    "swim_area_here": "Yes, swim area kept separate from the paddling and fishing",
    "private_launch": "Yes",
    "rentals": "Kayaks and canoes on site",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "jordan-crosswinds",
@@ -1838,7 +2253,8 @@
    "swim_area_here": "Yes, campers only",
    "private_launch": "Yes, at public ramps and designated launch sites only",
    "rentals": "Privately owned marina nearby hires fishing boats, kayaks and paddleboards",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "jordan-ebenezer",
@@ -1868,7 +2284,8 @@
    "swimming_allowed": "Designated areas only",
    "swim_area_here": "Yes, designated",
    "private_launch": "Yes, at public ramps and designated launch sites only",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "jordan-new-hope-overlook",
@@ -1898,7 +2315,8 @@
    "swimming_allowed": "Designated areas only",
    "swim_area_here": "No",
    "private_launch": "Yes, at public ramps and designated launch sites only",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "jordan-parkers-creek",
@@ -1928,7 +2346,8 @@
    "swimming_allowed": "Designated areas only",
    "swim_area_here": "Yes, designated",
    "private_launch": "Yes, at public ramps and designated launch sites only",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "jordan-poplar-point",
@@ -1958,7 +2377,8 @@
    "swimming_allowed": "Designated areas only",
    "swim_area_here": "Yes, designated",
    "private_launch": "Yes, at public ramps and designated launch sites only",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "jordan-seaforth",
@@ -1988,7 +2408,8 @@
    "swimming_allowed": "Designated areas only",
    "swim_area_here": "Yes, designated",
    "private_launch": "Yes, at public ramps and designated launch sites only",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "jordan-vista-point",
@@ -2018,7 +2439,8 @@
    "swimming_allowed": "Designated areas only",
    "swim_area_here": "Yes, designated",
    "private_launch": "Yes, at public ramps and designated launch sites only",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "jordan-white-oak",
@@ -2048,7 +2470,8 @@
    "swimming_allowed": "Designated areas only",
    "swim_area_here": "Yes, when not reserved",
    "private_launch": "Yes, at public ramps and designated launch sites only",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "jordan-farrington-point",
@@ -2073,13 +2496,14 @@
    "rapids_class_min": 0,
    "rapids_class_max": 0,
    "photo_status": "Pending",
-   "notes_public": "The north end of the lake and the busiest tournament ramp on Jordan — nearly every bass tournament launches here because it is free and open around the clock. Four ramps for trailered boats on the right and a separate dedicated launch on the left for canoes and kayaks. Despite the tournament traffic, paddlers say waits rarely exceed ten minutes and are usually none at all.",
+   "notes_public": "The north end of the lake and the busiest tournament ramp on Jordan — nearly every bass tournament launches here because it is free and open around the clock. Four ramps for trailered boats on the right and a separate dedicated launch on the left for canoes and kayaks. Despite the tournament traffic, paddlers say waits rarely exceed ten minutes and are usually none at all.\n\nCommunity destinations from the Triangle SUP Facebook group, distances approximate from Farrington Point Launch: Enchanted Lagoon and Forest 0.6 mi, Sassy Sands 0.75 mi, China Beach 1 mi, Te' Fiti 1 mi, Whale's Tail 1.5 mi, Tranquility Cove 1.5 mi, The Pipe 1.5 mi, Eagles Pass 2 mi, Fantasy Island 2 mi, The Crayons (buoys) 2 mi, Nude Beach 3 mi, The Riverlands 3.5 mi, The Towers 4 mi, Far Away 5+ mi. Destinations like Duck Island, Otter Beach, Butterfly Bayou, Promised Land, Catwalk, Sweet Spot and Jet Ski Paradise (0.0 mi, directly across) are also named on the map. These are paddler-named spots, not official designations.",
    "last_verified": "2026-07-31",
    "verification_source": "https://www.ncwildlife.org",
    "swimming_allowed": "Yes, designated areas elsewhere on the lake",
    "swim_area_here": "Small beach area, not a designated swim beach",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "jordan-poes-ridge",
@@ -2112,7 +2536,8 @@
    "swimming_allowed": "Yes, designated areas elsewhere on the lake",
    "swim_area_here": "No",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "kerr-bullocksville",
@@ -2137,7 +2562,8 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.ncparks.gov/park-features/kerr-lake-state-recreation-area-bullocksville-access",
    "private_launch": "Yes, at public ramps and designated launch sites only",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "kerr-county-line",
@@ -2166,7 +2592,8 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.ncparks.gov/park-features/kerr-lake-state-recreation-area-county-line-access",
    "private_launch": "Yes, at public ramps and designated launch sites only",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "kerr-henderson-point",
@@ -2193,7 +2620,8 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.ncparks.gov/park-features/kerr-lake-state-recreation-area-henderson-point-access",
    "private_launch": "Yes, at public ramps and designated launch sites only",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "kerr-hibernia",
@@ -2220,7 +2648,8 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.ncparks.gov/park-features/kerr-lake-state-recreation-area-hibernia-access",
    "private_launch": "Yes, at public ramps and designated launch sites only",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "kerr-jc-cooper",
@@ -2247,7 +2676,8 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.ncparks.gov/park-features/kerr-lake-state-recreation-area-jc-cooper-campground",
    "private_launch": "Yes, at public ramps and designated launch sites only",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "kerr-kimball-point",
@@ -2272,7 +2702,8 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.ncparks.gov/park-features/kerr-lake-state-recreation-area-kimball-point-access",
    "private_launch": "Yes, at public ramps and designated launch sites only",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "kerr-nutbush",
@@ -2299,7 +2730,8 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.ncparks.gov/park-features/kerr-lake-state-recreation-area-nutbush-bridge-access",
    "private_launch": "Yes, at public ramps and designated launch sites only",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "kerr-satterwhite",
@@ -2328,7 +2760,8 @@
    "swimming_allowed": "Designated areas only",
    "swim_area_here": "Yes, the only designated swim beach in the park",
    "private_launch": "Yes, at public ramps and designated launch sites only",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "lake-benson",
@@ -2354,7 +2787,8 @@
    "verification_source": "https://www.garnernc.gov",
    "private_launch": "No. Boathouse craft only.",
    "rentals": "Jon boats, kayaks and canoes from the boathouse. Trolling motor available.",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "lake-brandt",
@@ -2387,7 +2821,8 @@
    "swim_area_here": "No",
    "private_launch": "Yes",
    "rentals": "Solo kayak about $15, tandem about $25, paddleboard about $15. Hire runs 1 May to 31 October, first come first served, with no time limit. Renters must be 16 or over. Ages 9 to 15 may paddle a solo boat with a signed waiver and a parent alongside in another boat. Under 9 must share a tandem with an adult. These age rules apply to private boats too.",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "lake-crabtree",
@@ -2413,7 +2848,8 @@
    "verification_source": "https://triangleonthecheap.com/boat-rental-triangle/",
    "private_launch": "Yes, year-round launch area",
    "rentals": "Canoes, kayaks, rowboats, pedal boats and paddleboards, free of charge with valid ID",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "lake-devin",
@@ -2439,7 +2875,8 @@
    "last_verified": "2026-07-31",
    "verification_source": "https://www.oxfordnc.org",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "lake-higgins",
@@ -2468,7 +2905,8 @@
    "swim_area_here": "No",
    "private_launch": "Yes",
    "rentals": "Solo kayak about $15, tandem about $25, paddleboard about $15, canoe about $25. Higgins is the only one of the three city lakes that hires canoes. Hire runs 1 May to 31 October, first come first served, with no time limit. Renters must be 16 or over. Ages 9 to 15 may paddle a solo boat with a signed waiver and a parent alongside in another boat. Under 9 must share a tandem with an adult. These age rules apply to private boats too.",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "lake-james-catawba-river",
@@ -2499,7 +2937,8 @@
    "verification_source": "https://www.ncparks.gov/park-features/lake-james-state-park-catawba-river-access",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "carry_yards": 1760
+   "carry_yards": 1760,
+   "region": "Mountains"
   },
   {
    "spot_id": "lake-james-paddys-creek",
@@ -2532,7 +2971,8 @@
    "swim_area_here": "Yes, a large sandy swim beach",
    "private_launch": "Yes",
    "rentals": "Canoes and kayaks on site",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Mountains"
   },
   {
    "spot_id": "lake-johnson",
@@ -2560,7 +3000,8 @@
    "verification_source": "https://raleighnc.gov/parks-and-recreation/places/lake-johnson-park",
    "private_launch": "Yes",
    "rentals": "Kayaks and paddleboards from WakeRack lockers by the Waterfront Center. Pedal boats, canoes and fishing boats through the park.",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "lake-mackintosh",
@@ -2589,7 +3030,8 @@
    "swim_area_here": "No",
    "private_launch": "Yes",
    "rentals": "Kayaks, canoes and paddleboards",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "lake-michie",
@@ -2616,7 +3058,8 @@
    "notes_public": "One of the very few launches in the region with an ADA accessible boat house, dock and canoe/kayak launch. Non-motorized only, covering canoes, kayaks, paddleboards and sailboats, so it stays quiet.",
    "last_verified": "2026-07-30",
    "verification_source": "https://www.dprplaymore.org/455/Lake-Michie",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "lake-norman-sp",
@@ -2644,7 +3087,8 @@
    "verification_source": "https://www.ncparks.gov/park-features/lake-norman-state-park",
    "private_launch": "Yes, at public ramps and designated launch sites only",
    "rentals": "Boat hire on site",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "lake-norman-ymca",
@@ -2673,7 +3117,8 @@
    "swim_area_here": "Yes, lifeguarded",
    "private_launch": "Members only. Nationwide YMCA memberships are accepted.",
    "rentals": "Canoes, kayaks and paddleboards provided free to members, plus inflatables in the cove",
-   "access_type": "Nonprofit, membership required"
+   "access_type": "Nonprofit, membership required",
+   "region": "Piedmont"
   },
   {
    "spot_id": "lake-thom-a-lex",
@@ -2702,7 +3147,8 @@
    "verification_source": "https://www.lexingtonnc.gov",
    "swim_area_here": "No",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "lake-townsend",
@@ -2736,7 +3182,39 @@
    "swim_area_here": "No",
    "private_launch": "Yes",
    "rentals": "Solo kayak about $15, tandem about $25, and rowboats. No paddleboard hire listed here, unlike Brandt and Higgins. Sailboats can be hired with prior experience. Hire runs 1 May to 31 October, first come first served, with no time limit. Renters must be 16 or over. Ages 9 to 15 may paddle a solo boat with a signed waiver and a parent alongside in another boat. Under 9 must share a tandem with an adult. These age rules apply to private boats too.",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
+  },
+  {
+   "spot_id": "lake-waccamaw-ncwrc",
+   "name": "Lake Waccamaw NCWRC Boat Ramp",
+   "water_body": "Lake Waccamaw",
+   "water_type": "Flatwater",
+   "town": "Lake Waccamaw",
+   "county": "Columbus",
+   "latitude": 34.3005719,
+   "longitude": -78.5521214,
+   "managing_agency": "NC Wildlife Resources Commission",
+   "agency_url": "https://www.ncwildlife.org",
+   "launch_type": "Double concrete ramps with large L-shaped floating dock",
+   "parking_spaces": "Large lot across the street",
+   "fee_permit": "None",
+   "hours": "Open 24 hours",
+   "motorized_allowed": "Yes",
+   "part_of_park": "N",
+   "camping_available": "N",
+   "dogs_allowed": "Yes, leashed",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "wq_monitor_org": "Winyah Rivers Alliance",
+   "wq_org_url": "https://www.winyahrivers.org",
+   "photo_status": "Pending",
+   "notes_public": "The public ramp for Lake Waccamaw, one of the most ecologically unique lakes on Earth. Despite its size the lake is only ten feet at its deepest, so only small craft are practical. Well maintained double ramps with a recently added L-shaped floating dock. Gets busy on summer weekends. The state park's boat ramp sits separately and is for non-motorised craft.",
+   "last_verified": "2026-08-01",
+   "verification_source": "https://www.ncwildlife.org",
+   "private_launch": "Yes",
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "lake-waccamaw-sp",
@@ -2768,7 +3246,8 @@
    "swimming_allowed": "No swimming allowed in the park",
    "swim_area_here": "No",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "lake-wheeler",
@@ -2799,7 +3278,8 @@
    "swim_area_here": "No",
    "private_launch": "Yes, with a launch pass",
    "rentals": "Kayaks and paddleboards from WakeRack self-service lockers near the Waterfront Center, booked online",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "latta-preserve",
@@ -2826,7 +3306,8 @@
    "verification_source": "https://parkandrec.mecknc.gov/Activities/boating-paddling",
    "private_launch": "Yes",
    "rentals": "Mountain Island Lake Paddle Company will deliver boards and kayaks to the launches",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "lake-tillery-lillys-bridge",
@@ -2852,7 +3333,8 @@
    "verification_source": "https://www.lillysbridgemarina.com",
    "private_launch": "Yes",
    "rentals": "Kayaks and paddleboard hire, plus pontoon boats. Restaurant on site.",
-   "access_type": "Private marina, open to the public"
+   "access_type": "Private marina, open to the public",
+   "region": "Piedmont"
   },
   {
    "spot_id": "little-river-durham",
@@ -2877,7 +3359,8 @@
    "verification_source": "https://www.dprplaymore.org",
    "private_launch": "No. Hired craft only, and private trolling motors are not permitted.",
    "rentals": "Kayaks, canoes and jon boats with trolling motors. Bring your own battery.",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "lumber-river-chalk-banks",
@@ -2910,7 +3393,43 @@
    "verification_source": "https://www.ncparks.gov/state-parks/lumber-river-state-park",
    "swimming_allowed": "No",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Coast"
+  },
+  {
+   "spot_id": "lumber-river-princess-ann",
+   "name": "Lumber River SP, Princess Ann Access",
+   "water_body": "Lumber River",
+   "water_type": "River",
+   "town": "Orrum",
+   "county": "Robeson",
+   "latitude": 34.3890979,
+   "longitude": -79.0011716,
+   "managing_agency": "NC State Parks",
+   "agency_url": "https://www.ncparks.gov/state-parks/lumber-river-state-park",
+   "fee_permit": "None",
+   "restrooms": "Y, clean pit toilets and water faucets",
+   "hours": "7am to 9pm",
+   "motorized_allowed": "No",
+   "part_of_park": "Y",
+   "park_name": "Lumber River State Park",
+   "camping_available": "Y",
+   "camping_type": "Drive-in, walk-in group, and paddle-in sites",
+   "dogs_allowed": "Yes, leashed",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "hazards": "River levels vary significantly. At very low water, fallen trees are uncovered and may require portaging. Wire Pasture access is closed until further notice due to illegal activity — confirm you are heading to Princess Ann or Chalk Banks, not Wire Pasture. Bug spray is essential, especially in summer.",
+   "hazard_last_checked": "2026-08-01",
+   "wq_monitor_org": "Winyah Rivers Alliance",
+   "wq_org_url": "https://www.winyahrivers.org",
+   "photo_status": "Pending",
+   "notes_public": "The main access for the Lumber River, North Carolina's only National Wild and Scenic blackwater river. Griffin's Whirl, a rare reverse-flow section of the river below the bluff, is directly accessible from here. Paddle-in camping on sandy beaches. A reviewer described it as 'a place to gather your molecules and restore internal balance.' Rangers patrol regularly and the park is kept clean. Princess Ann and Chalk Banks are an hour apart — confirm which access you need before driving.",
+   "last_verified": "2026-08-01",
+   "verification_source": "https://www.ncparks.gov/park-features/lumber-river-state-park-princess-ann-access",
+   "private_launch": "Yes",
+   "access_type": "Public agency",
+   "region": "Coast",
+   "cell_signal": "Limited. Very rural Robeson County, spotty coverage."
   },
   {
    "spot_id": "manteo-waterfront-ramp",
@@ -2939,7 +3458,8 @@
    "last_verified": "2026-08-01",
    "verification_source": "https://www.townofmanteo.com",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "mayo-anglin-mill",
@@ -2957,7 +3477,8 @@
    "notes_public": "Mayo Beach and the Boiling Hole are here. No restrooms, so plan around that.",
    "last_verified": "2026-07-30",
    "verification_source": "https://www.ncparks.gov/park-features/mayo-river-state-park-anglin-mill-access",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Mountains"
   },
   {
    "spot_id": "mayo-mayodan",
@@ -2978,7 +3499,8 @@
    "notes_public": "Put in on the Mayo and paddle down into the Dan.",
    "last_verified": "2026-07-30",
    "verification_source": "https://www.ncparks.gov/park-features/mayo-river-state-park-mayodan-access",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Mountains"
   },
   {
    "spot_id": "mcdowell-nature",
@@ -3008,7 +3530,8 @@
    "verification_source": "https://parkandrec.mecknc.gov/Activities/boating-paddling",
    "private_launch": "Yes, bring your own canoe, kayak or paddleboard",
    "rentals": "None for hire, but guided programmes provide boats",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "medoc-mountain",
@@ -3031,7 +3554,8 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.ncparks.gov/park-features/medoc-mountain-state-park",
    "private_launch": "Yes, at public ramps and designated launch sites only",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "merchants-millpond",
@@ -3062,7 +3586,9 @@
    "swimming_allowed": "No",
    "swim_area_here": "No",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Coast",
+   "cell_signal": "Very limited. Essentially no cell service in most of the park."
   },
   {
    "spot_id": "morrow-mountain",
@@ -3089,7 +3615,8 @@
    "verification_source": "https://www.ncparks.gov/park-features/morrow-mountain-state-park",
    "private_launch": "Yes, at public ramps and designated launch sites only",
    "rentals": "Boat hire on site",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "mt-holly-landing",
@@ -3121,7 +3648,8 @@
    "verification_source": "https://www.gogastonnc.org/places/aquatic-adventures",
    "private_launch": "Yes, for a small per person fee",
    "rentals": "Kayaks and paddleboards on site. Aquatic Adventures runs guided trips and full moon paddles from here.",
-   "access_type": "Private business"
+   "access_type": "Private business",
+   "region": "Piedmont"
   },
   {
    "spot_id": "neuse-adventures-clayton",
@@ -3145,7 +3673,8 @@
    "verification_source": "https://neuseadventures.com",
    "private_launch": "Customers only",
    "rentals": "Canoes and kayaks with shuttle service. Two-hour and five-mile float options.",
-   "access_type": "Private outfitter"
+   "access_type": "Private outfitter",
+   "region": "Piedmont"
   },
   {
    "spot_id": "new-river-elk-shoals",
@@ -3178,7 +3707,8 @@
    "swimming_allowed": "Yes, Elk Shoals has a sandy beach swim area",
    "swim_area_here": "Yes, sandy beach",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Mountains"
   },
   {
    "spot_id": "new-river-kings-creek",
@@ -3209,7 +3739,9 @@
    "last_verified": "2026-07-31",
    "verification_source": "https://www.ncparks.gov/state-parks/new-river-state-park",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Mountains",
+   "cell_signal": "Limited, rural Alleghany County."
   },
   {
    "spot_id": "new-river-us221",
@@ -3242,7 +3774,8 @@
    "swimming_allowed": "Yes, at Elk Shoals access area",
    "swim_area_here": "No, swim beach is at Elk Shoals",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Mountains"
   },
   {
    "spot_id": "new-river-wagoner",
@@ -3274,7 +3807,8 @@
    "last_verified": "2026-07-31",
    "verification_source": "https://www.ncparks.gov/state-parks/new-river-state-park",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Mountains"
   },
   {
    "spot_id": "oak-hollow",
@@ -3303,7 +3837,39 @@
    "swim_area_here": "No",
    "private_launch": "Yes",
    "rentals": "Kayaks solo and tandem, paddleboards and sailboats",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
+  },
+  {
+   "spot_id": "ocean-isle-ncwrc",
+   "name": "Ocean Isle Beach NCWRC Boat Ramp",
+   "water_body": "Intracoastal Waterway",
+   "water_type": "Flatwater",
+   "town": "Ocean Isle Beach",
+   "county": "Brunswick",
+   "latitude": 33.8948332,
+   "longitude": -78.4393717,
+   "managing_agency": "NC Wildlife Resources Commission",
+   "agency_url": "https://www.ncwildlife.org",
+   "launch_type": "Double ramps",
+   "parking_spaces": "Generous, recommended over Holden Beach for ease",
+   "fee_permit": "None",
+   "hours": "Open 24 hours",
+   "motorized_allowed": "Yes",
+   "part_of_park": "N",
+   "camping_available": "N",
+   "dogs_allowed": "Yes, leashed",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "hazards": "Tidal coastal waters. Check tide tables and weather before launching.",
+   "hazard_last_checked": "2026-08-01",
+   "photo_status": "Pending",
+   "notes_public": "The Brunswick Islands' most recommended public ramp — better sheltered from wind and current than Holden Beach, easier to manoeuvre, and free. Paddlers looking at Holden Beach are directed here by reviewers. Seafood restaurants within walking distance.",
+   "last_verified": "2026-08-01",
+   "verification_source": "https://www.ncwildlife.org",
+   "private_launch": "Yes",
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "haw-old-bynum-bridge",
@@ -3335,7 +3901,39 @@
    "notes_public": "Parking on the east side of Bynum Road. Downstream from here to US 64 is rated by the state natural area for intermediate to advanced paddlers only.",
    "last_verified": "2026-07-30",
    "verification_source": "https://www.lowerhaw.org/activities",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
+  },
+  {
+   "spot_id": "oregon-inlet-fishing-center",
+   "name": "Oregon Inlet Fishing Center",
+   "water_body": "Oregon Inlet / Pamlico Sound",
+   "water_type": "Flatwater",
+   "town": "Nags Head",
+   "county": "Dare",
+   "latitude": 35.79705,
+   "longitude": -75.5477875,
+   "managing_agency": "Oregon Inlet Fishing Center LLC",
+   "agency_url": "https://www.oregoninletfishing.com",
+   "parking_spaces": "About 45 trailer spaces",
+   "fee_permit": "Ramp fee applies",
+   "restrooms": "Y, plus gas, snacks and tackle on site",
+   "hours": "6am to 8pm",
+   "motorized_allowed": "Yes",
+   "part_of_park": "N",
+   "camping_available": "N",
+   "dogs_allowed": "Yes, leashed",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "hazards": "Oregon Inlet is one of the most dangerous inlets on the East Coast. Strong tidal currents, shifting sandbars and ocean swells make this unsuitable for paddlers except those with significant open-water coastal experience. Tidal sound waters. Currents stronger than they look, especially on a running tide. Wind builds quickly on open sound water. Check forecast before going out.",
+   "hazard_last_checked": "2026-08-01",
+   "photo_status": "Pending",
+   "notes_public": "A full-service marina adjacent to the Bonner Bridge, with a charter fishing fleet and a view of Bodie Island Lighthouse. The inlet itself is hazardous for small craft. Included for completeness as the main southern OBX sound access, but paddlers should use the sound side ramps further north rather than launching into the inlet.",
+   "last_verified": "2026-08-01",
+   "verification_source": "https://www.oregoninletfishing.com",
+   "private_launch": "Yes",
+   "access_type": "Private marina, open to public for ramp use",
+   "region": "Coast"
   },
   {
    "spot_id": "pea-island-kayak-launch",
@@ -3365,7 +3963,8 @@
    "last_verified": "2026-08-01",
    "verification_source": "https://www.fws.gov/refuge/pea-island",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "pettigrew-lake-phelps",
@@ -3396,7 +3995,9 @@
    "swimming_allowed": "No",
    "swim_area_here": "No",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Coast",
+   "cell_signal": "Limited. Washington County, very rural."
   },
   {
    "spot_id": "pilot-ivy-bluff",
@@ -3419,7 +4020,8 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.ncparks.gov/park-features/pilot-mountain-state-park-ivy-bluff-access",
    "access_type": "Public agency",
-   "carry_yards": 880
+   "carry_yards": 880,
+   "region": "Mountains"
   },
   {
    "spot_id": "pilot-shoals",
@@ -3436,7 +4038,8 @@
    "notes_public": "Paddling launch for the Yadkin, doubling as a fishing access.",
    "last_verified": "2026-07-30",
    "verification_source": "https://www.ncparks.gov/park-features/pilot-mountain-state-park-shoals-fishing-area",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Mountains"
   },
   {
    "spot_id": "belews-piney-bluff",
@@ -3463,7 +4066,8 @@
    "verification_source": "https://www.ncwildlife.org",
    "swim_area_here": "No",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Mountains"
   },
   {
    "spot_id": "neuse-poole-road",
@@ -3492,7 +4096,8 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://raleighnc.gov/river-access",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "tar-port-terminal",
@@ -3521,7 +4126,8 @@
    "last_verified": "2026-07-31",
    "verification_source": "https://soundrivers.org/port-terminal-kayak-launch-now-open-for-launching/",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "ramseur-lake",
@@ -3550,7 +4156,8 @@
    "verification_source": "https://www.ramseur.org",
    "private_launch": "Yes",
    "rentals": "None confirmed",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "ramsey-creek",
@@ -3584,7 +4191,8 @@
    "swimming_allowed": "Yes, at the seasonal beach",
    "swim_area_here": "Yes, lifeguarded in season",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "randleman-lake",
@@ -3611,7 +4219,8 @@
    "swimming_allowed": "No. Entering the water at all is prohibited, as this is a drinking water reservoir.",
    "swim_area_here": "No",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "raven-rock",
@@ -3634,7 +4243,8 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.ncparks.gov/park-features/raven-rock-state-park",
    "private_launch": "Yes, at public ramps and designated launch sites only",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "neuse-river-bend",
@@ -3666,7 +4276,8 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://raleighnc.gov/river-access",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "river-park-north",
@@ -3697,7 +4308,72 @@
    "swimming_allowed": "No, not recommended in the river",
    "swim_area_here": "No",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Coast"
+  },
+  {
+   "spot_id": "river-road-park-wil",
+   "name": "River Road Park",
+   "water_body": "Cape Fear River",
+   "water_type": "Flatwater",
+   "town": "Wilmington",
+   "county": "New Hanover",
+   "latitude": 34.1144257,
+   "longitude": -77.9232945,
+   "managing_agency": "New Hanover County Parks",
+   "agency_url": "https://www.nhcgov.com",
+   "launch_type": "Single concrete ramp plus a kayak and paddleboard launch",
+   "fee_permit": "None",
+   "restrooms": "Y",
+   "hours": "8am to 8pm",
+   "motorized_allowed": "Yes",
+   "part_of_park": "Y",
+   "park_name": "River Road Park",
+   "camping_available": "N",
+   "dogs_allowed": "Yes, leashed",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "hazards": "Cape Fear River currents and maritime traffic. Tidal waters. Currents stronger than they appear. Check tide tables and plan accordingly.",
+   "hazard_last_checked": "2026-08-01",
+   "wq_monitor_org": "Cape Fear River Watch",
+   "wq_org_url": "https://www.cfrw.org",
+   "photo_status": "Pending",
+   "notes_public": "One of the best-rated launches near Wilmington. A separate kayak and SUP launch sits alongside the main ramp. Good shark tooth hunting on nearby Shark Tooth Island accessible by paddle. Fishing pier, playground and picnic tables. Alligators reported in the evening near the bank.",
+   "last_verified": "2026-08-01",
+   "verification_source": "https://www.nhcgov.com",
+   "private_launch": "Yes",
+   "access_type": "Public agency",
+   "region": "Coast"
+  },
+  {
+   "spot_id": "roanoke-festival-park-launch",
+   "name": "Roanoke Island Festival Park Kayak Launch",
+   "water_body": "Shallowbag Bay",
+   "water_type": "Flatwater",
+   "town": "Manteo",
+   "county": "Dare",
+   "latitude": 35.910467,
+   "longitude": -75.668916,
+   "managing_agency": "NC Historic Sites",
+   "agency_url": "https://www.ncparks.gov/state-parks/roanoke-island-festival-park",
+   "fee_permit": "Free to launch from the floating dock. Museum admission separate.",
+   "hours": "Tuesday to Saturday 9am to 5pm, Sunday 1pm to 5pm. Closed Monday.",
+   "motorized_allowed": "No",
+   "part_of_park": "Y",
+   "park_name": "Roanoke Island Festival Park",
+   "camping_available": "N",
+   "dogs_allowed": "Yes, leashed",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "hazards": "Tidal sound waters. Currents stronger than they look, especially on a running tide. Wind builds quickly on open sound water. Check forecast before going out.",
+   "hazard_last_checked": "2026-08-01",
+   "photo_status": "Pending",
+   "notes_public": "A floating dock launch on the northwest edge of the park, described by OBX paddle guides as tapping into a canal that connects to Shallowbag Bay. Paddle south past the Elizabeth II replica ship and Roanoke Marshes Lighthouse. A secluded beach on state land sits halfway to Pirate's Cove — a good rest stop. Give way to larger vessels and watch for duck blinds on the sound.",
+   "last_verified": "2026-08-01",
+   "verification_source": "https://www.outerbanks.org/blog/post/outer-banks-paddle-trails/",
+   "private_launch": "Yes",
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "roanoke-williamston",
@@ -3728,7 +4404,8 @@
    "last_verified": "2026-07-31",
    "verification_source": "https://www.visitnc.com/itinerary/flatwater-paddling-eastern-north-carolina",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "robertson-millpond",
@@ -3759,7 +4436,8 @@
    "verification_source": "https://www.wake.gov/departments-government/parks-recreation-open-space/all-parks-trails/robertson-millpond-preserve",
    "private_launch": "Yes, bring your own boat",
    "rentals": "Kayak hire on Saturdays only",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "haw-robeson-creek-ramp",
@@ -3789,7 +4467,8 @@
    "notes_public": "A full trailer ramp run by the Wildlife Resources Commission, so expect motorboats. Paddle about a mile down Robeson Creek to reach the Haw.",
    "last_verified": "2026-07-30",
    "verification_source": "https://www.lowerhaw.org/activities",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "haw-robeson-creek-canoe",
@@ -3820,7 +4499,37 @@
    "notes_public": "Despite the name this launch is on the Haw, not on Robeson Creek. Flat for a short way upstream and flat for a long way downstream all the way to Jordan Lake, which makes it the best board-friendly put-in on the Lower Haw.",
    "last_verified": "2026-07-30",
    "verification_source": "https://www.lowerhaw.org/activities",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
+  },
+  {
+   "spot_id": "rodanthe-boating-access",
+   "name": "Rodanthe Boating Access Area",
+   "water_body": "Pamlico Sound",
+   "water_type": "Flatwater",
+   "town": "Rodanthe",
+   "county": "Dare",
+   "latitude": 35.5959051,
+   "longitude": -75.4702525,
+   "managing_agency": "NC Wildlife Resources Commission",
+   "agency_url": "https://www.ncwildlife.org",
+   "fee_permit": "None",
+   "hours": "Open 24 hours",
+   "motorized_allowed": "Yes",
+   "part_of_park": "N",
+   "camping_available": "N",
+   "dogs_allowed": "Yes, leashed",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "hazards": "Open Pamlico Sound. Wind builds quickly and can make return paddle very difficult. Check forecast. This is an exposed sound-side access. Tidal coastal waters. Check tide tables and weather before launching.",
+   "hazard_last_checked": "2026-08-01",
+   "photo_status": "Pending",
+   "notes_public": "Sound-side access at Rodanthe on Hatteras Island, giving directly onto the Pamlico Sound. Adjacent to Pea Island NWR. Reviewers describe easy entry and beautiful, wildlife-rich paddling. No facilities.",
+   "last_verified": "2026-08-01",
+   "verification_source": "https://www.ncwildlife.org",
+   "private_launch": "Yes",
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "salem-lake",
@@ -3848,7 +4557,8 @@
    "swim_area_here": "No",
    "private_launch": "Yes",
    "rentals": "Boat hire from the marina centre, which also holds the fishing station and bait shop",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "haw-saxapahaw",
@@ -3881,7 +4591,8 @@
    "verification_source": "https://www.hawrivertrail.org/paddle-trail-overview",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "carry_yards": 30
+   "carry_yards": 30,
+   "region": "Piedmont"
   },
   {
    "spot_id": "haw-shallow-ford",
@@ -3917,7 +4628,37 @@
    "verification_source": "https://www.hawrivertrail.org/shallow-ford-natural-area",
    "swimming_allowed": "Not advised. Paddlers describe the river here as muddy and fast flowing.",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
+  },
+  {
+   "spot_id": "ocracoke-silver-lake",
+   "name": "Silver Lake Harbor, Ocracoke",
+   "water_body": "Silver Lake / Pamlico Sound",
+   "water_type": "Flatwater",
+   "town": "Ocracoke",
+   "county": "Hyde",
+   "latitude": 35.1127623,
+   "longitude": -75.9839923,
+   "managing_agency": "NC Wildlife Resources Commission",
+   "agency_url": "https://www.ncwildlife.org",
+   "fee_permit": "None",
+   "hours": "Open 24 hours",
+   "motorized_allowed": "Yes",
+   "part_of_park": "N",
+   "camping_available": "N",
+   "dogs_allowed": "Yes, leashed",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "hazards": "Ocracoke is only accessible by ferry from Cedar Island, Swan Quarter or Hatteras. Pamlico Sound is wide open water — conditions can change rapidly and are not suitable for inexperienced paddlers in windy weather. Tidal waters. Currents stronger than they appear. Check tide tables and plan accordingly.",
+   "hazard_last_checked": "2026-08-01",
+   "photo_status": "Pending",
+   "notes_public": "The harbour at Ocracoke Village, one of the most historically rich and remote communities on the Outer Banks. A genuine destination paddle — the sound side of the island is protected and beautiful. Plan ferry times carefully as they must be booked in advance especially in summer.",
+   "last_verified": "2026-08-01",
+   "verification_source": "https://www.ncwildlife.org",
+   "private_launch": "Yes",
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "singletary-lake-sp",
@@ -3948,7 +4689,8 @@
    "swimming_allowed": "Yes, a swimming dock",
    "swim_area_here": "Yes, swimming dock on the lake",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "smithfield-town-commons",
@@ -3972,7 +4714,8 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.johnstoncountync.org/things-to-do/nature-and-recreation/neuse-river-blueway/",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "haw-south-bynum",
@@ -4004,7 +4747,8 @@
    "notes_public": "Formerly Bynum Beach Canoe Access. Parking is extremely limited and roadside parking on Bynum Beach Road is expressly prohibited, so plan on the bridge walk with your board.",
    "last_verified": "2026-07-30",
    "verification_source": "https://www.lowerhaw.org/activities",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "south-mountains-clear-creek",
@@ -4029,7 +4773,8 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.ncparks.gov/state-parks/south-mountains-state-park",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Mountains"
   },
   {
    "spot_id": "high-rock-southmont",
@@ -4055,7 +4800,8 @@
    "verification_source": "https://www.ncwildlife.org",
    "swim_area_here": "No",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "spring-garden-landing",
@@ -4084,7 +4830,8 @@
    "last_verified": "2026-08-01",
    "verification_source": "https://www.saltchef.com/catch_fish/NC/Craven/boat_ramps.html",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "stone-mountain-sp",
@@ -4113,7 +4860,38 @@
    "last_verified": "2026-07-31",
    "verification_source": "https://www.ncparks.gov/state-parks/stone-mountain-state-park",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Mountains",
+   "cell_signal": "No cell service in most of the park."
+  },
+  {
+   "spot_id": "sunset-beach-access",
+   "name": "Sunset Beach Boat Access",
+   "water_body": "Intracoastal Waterway",
+   "water_type": "Flatwater",
+   "town": "Sunset Beach",
+   "county": "Brunswick",
+   "latitude": 33.8668105,
+   "longitude": -78.5068886,
+   "managing_agency": "Town of Sunset Beach",
+   "agency_url": "https://www.sunsetbeachnc.gov",
+   "fee_permit": "None",
+   "motorized_allowed": "Yes",
+   "part_of_park": "Y",
+   "park_name": "Sunset Beach",
+   "camping_available": "N",
+   "dogs_allowed": "Yes, leashed",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "hazards": "Tidal coastal waters. Check tide tables and weather before launching.",
+   "hazard_last_checked": "2026-08-01",
+   "photo_status": "Pending",
+   "notes_public": "Listed by Brunswick Islands tourism as a specifically designed kayak, canoe and SUP launch site. The town sits at the western end of the Brunswick Islands, with marsh creeks and the ICW accessible from here. A fishing pier is adjacent.",
+   "last_verified": "2026-08-01",
+   "verification_source": "https://www.ncbrunswick.com/things-to-do/attractions-activities/boating-marinas/kayak-canoe-sup-launch-sites/",
+   "private_launch": "Yes",
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "tar-sunset-park",
@@ -4144,7 +4922,8 @@
    "last_verified": "2026-07-31",
    "verification_source": "https://www.rockymountnc.gov/278/Tar-River-Paddle-Trail",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "sutton-lake-ncwrc",
@@ -4174,7 +4953,8 @@
    "last_verified": "2026-08-01",
    "verification_source": "https://www.ncwildlife.org",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "haw-swepsonville",
@@ -4208,7 +4988,8 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.hawrivertrail.org/paddle-trail-overview",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "lake-tillery-swift-island",
@@ -4233,7 +5014,8 @@
    "last_verified": "2026-07-31",
    "verification_source": "https://www.ncwildlife.org",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "tailrace-marina",
@@ -4259,7 +5041,8 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.gogastonnc.org/post/paddling-the-catawba-and-south-fork-rivers-and-lakes-in-gaston-county",
    "rentals": "Kayaks, paddleboards, canoes and pontoons. An annual kayak membership covers a guest.",
-   "access_type": "Private business"
+   "access_type": "Private business",
+   "region": "Piedmont"
   },
   {
    "spot_id": "tar-reservoir-ramp",
@@ -4287,7 +5070,34 @@
    "last_verified": "2026-07-31",
    "verification_source": "https://www.rockymountnc.gov/278/Tar-River-Paddle-Trail",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Coast"
+  },
+  {
+   "spot_id": "floatery-madison",
+   "name": "The Floatery",
+   "water_body": "Mayo River",
+   "water_type": "River",
+   "town": "Madison",
+   "county": "Rockingham",
+   "latitude": 36.3844662,
+   "longitude": -79.9534024,
+   "managing_agency": "The Floatery",
+   "agency_url": "https://floatery.com",
+   "fee_permit": "Varies by trip type. Book and pay in advance.",
+   "hours": "Saturday and Sunday 8am to 4pm for bookings. Closed Monday to Friday.",
+   "part_of_park": "N",
+   "camping_available": "N",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "photo_status": "Pending",
+   "notes_public": "One of the most distinctive outfitters in the state. Known for a 65-foot water slide into the river and an outstanding guided firefly float in June and the first week of July, when the trees along the river are full of fireflies. The night float runs 7:30 to 10pm and includes a guide, tracker, glowstick, headlamp, life jacket and shuttle — everything you need. Day floats last about four hours. Owner Glinda is praised by reviewers for treating guests like family and putting safety first. 4.8 stars across 141 reviews. Book well in advance for the firefly floats, which sell out.",
+   "last_verified": "2026-08-01",
+   "verification_source": "https://floatery.com/adventure/",
+   "private_launch": "Customers only",
+   "rentals": "Tubes, kayaks and paddles. Guided firefly float June through early July, 7:30pm to 10pm — includes tracker, glowstick, life jacket, headlamp, shuttle and guide. Day floats with a 65-foot water slide into the river. Cooler float option available. Staff carry your cooler to and from the water.",
+   "access_type": "Private outfitter",
+   "region": "Piedmont"
   },
   {
    "spot_id": "neuse-thornton",
@@ -4319,7 +5129,40 @@
    "verification_source": "https://raleighnc.gov/river-access",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "carry_yards": 880
+   "carry_yards": 880,
+   "region": "Piedmont"
+  },
+  {
+   "spot_id": "trails-end-ramp",
+   "name": "Trails End Boat Ramp",
+   "water_body": "Intracoastal Waterway",
+   "water_type": "Flatwater",
+   "town": "Wilmington",
+   "county": "New Hanover",
+   "latitude": 34.156152,
+   "longitude": -77.857373,
+   "managing_agency": "NC Wildlife Resources Commission",
+   "agency_url": "https://www.ncwildlife.org",
+   "parking_spaces": "30 spaces, fills quickly on summer weekends",
+   "fee_permit": "None",
+   "hours": "Open 24 hours",
+   "motorized_allowed": "Yes",
+   "part_of_park": "N",
+   "camping_available": "N",
+   "dogs_allowed": "Yes, leashed",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "hazards": "Tidal ramp — low tide makes entry tricky. Docks deteriorating and have no cleats. Strong ICW currents when tide is running. Parking often taken by cars rather than trailers. Tidal waters. Currents stronger than they appear. Check tide tables and plan accordingly.",
+   "hazard_last_checked": "2026-08-01",
+   "wq_monitor_org": "Cape Fear River Watch",
+   "wq_org_url": "https://www.cfrw.org",
+   "photo_status": "Pending",
+   "notes_public": "Gateway to Masonboro Island, one of the longest undeveloped barrier islands on the East Coast. Paddling to Masonboro across the ICW is achievable in calm conditions, about a mile. Masonboro Paddle Company and other outfitters meet customers here. Free but congested — arrive before 8am on summer weekends.",
+   "last_verified": "2026-08-01",
+   "verification_source": "https://www.ncwildlife.org",
+   "private_launch": "Yes",
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "whitewater-center",
@@ -4346,7 +5189,8 @@
    "verification_source": "https://www.charlotteonthecheap.com/boat-rental-charlotte/",
    "private_launch": "Unknown, the site is built around its own hire fleet",
    "rentals": "Flatwater kayaks and paddleboards included in the activity pass. Life jacket provided.",
-   "access_type": "Nonprofit, day pass required"
+   "access_type": "Nonprofit, day pass required",
+   "region": "Piedmont"
   },
   {
    "spot_id": "haw-us64",
@@ -4379,7 +5223,8 @@
    "notes_public": "Experts only heading downstream toward Robeson Creek. The classic Lower Haw whitewater run starts here and it is not a beginner stretch.",
    "last_verified": "2026-07-30",
    "verification_source": "https://www.lowerhaw.org/activities",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "union-point-park",
@@ -4411,7 +5256,8 @@
    "last_verified": "2026-08-01",
    "verification_source": "https://www.newbern.com/boating-new-bern.html",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "university-lake-owasa",
@@ -4442,7 +5288,8 @@
    "swim_area_here": "No",
    "private_launch": "Yes, kayaks and canoes only. Paddleboards explicitly prohibited.",
    "rentals": "Kayaks, canoes and flat-bottomed boats available for hire",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "uwharrie-low-water-bridge",
@@ -4470,7 +5317,8 @@
    "last_verified": "2026-07-31",
    "verification_source": "https://www.fs.usda.gov/recarea/nfsnc/recarea/?recid=48972",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "valdese-lakeside",
@@ -4498,7 +5346,40 @@
    "verification_source": "https://www.valdesenc.gov",
    "private_launch": "Yes",
    "rentals": "RAD Rentals will deliver kayaks and paddleboards direct to the dock",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Mountains"
+  },
+  {
+   "spot_id": "washington-baum-bridge-ramp",
+   "name": "Washington Baum Bridge Boating Access",
+   "water_body": "Roanoke Sound",
+   "water_type": "Flatwater",
+   "town": "Manteo",
+   "county": "Dare",
+   "latitude": 35.8937576,
+   "longitude": -75.6377691,
+   "managing_agency": "NC Wildlife Resources Commission",
+   "agency_url": "https://www.ncwildlife.org",
+   "launch_type": "Multi-lane ramp with courtesy docks",
+   "parking_spaces": "About 50 trailer spaces, very few car-only spaces",
+   "fee_permit": "None",
+   "restrooms": "None confirmed",
+   "hours": "Open 24 hours",
+   "motorized_allowed": "Yes",
+   "part_of_park": "N",
+   "camping_available": "N",
+   "dogs_allowed": "Yes, leashed",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "hazards": "Tidal sound waters. Currents stronger than they look, especially on a running tide. Wind builds quickly on open sound water. Check forecast before going out.",
+   "hazard_last_checked": "2026-08-01",
+   "photo_status": "Pending",
+   "notes_public": "The most-referenced sound launch on Roanoke Island, directly under the Washington Baum Bridge. Roanoke Sound is described by multiple paddling guides as one of the best paddling environments on the OBX — protected water that rarely gets choppy, excellent wildlife, and the option to paddle toward Manteo's historic waterfront. Reviewers flag very limited car-only parking — come with a trailer or arrive very early.",
+   "last_verified": "2026-08-01",
+   "verification_source": "https://www.outerbanks.com/washington-baum-bridge-and-boat-ramp.html",
+   "private_launch": "Yes",
+   "access_type": "Public agency",
+   "region": "Coast"
   },
   {
    "spot_id": "eno-west-point",
@@ -4525,7 +5406,8 @@
    "notes_public": "Enter above the dam behind the mill and paddle roughly three quarters of a mile up to Sennet Hole. The dam holds deep water year round, so this is one of the few Eno spots that does not depend on rain.",
    "last_verified": "2026-07-30",
    "verification_source": "https://www.froghollowoutdoors.com/durham-flyer-finding-eno-river-treasures-by-water",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "french-broad-westfeldt",
@@ -4558,7 +5440,8 @@
    "last_verified": "2026-07-31",
    "verification_source": "https://frenchbroadpaddle.com",
    "private_launch": "Yes",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Mountains"
   },
   {
    "spot_id": "umstead-crabtree-creek",
@@ -4583,7 +5466,8 @@
    "verification_source": "https://www.ncparks.gov/park-features/william-b-umstead-state-park-crabtree-creek-access",
    "private_launch": "Yes, at public ramps and designated launch sites only",
    "rentals": "Boat hire on site",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
   },
   {
    "spot_id": "umstead-reedy-creek",
@@ -4604,7 +5488,40 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.ncparks.gov/park-features/william-b-umstead-state-park-reedy-creek-access",
    "private_launch": "Yes, at public ramps and designated launch sites only",
-   "access_type": "Public agency"
+   "access_type": "Public agency",
+   "region": "Piedmont"
+  },
+  {
+   "spot_id": "wrightsville-beach-access",
+   "name": "Wrightsville Beach Boating Access",
+   "water_body": "Intracoastal Waterway",
+   "water_type": "Flatwater",
+   "town": "Wrightsville Beach",
+   "county": "New Hanover",
+   "latitude": 34.2183703,
+   "longitude": -77.8111779,
+   "managing_agency": "NC Wildlife Resources Commission",
+   "agency_url": "https://www.ncwildlife.org",
+   "parking_spaces": "Plenty for trailers, very limited car-only spaces",
+   "fee_permit": "Paid car parking nearby at $5/hour via smartphone app",
+   "hours": "Open during daylight",
+   "motorized_allowed": "Yes",
+   "part_of_park": "N",
+   "camping_available": "N",
+   "dogs_allowed": "Yes, leashed",
+   "rapids_class_min": 0,
+   "rapids_class_max": 0,
+   "hazards": "Heavy boat traffic and ICW currents. Tidal waters. Currents stronger than they appear. Check tide tables and plan accordingly.",
+   "hazard_last_checked": "2026-08-01",
+   "wq_monitor_org": "Cape Fear River Watch",
+   "wq_org_url": "https://www.cfrw.org",
+   "photo_status": "Pending",
+   "notes_public": "The most centrally located launch on the Wrightsville Beach sound side. Access to the ICW, marsh creeks behind the island, and Banks Channel. Parking is genuinely difficult — reviewer waited over an hour for a space on a summer weekend. Arrive very early or come mid-week. Wrightsville Beach Kayak Company, Carolina Paddleboard Co and Wrightsville SUP all operate nearby.",
+   "last_verified": "2026-08-01",
+   "verification_source": "https://www.ncwildlife.org",
+   "private_launch": "Yes",
+   "access_type": "Public agency",
+   "region": "Coast"
   }
  ]
 }
