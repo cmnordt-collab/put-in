@@ -552,7 +552,7 @@
         the site via Venmo, or check out the affiliate links on the Gear page. We also could not
         provide any of this without the incredible nonprofits and governmental agencies that
         collect this information year-round. Please visit the
-        <a href="#" onclick="showTab('partners');return false;">Partners tab</a>
+        <a href="#" class="tab-link" data-tab="partners">Partners</a>
         to learn more about the Riverkeepers and other local nonprofit organizations.</p>
         <div class="support-prose">
           <p>Every contribution helps keep the data current and the site running.</p>
@@ -1360,6 +1360,12 @@
       ["spots","about","partners"].forEach(function(t) {
         var btn = document.getElementById("tab-" + t);
         if (btn) btn.addEventListener("click", function() { showTab(t); });
+      });
+      document.querySelectorAll(".tab-link").forEach(function(a) {
+        a.addEventListener("click", function(e) {
+          e.preventDefault();
+          showTab(this.dataset.tab);
+        });
       });
       renderList();
       const c = $("count");
