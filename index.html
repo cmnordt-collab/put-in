@@ -1,3 +1,4 @@
+<title>Put-In — Where Should I Paddle in NC?</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   :root {
@@ -251,6 +252,21 @@
   .livegrid .v { font-family: var(--mono); font-size: 20px; font-variant-numeric: tabular-nums; margin-top: 2px; }
   .livenote { margin: 12px 0 0; font-size: 12.5px; color: var(--ink-soft); }
   .unrec { color: var(--ink-soft); font-style: italic; opacity: 0.75; }
+  .droprow { display:flex; align-items:center; gap:8px; margin-bottom:10px; flex-wrap:wrap; }
+  .droplabel { font-size:12px; color:var(--ink-soft); white-space:nowrap; }
+  .dropsel { font-size:12.5px; padding:5px 8px; border:1px solid var(--rule);
+             border-radius:20px; background:var(--paper); color:var(--ink);
+             cursor:pointer; appearance:none; -webkit-appearance:none;
+             background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%2314606D'/%3E%3C/svg%3E");
+             background-repeat:no-repeat; background-position:right 8px center;
+             padding-right:24px; }
+  .dropsel:focus { outline:2px solid var(--chan); }
+  .spot-map { width:100%; height:220px; border-radius:8px; margin:18px 0 0;
+              border:1px solid var(--rule); overflow:hidden; }
+  .spot-map iframe { width:100%; height:100%; border:none; }
+  .cell-warn { margin:8px 0 0; padding:8px 14px; background:rgba(201,143,26,.10);
+               border-left:3px solid var(--flag-amber); border-radius:4px;
+               font-size:13px; line-height:1.5; }
   .backbar { display:flex; align-items:center; gap:12px; margin-bottom:18px; }
   .back { font-size:15px; font-weight:600; padding:8px 18px; border-radius:6px;
           background:var(--paper-2); border:1px solid var(--rule); cursor:pointer;
@@ -374,7 +390,7 @@
     </svg>
     <div class="masthead-inner">
       <div class="eyebrow">SUP · Kayak · Canoe</div>
-      <h1>Put-In</h1>
+      <h1>Where Should I Paddle?</h1>
       <p>Search a spot, see everything that matters before you load the car.</p>
     </div>
   </header>
@@ -388,6 +404,36 @@
         </div>
       </div>
 
+      <div class="droprow">
+        <span class="droplabel">Region</span>
+        <select class="dropsel" id="sel-region">
+          <option value="">All</option>
+          <option value="Piedmont">Piedmont</option>
+          <option value="Mountains">Mountains</option>
+          <option value="Coast">Coast</option>
+        </select>
+        <span class="droplabel">Water type</span>
+        <select class="dropsel" id="sel-water">
+          <option value="">All</option>
+          <option value="Flatwater">Lake / Flatwater</option>
+          <option value="River">River</option>
+          <option value="Sound">Sound / Bay</option>
+          <option value="Ocean">Ocean / Inlet</option>
+        </select>
+        <span class="droplabel">Rapids</span>
+        <select class="dropsel" id="sel-rapids">
+          <option value="">Any</option>
+          <option value="flat">Flatwater only</option>
+          <option value="1">Class I max</option>
+          <option value="2">Class II max</option>
+        </select>
+        <span class="droplabel">Carry</span>
+        <select class="dropsel" id="sel-carry">
+          <option value="">Any</option>
+          <option value="short">Short (&lt;100 yd)</option>
+          <option value="long">Long carry flagged</option>
+        </select>
+      </div>
       <div class="filters" id="filters" role="group" aria-label="Filter spots"></div>
 
       <div class="resultcount">
@@ -482,6 +528,9 @@
       floodStage: r.flood_stage_ft || null,
       accessType: r.access_type || null,
       carryYards: r.carry_yards !== undefined ? Number(r.carry_yards) : null,
+      region: r.region || null,
+      cellSignal: r.cell_signal || null,
+
       swimming: r.swimming_allowed || null, swimArea: r.swim_area_here || null,
       privateLaunch: r.private_launch || null, rentals: r.rentals || null,
       wq: r.wq_monitor_org || null, wqUrl: r.wq_org_url || null,
@@ -492,17 +541,17 @@
   }
 
   const FILTERS = [
-    { id:"flat",     label:"Flatwater only", test: s => s.rapids && s.rapids[1] === 0 },
-    { id:"nomotors", label:"No motors",      test: s => s.motors === false },
-    { id:"longcarry", label:"Long carry",   test: s => s.carryYards !== null && s.carryYards >= 150 },
-    { id:"camping",  label:"Camping",        test: s => s.camping === true },
-    { id:"dogs",     label:"Dog friendly",   test: s => s.dogs === true },
-    { id:"park",     label:"In a park",      test: s => s.park === true },
-    { id:"fav",      label:"Favorites",      test: s => state.favs.has(s.id) }
+    { id:"nomotors",  label:"No motors",        test: s => s.motors === false },
+    { id:"swimmable", label:"Swimmable",         test: s => s.swimArea && /^yes/i.test(s.swimArea) },
+    { id:"rentals",   label:"Rentals available", test: s => !!s.rentals },
+    { id:"camping",   label:"Camping",           test: s => s.camping === true },
+    { id:"dogs",      label:"Dog friendly",      test: s => s.dogs === true },
+    { id:"ada",       label:"Accessible launch", test: s => s.ada === true },
+    { id:"fav",       label:"Favorites",         test: s => state.favs.has(s.id) }
   ];
 
   // ---------------------------------------------------------------- state
-  const state = { q:"", active:new Set(), favs:new Set(), notes:{}, open:null };
+  const state = { q:"", active:new Set(), favs:new Set(), notes:{}, open:null, region:"", waterType:"", rapids:"", carry:"" };
 
   const $ = id => document.getElementById(id);
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;" }[c]));
@@ -569,11 +618,24 @@
 
   // ---------------------------------------------------------------- render: list
   function renderList() {
-    const found = SPOTS.filter(matches);
+    let found = SPOTS.filter(matches);
+    if (state.region) found = found.filter(s => s.region === state.region);
+    if (state.waterType) {
+      if (state.waterType === "Sound") found = found.filter(s => s.water && /sound|bay|pamlico|albemarle|roanoke|currituck|bogue|core|ICW|intracoastal/i.test(s.water));
+      else if (state.waterType === "Ocean") found = found.filter(s => s.water && /ocean|atlantic|inlet|cape fear river.*atlantic/i.test(s.water));
+      else if (state.waterType === "River") found = found.filter(s => s.type === "River");
+      else if (state.waterType === "Flatwater") found = found.filter(s => s.type !== "River" && !(s.water && /sound|bay|ocean|atlantic|inlet|intracoastal/i.test(s.water)));
+    }
+    if (state.rapids === "flat") found = found.filter(s => s.rapids && s.rapids[1] === 0);
+    else if (state.rapids === "1") found = found.filter(s => s.rapids && s.rapids[1] <= 1);
+    else if (state.rapids === "2") found = found.filter(s => s.rapids && s.rapids[1] <= 2);
+    if (state.carry === "short") found = found.filter(s => s.carryYards === null || s.carryYards < 100);
+    else if (state.carry === "long") found = found.filter(s => s.carryYards !== null && s.carryYards >= 150);
     found.sort((a, b) => a.name.localeCompare(b.name));
-    $("count").textContent = found.length + (found.length === 1 ? " spot" : " spots");
+    const count = found.length;
+    $("count").textContent = count + (count === 1 ? " spot" : " spots");
 
-    if (!found.length) {
+    if (!count) {
       $("cards").innerHTML =
         '<div class="empty"><p>Nothing matches yet.</p>' +
         '<span>Loosen a filter, or try searching by county or water body.</span></div>';
@@ -703,7 +765,7 @@
               ? '<span class="nolaunch-block">⚠️ No private boats allowed here</span>'
               : fact(s.privateLaunch)],
           ["Gate hours", fact(s.hours)],
-          ["Fee or permit", fact(s.fee)],
+          ["Fee or permit", s.fee && !/none/i.test(s.fee) ? '<b>' + esc(s.fee) + '</b>' : fact(s.fee)],
           ["Restrooms", tri(s.restrooms)],
           ["Part of a park", s.parkName ? esc(s.parkName) : tri(s.park)]
         ]) +
@@ -725,6 +787,7 @@
           ["Swimming", fact(s.swimming)],
           ["Swim area here", fact(s.swimArea)],
           ["Hire on site", fact(s.rentals)],
+          ["Cell signal", fact(s.cellSignal)],
           ["Managed by", s.agency ? (s.agencyUrl
               ? '<a href="' + esc(s.agencyUrl) + '" target="_blank" rel="noopener">' + esc(s.agency) + '</a>'
               : esc(s.agency)) : fact(null)]
@@ -746,6 +809,7 @@
           ["Low head dam", fact(s.dam)],
           ["Last checked", fact(s.hazardChecked)]
         ]) +
+        (s.cellSignal ? '<div class="cell-warn">⚠️ <b>Cell signal:</b> ' + esc(s.cellSignal) + '</div>' : '') +
         '<p class="hazfoot">Blank means nobody has verified it, not that the water is clear. '+
           'Scout anything you have not paddled before.</p>' +
       '</section>' +
@@ -755,7 +819,14 @@
         '<textarea class="notes" id="notes" placeholder="Last visit, put-in quirks, where to park, who you went with\u2026">' +
           esc(state.notes[s.id] || "") + '</textarea>' +
         '<p class="notes-hint">Saved on this device only. Clearing browser data will erase them.</p>' +
-      '</section>';
+      '</section>' +
+
+      (s.lat && s.lon
+        ? '<div class="spot-map"><iframe loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=' +
+            (s.lon - 0.012) + '%2C' + (s.lat - 0.008) + '%2C' + (s.lon + 0.012) + '%2C' + (s.lat + 0.008) +
+            '&layer=mapnik&marker=' + s.lat + '%2C' + s.lon +
+            '" title="Map of ' + esc(s.name) + '"></iframe></div>'
+        : '');
 
     $("list-view").hidden = true;
     $("detail-view").hidden = false;
@@ -1052,6 +1123,10 @@
       renderFilters();
       renderKey();
 
+      ["sel-region","sel-water","sel-rapids","sel-carry"].forEach(id => {
+        const key = {'sel-region':'region','sel-water':'waterType','sel-rapids':'rapids','sel-carry':'carry'}[id];
+        $(id).addEventListener("change", () => { state[key] = $(id).value; renderList(); });
+      });
       renderList();
       const c = $("count");
       if (c && payload.generated) c.title = "Data generated " + payload.generated;
