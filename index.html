@@ -77,6 +77,10 @@
   .partner-card a { font-size:13px; font-weight:600; color:var(--chan);
                     text-decoration:none; margin-right:14px; }
   .partner-card a:hover { text-decoration:underline; }
+  .partner-filter-btn { display:inline-block; margin-top:10px; padding:7px 14px;
+                        background:var(--chan); color:#fff; border:none; border-radius:5px;
+                        font-size:13px; font-weight:700; cursor:pointer; }
+  .partner-filter-btn:hover { opacity:.85; }
   .support-prose { margin:32px 0 0; padding:20px; background:var(--paper-2);
                    border-radius:8px; text-align:center; }
   .support-prose p { font-size:14px; color:var(--ink-soft); margin:0 0 12px; }
@@ -483,6 +487,7 @@
 
       <div class="resultcount">
         <div class="eyebrow" id="count">—</div>
+        <span id="partner-label" style="font-size:12px;color:var(--chan);font-weight:600;margin-left:4px"></span>
         <button class="linkbtn" id="clear" type="button">Clear filters</button>
       </div>
 
@@ -508,44 +513,47 @@
     <div id="panel-about" class="tabpanel">
       <div class="prose">
         <h2>About Put-In</h2>
-        <p>Put-In is a free, independently built guide to paddling access in North Carolina &mdash;
-        for SUPs, kayaks and canoes. It exists because the information paddlers need before loading
+        <p>Put-In is a free, independently built guide to paddling access in North Carolina for
+        SUPs, kayaks, and canoes. It exists because the information paddlers need before loading
         the car was scattered across dozens of agency websites, Facebook groups, and word of mouth,
         and nobody had pulled it together in one place.</p>
-
         <h3>Who built it</h3>
-        <p>My name is Carrie Nordt. I am a paddler in the NC Piedmont, a lifelong swimmer and water
-        enthusiast, and a former open water racer. I started paddling seriously when I was coaching
-        and training for open water 5k and 10k races &mdash; and fell in love with it just as much
-        as swimming, but it fit better into a full-time working life. It became a way to explore the
-        coast on trips, and a way to stay on the water when summer temperatures or time constraints
-        made open water racing impossible.</p>
-
-        <p>Over the years I found myself researching water quality reports, hunting for new spots,
+        <p>I am a paddler in the NC Piedmont, a lifelong swimmer and water enthusiast, and a
+        former open water racer. I started paddling seriously when I was
+        coaching and training for open water 5k and 10k races, and fell in love with it just as
+        much as swimming. It became a way to explore the coast on trips and to stay on the water
+        when summer temperatures or time constraints made open-water swimming impossible in our
+        NC summers.</p>
+        <p>Over the years, I found myself researching water quality reports, hunting for new spots,
         checking conditions, and building mental maps of what was actually paddleable and what was
-        not. I love collecting and using that kind of data. Put-In is where that habit finally has
-        a home.</p>
-
+        not. I love collecting and using that kind of data, and Put-In is where that habit finally
+        has a home.</p>
         <h3>Why it exists</h3>
         <p>Too many drives ended in a locked gate, a hire-only lake, a carry that was impossible
-        with a hard board alone, or conditions nobody warned about. When I was racing I learned to
-        take water quality seriously &mdash; warm temperatures, algal blooms and runoff are real
-        issues on NC waters, and knowing who monitors a lake before you get in it matters. Growing
-        up going to the NC coast made me aware early of what can go wrong when you are not prepared
-        for changing tides, submerged hazards, or weather that moves faster than you do.</p>
-
-        <p>Put-In is the resource I wished existed. Every spot is checked against its managing
-        agency and carries the source it came from. Blank fields mean unverified, not absent &mdash;
-        that distinction matters most for hazards and dams.</p>
-
+        with a hard board alone, or other conditions nobody warned about. When I was racing, I
+        learned to take water quality seriously. Warm temperatures, algal blooms, and runoff are
+        real issues on NC waters, and knowing who monitors a lake before I got in it mattered a
+        lot to me. Growing up visiting the NC coast made me aware early on of what can go wrong
+        when you are not prepared for the changing tides, submerged hazards, or weather conditions
+        that move faster than you do.</p>
+        <p>Put-In is the resource I wished existed. Every spot is checked
+        against its managing agency and includes its source. As a safety note, blank fields mean
+        <strong>unverified</strong>, not absent &mdash; that distinction matters most for hazards
+        and dams.</p>
         <h3>What it is not</h3>
         <p>Put-In is not a substitute for scouting, and it is not a safety guarantee. Conditions
         change faster than any database can keep up with. Always check current conditions before
         you go, tell someone your float plan, and paddle within your skill level.</p>
-
+        <p>As this site evolves, I hope to include features that help increase paddlers&rsquo;
+        safety and expertise, route planning, and eventually expand outside of NC. If others in
+        the paddling community wish to contribute their experiences, please contact me below!</p>
         <h3>Support the site</h3>
-        <p>Put-In is free and always will be. If it saved you a wasted drive, consider buying
-        me a coffee.</p>
+        <p>Put-In is free and always will be. If it saved you a wasted drive, consider supporting
+        the site via Venmo, or check out the affiliate links on the Gear page. We also could not
+        provide any of this without the incredible nonprofits and governmental agencies that
+        collect this information year-round. Please visit the
+        <a href="#" onclick="showTab('partners');return false;">Partners tab</a>
+        to learn more about the Riverkeepers and other local nonprofit organizations.</p>
         <div class="support-prose">
           <p>Every contribution helps keep the data current and the site running.</p>
           <a class="btn-support" href="https://www.venmo.com/u/CarrieNTheSwim" target="_blank" rel="noopener">
@@ -559,118 +567,87 @@
     <div id="panel-partners" class="tabpanel">
       <div class="prose">
         <h2>Partners &amp; Water Monitors</h2>
-        <p>The water quality information on this site exists because of the organisations below.
-        They sample rivers and lakes, issue advisories, fight for clean water policy, and make
-        their data publicly available. Put-In credits them on every spot they monitor.
-        Please consider supporting their work.</p>
-
+        <p>The water quality information on this site exists because of the organizations below. They sample rivers and lakes, issue advisories, fight for clean water policy, and make their data publicly available. Put-In credits them on every spot they monitor. Please consider supporting their work and voting for officials who prioritize our North Carolina natural resources.</p>
         <div class="partner-grid">
-
           <div class="partner-card">
             <h3>Haw River Assembly</h3>
             <p class="pcount">14 SPOTS MONITORED</p>
-            <p>Protecting the Haw River watershed since 1982 &mdash; headwaters of Jordan Lake
-            and the drinking water supply for hundreds of thousands of Triangle residents. They
-            run water quality monitoring, advocacy and restoration across the entire basin.</p>
-            <a href="https://www.hawriver.org" target="_blank" rel="noopener">hawriver.org</a>
-            <a href="https://www.hawriver.org/donate" target="_blank" rel="noopener">Donate &rarr;</a>
+            <p>Protecting the Haw River watershed since 1982. Headwaters of Jordan Lake and the drinking water supply for hundreds of thousands of Triangle residents. They run water quality monitoring, advocacy, and restoration across the entire basin.</p>
+            <a href="https://www.hawriver.org" target="_blank" rel="noopener">hawriver.org</a><a href="https://www.hawriver.org/donate" target="_blank" rel="noopener">Donate →</a>
+          <button class="partner-filter-btn" onclick="filterByPartner('wq','Haw River Assembly')">View 14 spots →</button>
           </div>
-
           <div class="partner-card">
             <h3>Sound Rivers</h3>
             <p class="pcount">10 SPOTS MONITORED</p>
-            <p>Protecting the Neuse and Tar-Pamlico river basins, which drain most of eastern NC
-            into the Pamlico Sound. They run the state&rsquo;s most active citizen water quality
-            monitoring programme and built the accessible kayak launch at Port Terminal in
-            Greenville.</p>
-            <a href="https://soundrivers.org" target="_blank" rel="noopener">soundrivers.org</a>
-            <a href="https://soundrivers.org/donate/" target="_blank" rel="noopener">Donate &rarr;</a>
+            <p>Protecting the Neuse and Tar-Pamlico river basins, which drain most of eastern NC into the Pamlico Sound. They run the state’s most active citizen water quality monitoring program and built the accessible kayak launch at Port Terminal in Greenville.</p>
+            <a href="https://soundrivers.org" target="_blank" rel="noopener">soundrivers.org</a><a href="https://soundrivers.org/donate/" target="_blank" rel="noopener">Donate →</a>
+          <button class="partner-filter-btn" onclick="filterByPartner('wq','Sound Rivers')">View 10 spots →</button>
           </div>
-
           <div class="partner-card">
             <h3>Catawba Riverkeeper</h3>
             <p class="pcount">9 SPOTS MONITORED</p>
-            <p>Defending 225 miles of river from the Blue Ridge foothills to Lake Wylie, covering
-            the drinking water supply for over a million people. They run guided paddle programmes
-            from Confluence in Cramerton and The Boathouse in McAdenville.</p>
-            <a href="https://www.catawbariverkeeper.org" target="_blank" rel="noopener">catawbariverkeeper.org</a>
-            <a href="https://www.catawbariverkeeper.org/donate" target="_blank" rel="noopener">Donate &rarr;</a>
+            <p>Defending 225 miles of river from the Blue Ridge foothills to Lake Wylie, covering the drinking water supply for over a million people. They run guided paddle programs from Confluence in Cramerton and The Boathouse in McAdenville.</p>
+            <a href="https://www.catawbariverkeeper.org" target="_blank" rel="noopener">catawbariverkeeper.org</a><a href="https://www.catawbariverkeeper.org/donate" target="_blank" rel="noopener">Donate →</a>
+          <button class="partner-filter-btn" onclick="filterByPartner('wq','Catawba Riverkeeper')">View 9 spots →</button>
           </div>
-
           <div class="partner-card">
             <h3>Eno River Association</h3>
             <p class="pcount">9 SPOTS MONITORED</p>
-            <p>Protecting the Eno River since 1966 &mdash; one of the longest-running river
-            conservation organisations in the Southeast. They were instrumental in establishing
-            Eno River State Park and continue to monitor water quality and restore habitat
-            throughout the watershed.</p>
-            <a href="https://www.enoriver.org" target="_blank" rel="noopener">enoriver.org</a>
-            <a href="https://www.enoriver.org/donate/" target="_blank" rel="noopener">Donate &rarr;</a>
+            <p>Protecting the Eno River since 1966, one of the longest-running river conservation organizations in the Southeast. They were instrumental in establishing Eno River State Park and continue to monitor water quality and restore habitat throughout the watershed.</p>
+            <a href="https://www.enoriver.org" target="_blank" rel="noopener">enoriver.org</a><a href="https://www.enoriver.org/donate/" target="_blank" rel="noopener">Donate →</a>
+          <button class="partner-filter-btn" onclick="filterByPartner('wq','Eno River Association')">View 9 spots →</button>
           </div>
-
           <div class="partner-card">
             <h3>Cape Fear River Watch</h3>
             <p class="pcount">8 SPOTS MONITORED</p>
-            <p>Protecting the Cape Fear River basin from the Triad to the coast. They operate
-            the kayak rental programme at Greenfield Lake in Wilmington and run citizen monitoring
-            across one of the most ecologically complex watersheds in the state.</p>
-            <a href="https://www.cfrw.org" target="_blank" rel="noopener">cfrw.org</a>
-            <a href="https://www.cfrw.org/donate" target="_blank" rel="noopener">Donate &rarr;</a>
+            <p>Protecting the Cape Fear River basin from the Triad to the coast. They operate the kayak rental program at Greenfield Lake in Wilmington and run citizen monitoring across one of the most ecologically complex watersheds in the state.</p>
+            <a href="https://www.cfrw.org" target="_blank" rel="noopener">cfrw.org</a><a href="https://www.cfrw.org/donate" target="_blank" rel="noopener">Donate →</a>
+          <button class="partner-filter-btn" onclick="filterByPartner('wq','Cape Fear River Watch')">View 8 spots →</button>
           </div>
-
           <div class="partner-card">
             <h3>MountainTrue / French Broad Paddle Trail</h3>
             <p class="pcount">8 SPOTS MONITORED</p>
-            <p>Advocating for clean water, healthy forests and thriving communities across western
-            NC. They steward the French Broad River Paddle Trail, significantly impacted by
-            Hurricane Helene in 2024, and document its ongoing recovery.</p>
-            <a href="https://mountaintrue.org" target="_blank" rel="noopener">mountaintrue.org</a>
-            <a href="https://frenchbroadpaddle.com" target="_blank" rel="noopener">French Broad Paddle Trail</a>
-            <a href="https://mountaintrue.org/donate/" target="_blank" rel="noopener">Donate &rarr;</a>
+            <p>Advocating for clean water, healthy forests and thriving communities across western NC. They steward the French Broad River Paddle Trail, significantly impacted by Hurricane Helene in 2024, and document its ongoing recovery.</p>
+            <a href="https://mountaintrue.org" target="_blank" rel="noopener">mountaintrue.org</a><a href="https://frenchbroadpaddle.com" target="_blank" rel="noopener">French Broad Paddle Trail</a><a href="https://mountaintrue.org/donate/" target="_blank" rel="noopener">Donate →</a>
+          <button class="partner-filter-btn" onclick="filterByPartner('wq','MountainTrue')">View 8 spots →</button>
           </div>
-
           <div class="partner-card">
             <h3>Winyah Rivers Alliance</h3>
             <p class="pcount">5 SPOTS MONITORED</p>
-            <p>Protecting the Lumber, Waccamaw and Pee Dee river systems in southeastern NC &mdash;
-            including the Black River, home to the oldest known trees east of the Rocky Mountains,
-            and the Lumber River, NC&rsquo;s only National Wild and Scenic blackwater river.</p>
-            <a href="https://www.winyahrivers.org" target="_blank" rel="noopener">winyahrivers.org</a>
-            <a href="https://www.winyahrivers.org/donate" target="_blank" rel="noopener">Donate &rarr;</a>
+            <p>Protecting the Lumber, Waccamaw and Pee Dee river systems in southeastern NC, including the Black River, home to the oldest known trees east of the Rocky Mountains, and the Lumber River, NC’s only National Wild and Scenic blackwater river.</p>
+            <a href="https://www.winyahrivers.org" target="_blank" rel="noopener">winyahrivers.org</a><a href="https://www.winyahrivers.org/donate" target="_blank" rel="noopener">Donate →</a>
+          <button class="partner-filter-btn" onclick="filterByPartner('wq','Winyah Rivers Alliance')">View 5 spots →</button>
           </div>
-
           <div class="partner-card">
             <h3>Tar-Pamlico River Foundation</h3>
             <p class="pcount">3 SPOTS MONITORED</p>
-            <p>Stewarding the 55-mile Tar River Paddle Trail from Rocky Mount to Washington, NC.
-            They maintain access information, coordinate with local governments, and monitor one
-            of the most paddleable river corridors in eastern NC.</p>
+            <p>Stewarding the 55-mile Tar River Paddle Trail from Rocky Mount to Washington, NC. They maintain access information, coordinate with local governments, and monitor one of the most paddleable river corridors in eastern NC.</p>
             <a href="https://www.tarpamlicowatertrail.org" target="_blank" rel="noopener">tarpamlicowatertrail.org</a>
+          <button class="partner-filter-btn" onclick="filterByPartner('wq','Tar-Pamlico River Foundation')">View 3 spots →</button>
           </div>
-
           <div class="partner-card">
             <h3>Yadkin Riverkeeper</h3>
             <p class="pcount">2 SPOTS MONITORED</p>
-            <p>Protecting the Yadkin-Pee Dee River basin &mdash; the longest river system entirely
-            within North Carolina &mdash; from the Blue Ridge foothills to the South Carolina line.</p>
-            <a href="https://www.yadkinriverkeeper.org" target="_blank" rel="noopener">yadkinriverkeeper.org</a>
-            <a href="https://www.yadkinriverkeeper.org/donate" target="_blank" rel="noopener">Donate &rarr;</a>
+            <p>Protecting the Yadkin-Pee Dee River basin, the longest river system entirely within North Carolina, from the Blue Ridge foothills to the South Carolina line.</p>
+            <a href="https://www.yadkinriverkeeper.org" target="_blank" rel="noopener">yadkinriverkeeper.org</a><a href="https://www.yadkinriverkeeper.org/donate" target="_blank" rel="noopener">Donate →</a>
+          <button class="partner-filter-btn" onclick="filterByPartner('wq','Yadkin Riverkeeper')">View 2 spots →</button>
           </div>
-
           <div class="partner-card">
             <h3>NC Coastal Federation</h3>
             <p class="pcount">1 SPOT MONITORED</p>
-            <p>Protecting and restoring the NC coast through advocacy, education and conservation.
-            They installed the living shoreline at the Bob Perry Road launch in Kitty Hawk, one of
-            the most ecologically thoughtful access improvements on the Outer Banks.</p>
-            <a href="https://www.nccoast.org" target="_blank" rel="noopener">nccoast.org</a>
-            <a href="https://www.nccoast.org/donate/" target="_blank" rel="noopener">Donate &rarr;</a>
+            <p>Protecting and restoring the NC coast through advocacy, education and conservation. They installed the living shoreline at the Bob Perry Road launch in Kitty Hawk, one of the most ecologically thoughtful access improvements on the Outer Banks.</p>
+            <a href="https://www.nccoast.org" target="_blank" rel="noopener">nccoast.org</a><a href="https://www.nccoast.org/donate/" target="_blank" rel="noopener">Donate →</a>
+          <button class="partner-filter-btn" onclick="filterByPartner('wq','NC Coastal Federation')">View 1 spot →</button>
           </div>
-
+          <div class="partner-card">
+            <h3>NC State Parks</h3>
+            <p class="pcount">23 SPOTS IN THE DATASET</p>
+            <p>NC State Parks manages over 80 parks, recreation areas and natural areas across the state. Many parks issue annual passes covering day-use fees at all sites. If you hold a State Parks pass, the button below shows every access in this dataset where your pass is valid. Learn more and purchase a pass at ncparks.gov.</p>
+            <a href="https://www.ncparks.gov" target="_blank" rel="noopener">ncparks.gov</a><a href="https://www.ncparks.gov/fees-reservations/passes" target="_blank" rel="noopener">Annual passes →</a>
+          <button class="partner-filter-btn" onclick="filterByPartner('agency','NC State Parks')">View 23 spots →</button>
+          </div>
         </div>
-        <p class="meta" style="margin-top:28px">Spot counts reflect paddling accesses in the
-        Put-In dataset where each organisation provides water quality monitoring. Data as of
-        August 2026.</p>
+        <p class="meta" style="margin-top:28px">Spot counts reflect paddling accesses in the Put-In dataset where each organization provides water quality monitoring or manages the access. Data as of August 2026.</p>
       </div>
     </div><!-- /panel-partners -->
 
@@ -837,6 +814,13 @@
   // ---------------------------------------------------------------- render: list
   function renderList() {
     let found = SPOTS.filter(matches);
+    if (state.partnerFilter) {
+      var pf = state.partnerFilter;
+      found = found.filter(function(x) {
+        var v = pf.field === "wq" ? x.wq : x.agency;
+        return v && v.toLowerCase().indexOf(pf.value.toLowerCase()) !== -1;
+      });
+    }
     if (state.region) found = found.filter(s => s.region === state.region);
     if (state.waterType) {
       if (state.waterType === "Sound") found = found.filter(s => s.water && /sound|bay|pamlico|albemarle|roanoke|currituck|bogue|core|ICW|intracoastal/i.test(s.water));
@@ -852,6 +836,8 @@
     found.sort((a, b) => a.name.localeCompare(b.name));
     const count = found.length;
     $("count").textContent = count + (count === 1 ? " spot" : " spots");
+    var _pl2 = $("partner-label");
+    if (_pl2) _pl2.textContent = state.partnerFilter ? " — " + state.partnerFilter.value : "";
 
     if (!count) {
       $("cards").innerHTML =
@@ -1153,7 +1139,7 @@
   });
 
   $("clear").addEventListener("click", () => {
-    state.active.clear(); state.q = ""; $("q").value = "";
+    state.active.clear(); state.q = ""; state.partnerFilter = null; $("q").value = ""; var _pl=$("partner-label"); if(_pl) _pl.textContent="";
     renderFilters(); renderList();
   });
 
@@ -1329,6 +1315,13 @@
       if (state && state.open && dv) { dv.hidden = false; if (lv) lv.hidden = true; }
       else if (lv) lv.hidden = false;
     }
+  }
+
+
+  function filterByPartner(field, value) {
+    state.partnerFilter = { field: field, value: value };
+    showTab("spots");
+    renderList();
   }
 
   // ---------------------------------------------------------------- boot
