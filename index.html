@@ -324,7 +324,7 @@
   .wqline { display: flex; align-items: center; gap: 9px; font-size: 14px; }
   .wqblock { display:flex; flex-direction:column; gap:10px; }
   .btn-swimguide { display:inline-block; padding:10px 18px; background:var(--chan);
-                   color:#000; border:none; border-radius:6px;
+                   color:#fff; border:none; border-radius:6px;
                    text-decoration:none; font-weight:700; font-size:13.5px;
                    align-self:flex-start; }
   .btn-swimguide:hover { opacity:.85; }
@@ -740,9 +740,8 @@
       '<section class="block">' +
         '<span class="eyebrow">Water quality</span>' +
         '<div class="wqblock">' +
-          '<a class="btn-swimguide" href="https://swimguide.org/search?q=' +
-            encodeURIComponent((s.water||s.name)) +
-            '" target="_blank" rel="noopener">Check current water quality on Swim Guide</a>' +
+          '<a class="btn-swimguide" href="https://waterkeeperscarolina.org/swim-guide/"' +
+            ' target="_blank" rel="noopener">Check NC water quality on Swim Guide →</a>' +
           (s.wq ? '<p class="wq-credit">Monitoring Provided By: ' +
             (s.wqUrl ? '<a href="' + esc(s.wqUrl) + '" target="_blank" rel="noopener">' +
             esc(s.wq) + '</a>' : esc(s.wq)) + '.</p>'
