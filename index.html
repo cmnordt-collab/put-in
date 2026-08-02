@@ -322,6 +322,13 @@
                border-left: 2px solid var(--amber); padding-left: 10px; }
 
   .wqline { display: flex; align-items: center; gap: 9px; font-size: 14px; }
+  .wqblock { display:flex; flex-direction:column; gap:10px; }
+  .btn-swimguide { display:inline-block; padding:9px 16px; background:var(--chan);
+                   color:#fff; border-radius:6px; text-decoration:none; font-weight:600;
+                   font-size:13.5px; align-self:flex-start; }
+  .btn-swimguide:hover { opacity:.88; }
+  .wq-credit { font-size:13px; color:var(--ink-soft); }
+  .wq-credit a { color:var(--chan); }
   .dot { width: 11px; height: 11px; border-radius: 50%; flex: none; }
   .dot.green { background: var(--flag-green); }
   .dot.grey  { background: var(--contour); }
@@ -545,7 +552,7 @@
     { id:"swimmable", label:"Swimmable",         test: s => s.swimArea && /^yes/i.test(s.swimArea) },
     { id:"rentals",   label:"Rentals available", test: s => !!s.rentals },
     { id:"camping",   label:"Camping",           test: s => s.camping === true },
-    { id:"dogs",      label:"Dog friendly",      test: s => s.dogs === true },
+    { id:"dogs",      label:"Dog-friendly",      test: s => s.dogs === true },
     { id:"ada",       label:"Accessible launch", test: s => s.ada === true },
     { id:"fav",       label:"Favorites",         test: s => state.favs.has(s.id) }
   ];
@@ -731,10 +738,15 @@
 
       '<section class="block">' +
         '<span class="eyebrow">Water quality</span>' +
-        '<div class="wqline"><span class="dot grey"></span><span>' +
-          (s.wq ? (s.wqUrl ? '<a href="' + esc(s.wqUrl) + '" target="_blank" rel="noopener">' +
-            esc(s.wq) + '</a>' : esc(s.wq)) + ' monitors this water.'
-                : 'No monitoring organisation recorded for this spot yet.') + '</span></div>' +
+        '<div class="wqblock">' +
+          '<a class="btn-swimguide" href="https://swimguide.org/search?q=' +
+            encodeURIComponent((s.water||s.name)) +
+            '" target="_blank" rel="noopener">Check current water quality on Swim Guide</a>' +
+          (s.wq ? '<p class="wq-credit">Monitoring provided by ' +
+            (s.wqUrl ? '<a href="' + esc(s.wqUrl) + '" target="_blank" rel="noopener">' +
+            esc(s.wq) + '</a>' : esc(s.wq)) + '.</p>'
+                : '<p class="wq-credit">No monitoring partner recorded for this spot yet.</p>') +
+        '</div>' +
       '</section>' +
 
       '<section class="block">' +
