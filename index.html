@@ -52,7 +52,38 @@
     opacity: 0.28;
     pointer-events: none;
   }
-  .masthead-inner { position: relative; max-width: 940px; margin: 0 auto; }
+  .tabnav { display:flex; gap:0; margin-top:12px;
+            border-bottom:2px solid rgba(255,255,255,.2); }
+  .tabnav button { padding:7px 18px; background:none; border:none; color:#fff;
+                   font-weight:600; font-size:13px; letter-spacing:.06em;
+                   cursor:pointer; border-bottom:3px solid transparent;
+                   margin-bottom:-2px; opacity:.55; transition:opacity .15s; }
+  .tabnav button.active { opacity:1; border-bottom-color:#fff; }
+  .tabpanel { display:none; }
+  .tabpanel.active { display:block; }
+  .prose { max-width:680px; margin:0 auto; padding:28px 4px 48px; }
+  .prose h2 { font-size:20px; margin:0 0 14px; color:var(--ink); }
+  .prose h3 { font-size:15px; margin:28px 0 8px; color:var(--chan); letter-spacing:.04em; text-transform:uppercase; }
+  .prose p { font-size:14.5px; line-height:1.75; color:var(--ink); margin:0 0 14px; }
+  .prose a { color:var(--chan); }
+  .prose .meta { font-size:13px; color:var(--ink-soft); margin:0 0 14px; }
+  .partner-grid { display:flex; flex-direction:column; gap:18px; margin:20px 0 0; }
+  .partner-card { padding:16px 18px; background:var(--paper-2);
+                  border-radius:8px; border-left:3px solid var(--chan); }
+  .partner-card h3 { margin:0 0 2px; font-size:15px; color:var(--ink);
+                     text-transform:none; letter-spacing:normal; }
+  .partner-card .pcount { font-size:12px; color:var(--ink-soft); margin:0 0 8px; }
+  .partner-card p { font-size:13.5px; line-height:1.6; color:var(--ink-soft); margin:0 0 10px; }
+  .partner-card a { font-size:13px; font-weight:600; color:var(--chan);
+                    text-decoration:none; margin-right:14px; }
+  .partner-card a:hover { text-decoration:underline; }
+  .support-prose { margin:32px 0 0; padding:20px; background:var(--paper-2);
+                   border-radius:8px; text-align:center; }
+  .support-prose p { font-size:14px; color:var(--ink-soft); margin:0 0 12px; }
+  .btn-support { display:inline-block; padding:10px 24px; background:var(--chan);
+                 color:#fff; border-radius:6px; text-decoration:none;
+                 font-weight:700; font-size:14px; }
+    .masthead-inner { position: relative; max-width: 940px; margin: 0 auto; }
   .masthead .eyebrow { color: #A9D2CF; }
   .masthead h1 {
     margin: 6px 0 4px;
@@ -400,10 +431,16 @@
       <div class="eyebrow">SUP · Kayak · Canoe</div>
       <h1>Where Should I Paddle?</h1>
       <p>Search a spot, see everything that matters before you load the car.</p>
+      <nav class="tabnav" role="tablist">
+        <button id="tab-spots"    class="active" onclick="showTab('spots')">SPOTS</button>
+        <button id="tab-about"    class=""       onclick="showTab('about')">ABOUT</button>
+        <button id="tab-partners" class=""       onclick="showTab('partners')">PARTNERS</button>
+      </nav>
     </div>
   </header>
 
   <main class="wrap">
+    <div id="panel-spots" class="tabpanel active">
     <div id="list-view">
       <div class="searchrow">
         <div class="searchfield">
@@ -465,6 +502,178 @@
     </div>
 
     <div id="detail-view" hidden></div>
+    </div><!-- /panel-spots -->
+
+    <!-- ABOUT -->
+    <div id="panel-about" class="tabpanel">
+      <div class="prose">
+        <h2>About Put-In</h2>
+        <p>Put-In is a free, independently built guide to paddling access in North Carolina &mdash;
+        for SUPs, kayaks and canoes. It exists because the information paddlers need before loading
+        the car was scattered across dozens of agency websites, Facebook groups, and word of mouth,
+        and nobody had pulled it together in one place.</p>
+
+        <h3>Who built it</h3>
+        <p>My name is Carrie Nordt. I am a paddler in the NC Piedmont, a lifelong swimmer and water
+        enthusiast, and a former open water racer. I started paddling seriously when I was coaching
+        and training for open water 5k and 10k races &mdash; and fell in love with it just as much
+        as swimming, but it fit better into a full-time working life. It became a way to explore the
+        coast on trips, and a way to stay on the water when summer temperatures or time constraints
+        made open water racing impossible.</p>
+
+        <p>Over the years I found myself researching water quality reports, hunting for new spots,
+        checking conditions, and building mental maps of what was actually paddleable and what was
+        not. I love collecting and using that kind of data. Put-In is where that habit finally has
+        a home.</p>
+
+        <h3>Why it exists</h3>
+        <p>Too many drives ended in a locked gate, a hire-only lake, a carry that was impossible
+        with a hard board alone, or conditions nobody warned about. When I was racing I learned to
+        take water quality seriously &mdash; warm temperatures, algal blooms and runoff are real
+        issues on NC waters, and knowing who monitors a lake before you get in it matters. Growing
+        up going to the NC coast made me aware early of what can go wrong when you are not prepared
+        for changing tides, submerged hazards, or weather that moves faster than you do.</p>
+
+        <p>Put-In is the resource I wished existed. Every spot is checked against its managing
+        agency and carries the source it came from. Blank fields mean unverified, not absent &mdash;
+        that distinction matters most for hazards and dams.</p>
+
+        <h3>What it is not</h3>
+        <p>Put-In is not a substitute for scouting, and it is not a safety guarantee. Conditions
+        change faster than any database can keep up with. Always check current conditions before
+        you go, tell someone your float plan, and paddle within your skill level.</p>
+
+        <h3>Support the site</h3>
+        <p>Put-In is free and always will be. If it saved you a wasted drive, consider buying
+        me a coffee.</p>
+        <div class="support-prose">
+          <p>Every contribution helps keep the data current and the site running.</p>
+          <a class="btn-support" href="https://www.venmo.com/u/CarrieNTheSwim" target="_blank" rel="noopener">
+            &#128182; Support on Venmo
+          </a>
+        </div>
+      </div>
+    </div><!-- /panel-about -->
+
+    <!-- PARTNERS -->
+    <div id="panel-partners" class="tabpanel">
+      <div class="prose">
+        <h2>Partners &amp; Water Monitors</h2>
+        <p>The water quality information on this site exists because of the organisations below.
+        They sample rivers and lakes, issue advisories, fight for clean water policy, and make
+        their data publicly available. Put-In credits them on every spot they monitor.
+        Please consider supporting their work.</p>
+
+        <div class="partner-grid">
+
+          <div class="partner-card">
+            <h3>Haw River Assembly</h3>
+            <p class="pcount">14 SPOTS MONITORED</p>
+            <p>Protecting the Haw River watershed since 1982 &mdash; headwaters of Jordan Lake
+            and the drinking water supply for hundreds of thousands of Triangle residents. They
+            run water quality monitoring, advocacy and restoration across the entire basin.</p>
+            <a href="https://www.hawriver.org" target="_blank" rel="noopener">hawriver.org</a>
+            <a href="https://www.hawriver.org/donate" target="_blank" rel="noopener">Donate &rarr;</a>
+          </div>
+
+          <div class="partner-card">
+            <h3>Sound Rivers</h3>
+            <p class="pcount">10 SPOTS MONITORED</p>
+            <p>Protecting the Neuse and Tar-Pamlico river basins, which drain most of eastern NC
+            into the Pamlico Sound. They run the state&rsquo;s most active citizen water quality
+            monitoring programme and built the accessible kayak launch at Port Terminal in
+            Greenville.</p>
+            <a href="https://soundrivers.org" target="_blank" rel="noopener">soundrivers.org</a>
+            <a href="https://soundrivers.org/donate/" target="_blank" rel="noopener">Donate &rarr;</a>
+          </div>
+
+          <div class="partner-card">
+            <h3>Catawba Riverkeeper</h3>
+            <p class="pcount">9 SPOTS MONITORED</p>
+            <p>Defending 225 miles of river from the Blue Ridge foothills to Lake Wylie, covering
+            the drinking water supply for over a million people. They run guided paddle programmes
+            from Confluence in Cramerton and The Boathouse in McAdenville.</p>
+            <a href="https://www.catawbariverkeeper.org" target="_blank" rel="noopener">catawbariverkeeper.org</a>
+            <a href="https://www.catawbariverkeeper.org/donate" target="_blank" rel="noopener">Donate &rarr;</a>
+          </div>
+
+          <div class="partner-card">
+            <h3>Eno River Association</h3>
+            <p class="pcount">9 SPOTS MONITORED</p>
+            <p>Protecting the Eno River since 1966 &mdash; one of the longest-running river
+            conservation organisations in the Southeast. They were instrumental in establishing
+            Eno River State Park and continue to monitor water quality and restore habitat
+            throughout the watershed.</p>
+            <a href="https://www.enoriver.org" target="_blank" rel="noopener">enoriver.org</a>
+            <a href="https://www.enoriver.org/donate/" target="_blank" rel="noopener">Donate &rarr;</a>
+          </div>
+
+          <div class="partner-card">
+            <h3>Cape Fear River Watch</h3>
+            <p class="pcount">8 SPOTS MONITORED</p>
+            <p>Protecting the Cape Fear River basin from the Triad to the coast. They operate
+            the kayak rental programme at Greenfield Lake in Wilmington and run citizen monitoring
+            across one of the most ecologically complex watersheds in the state.</p>
+            <a href="https://www.cfrw.org" target="_blank" rel="noopener">cfrw.org</a>
+            <a href="https://www.cfrw.org/donate" target="_blank" rel="noopener">Donate &rarr;</a>
+          </div>
+
+          <div class="partner-card">
+            <h3>MountainTrue / French Broad Paddle Trail</h3>
+            <p class="pcount">8 SPOTS MONITORED</p>
+            <p>Advocating for clean water, healthy forests and thriving communities across western
+            NC. They steward the French Broad River Paddle Trail, significantly impacted by
+            Hurricane Helene in 2024, and document its ongoing recovery.</p>
+            <a href="https://mountaintrue.org" target="_blank" rel="noopener">mountaintrue.org</a>
+            <a href="https://frenchbroadpaddle.com" target="_blank" rel="noopener">French Broad Paddle Trail</a>
+            <a href="https://mountaintrue.org/donate/" target="_blank" rel="noopener">Donate &rarr;</a>
+          </div>
+
+          <div class="partner-card">
+            <h3>Winyah Rivers Alliance</h3>
+            <p class="pcount">5 SPOTS MONITORED</p>
+            <p>Protecting the Lumber, Waccamaw and Pee Dee river systems in southeastern NC &mdash;
+            including the Black River, home to the oldest known trees east of the Rocky Mountains,
+            and the Lumber River, NC&rsquo;s only National Wild and Scenic blackwater river.</p>
+            <a href="https://www.winyahrivers.org" target="_blank" rel="noopener">winyahrivers.org</a>
+            <a href="https://www.winyahrivers.org/donate" target="_blank" rel="noopener">Donate &rarr;</a>
+          </div>
+
+          <div class="partner-card">
+            <h3>Tar-Pamlico River Foundation</h3>
+            <p class="pcount">3 SPOTS MONITORED</p>
+            <p>Stewarding the 55-mile Tar River Paddle Trail from Rocky Mount to Washington, NC.
+            They maintain access information, coordinate with local governments, and monitor one
+            of the most paddleable river corridors in eastern NC.</p>
+            <a href="https://www.tarpamlicowatertrail.org" target="_blank" rel="noopener">tarpamlicowatertrail.org</a>
+          </div>
+
+          <div class="partner-card">
+            <h3>Yadkin Riverkeeper</h3>
+            <p class="pcount">2 SPOTS MONITORED</p>
+            <p>Protecting the Yadkin-Pee Dee River basin &mdash; the longest river system entirely
+            within North Carolina &mdash; from the Blue Ridge foothills to the South Carolina line.</p>
+            <a href="https://www.yadkinriverkeeper.org" target="_blank" rel="noopener">yadkinriverkeeper.org</a>
+            <a href="https://www.yadkinriverkeeper.org/donate" target="_blank" rel="noopener">Donate &rarr;</a>
+          </div>
+
+          <div class="partner-card">
+            <h3>NC Coastal Federation</h3>
+            <p class="pcount">1 SPOT MONITORED</p>
+            <p>Protecting and restoring the NC coast through advocacy, education and conservation.
+            They installed the living shoreline at the Bob Perry Road launch in Kitty Hawk, one of
+            the most ecologically thoughtful access improvements on the Outer Banks.</p>
+            <a href="https://www.nccoast.org" target="_blank" rel="noopener">nccoast.org</a>
+            <a href="https://www.nccoast.org/donate/" target="_blank" rel="noopener">Donate &rarr;</a>
+          </div>
+
+        </div>
+        <p class="meta" style="margin-top:28px">Spot counts reflect paddling accesses in the
+        Put-In dataset where each organisation provides water quality monitoring. Data as of
+        August 2026.</p>
+      </div>
+    </div><!-- /panel-partners -->
+
   </main>
 </div>
 
@@ -554,7 +763,8 @@
     { id:"rentals",   label:"Rentals available", test: s => !!s.rentals },
     { id:"camping",   label:"Camping",           test: s => s.camping === true },
     { id:"dogs",      label:"Dog-friendly",      test: s => s.dogs === true },
-    { id:"ada",       label:"Accessible launch", test: s => s.ada === true },
+    { id:"free",      label:"Free access",       test: s => s.fee && /^none|^free|^no fee/i.test(s.fee) },
+    { id:"ada",       label:"ADA Launch",        test: s => s.ada === true },
     { id:"fav",       label:"Favorites",         test: s => state.favs.has(s.id) }
   ];
 
@@ -1104,6 +1314,21 @@
     line.innerHTML =
       '<div class="moondisc"><i style="transform:translateX(' + off.toFixed(1) + 'px)"></i></div>' +
       '<div class="moontext"><b>' + phaseName(il.phase) + ', ' + pct + '% lit.</b> ' + verdict + '</div>';
+  }
+
+
+  function showTab(name) {
+    ["spots","about","partners"].forEach(function(t) {
+      var pan = document.getElementById("panel-" + t);
+      var btn = document.getElementById("tab-" + t);
+      if (pan) pan.classList.toggle("active", t === name);
+      if (btn) btn.classList.toggle("active", t === name);
+    });
+    if (name === "spots") {
+      var dv = $("detail-view"), lv = $("list-view");
+      if (state && state.open && dv) { dv.hidden = false; if (lv) lv.hidden = true; }
+      else if (lv) lv.hidden = false;
+    }
   }
 
   // ---------------------------------------------------------------- boot
