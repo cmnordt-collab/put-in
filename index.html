@@ -432,9 +432,9 @@
       <h1>Where Should I Paddle?</h1>
       <p>Search a spot, see everything that matters before you load the car.</p>
       <nav class="tabnav" role="tablist">
-        <button id="tab-spots"    class="active" onclick="showTab('spots')">SPOTS</button>
-        <button id="tab-about"    class=""       onclick="showTab('about')">ABOUT</button>
-        <button id="tab-partners" class=""       onclick="showTab('partners')">PARTNERS</button>
+        <button id="tab-spots"    class="active">SPOTS</button>
+        <button id="tab-about"    class="">ABOUT</button>
+        <button id="tab-partners" class="">PARTNERS</button>
       </nav>
     </div>
   </header>
@@ -1363,6 +1363,10 @@
       ["sel-region","sel-water","sel-rapids","sel-carry"].forEach(id => {
         const key = {'sel-region':'region','sel-water':'waterType','sel-rapids':'rapids','sel-carry':'carry'}[id];
         $(id).addEventListener("change", () => { state[key] = $(id).value; renderList(); });
+      });
+      ["spots","about","partners"].forEach(function(t) {
+        var btn = document.getElementById("tab-" + t);
+        if (btn) btn.addEventListener("click", function() { showTab(t); });
       });
       renderList();
       const c = $("count");
