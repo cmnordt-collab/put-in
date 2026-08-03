@@ -81,6 +81,18 @@
                         background:var(--chan); color:#fff; border:none; border-radius:5px;
                         font-size:13px; font-weight:700; cursor:pointer; }
   .partner-filter-btn:hover { opacity:.85; }
+  .gear-grid { display:flex; flex-direction:column; gap:14px; margin:12px 0 24px; }
+  .gear-card { display:flex; gap:14px; padding:14px; background:var(--paper-2);
+               border-radius:8px; text-decoration:none; color:var(--ink);
+               border:1px solid var(--rule); transition:border-color .15s; }
+  .gear-card:hover { border-color:var(--chan); }
+  .gear-card-body { flex:1; }
+  .gear-card-name { font-weight:700; font-size:14px; display:block; margin-bottom:3px; }
+  .gear-card-desc { font-size:13px; color:var(--ink-soft); line-height:1.5; display:block; }
+  .gear-card-retailer { font-size:11.5px; color:var(--chan); margin-top:5px; display:block; }
+  .gear-section-note { font-size:13.5px; color:var(--ink-soft); margin:0 0 10px;
+                       line-height:1.6; font-style:italic; }
+  .gear-placeholder { font-size:13.5px; color:var(--ink-soft); font-style:italic; margin:0; }
   .support-prose { margin:32px 0 0; padding:20px; background:var(--paper-2);
                    border-radius:8px; text-align:center; }
   .support-prose p { font-size:14px; color:var(--ink-soft); margin:0 0 12px; }
@@ -345,6 +357,10 @@
   .loadfail b { color: var(--ink); display: block; margin-bottom: 6px; }
   .loadfail code { font-family: var(--mono); font-size: 12.5px; background: var(--paper-deep);
                    padding: 2px 5px; border-radius: 3px; }
+  .meteor-line { margin-top:12px; padding:8px 12px; background:rgba(20,96,109,.08);
+                 border-left:3px solid var(--chan); border-radius:4px;
+                 font-size:13px; line-height:1.5; color:var(--ink); }
+  .meteor-line strong { color:var(--chan); }
   .moonline { display: flex; align-items: center; gap: 12px; margin-top: 14px;
               padding-top: 14px; border-top: 1px dashed var(--rule); }
   .moondisc { width: 30px; height: 30px; border-radius: 50%; flex: 0 0 auto;
@@ -439,6 +455,7 @@
         <button id="tab-spots"    class="active">SPOTS</button>
         <button id="tab-about"    class="">ABOUT</button>
         <button id="tab-partners" class="">PARTNERS</button>
+        <button id="tab-gear"     class="">GEAR</button>
       </nav>
     </div>
   </header>
@@ -650,6 +667,438 @@
         <p class="meta" style="margin-top:28px">Spot counts reflect paddling accesses in the Put-In dataset where each organization provides water quality monitoring or manages the access. Data as of August 2026.</p>
       </div>
     </div><!-- /panel-partners -->
+
+
+    <!-- GEAR -->
+    <div id="panel-gear" class="tabpanel">
+      <div class="prose">
+        <h2>Gear &amp; Kit</h2>
+        <p>Picks from someone who actually paddles. Everything here is gear I own, have used,
+        or would confidently recommend. Affiliate links help keep Put-In free &mdash; they cost
+        you nothing extra.</p>
+
+        <h3>SUP Boards</h3>
+        <div class="gear-grid" id="gear-boards">
+          <a class="gear-card" href="https://www.tamarindoboards.com/product-page/carbon-fiber-boards" target="_blank" rel="noopener">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Tamarindo Board Co. &mdash; Full Carbon Fiber SUP</span>
+              <span class="gear-card-desc">EPS core with a full layer of carbon fiber cloth nose to tail, epoxy resin, 3 removable fins, bungee tie-downs, camera mount and a maintenance-free vent plug. Available in 10'6&quot; &times; 31&quot;, 11' &times; 33&quot;, and 11'6&quot; &times; 34&quot;. Hand-fiberglassed and polished in Chesapeake, VA. Keep it in the shade when not in use &mdash; the black carbon core absorbs heat fast in direct sun. <strong>From $1,399</strong> &mdash; slightly above the $1,000&ndash;$1,200 range, but check their scratch &amp; dent page for deals.</span>
+              <span class="gear-card-retailer"><a href="https://www.tamarindoboards.com/product-page/carbon-fiber-boards" target="_blank" rel="noopener">tamarindoboards.com</a> &bull; <a href="https://www.tamarindoboards.com/copy-of-sups" target="_blank" rel="noopener">Scratch &amp; dent</a> &mdash; direct, no affiliate program</span>
+            </div>
+          </a>
+          <p class="gear-section-note">They also sell their own <a href="https://www.tamarindoboards.com/product-page/wood-carbon-fiber-paddles" target="_blank" rel="noopener">adjustable carbon fiber paddle ($199)</a> and <a href="https://www.tamarindoboards.com/product-page/board-bags" target="_blank" rel="noopener">board bags from $79</a>.</p>
+        </div>
+
+
+
+        <h3>Safety</h3>
+        <p class="gear-section-note">In North Carolina an unpowered boat must show a white light between sunset and sunrise. A handheld waterproof torch counts &mdash; keep it reachable, not buried in a dry bag.</p>
+        <div class="gear-grid" id="gear-safety">
+          <a class="gear-card" href="https://www.rei.com/product/189520/ruffwear-float-coat-dog-life-jacket" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Ruffwear Float Coat Dog Life Jacket</span>
+              <span class="gear-card-desc">The standard for dogs on the water. Strong grab handle for lifting back onto the board, foam panels that keep their head up naturally, and reflective trim. Available at REI &mdash; measure your dog’s chest before ordering.</span>
+              <span class="gear-card-retailer"><a href="https://www.rei.com/b/ruffwear/c/dog-life-jackets" target="_blank" rel="noopener sponsored">REI</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+          <a class="gear-card" href="#" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Princeton Tec Remix Waterproof Headlamp</span>
+              <span class="gear-card-desc">NC law requires a white light between sunset and sunrise on any paddle craft. IPX4 water resistant, 300&ndash;450 lumens, red LEDs preserve night vision. <strong>~$30</strong></span>
+              <span class="gear-card-retailer"><a href="https://www.amazon.com/s?k=princeton+tec+remix+headlamp" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+          <a class="gear-card" href="#" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Fox 40 Pealess Safety Whistle</span>
+              <span class="gear-card-desc">Required safety gear on the water. Pealess means it works when wet. Attach it to your PFD or dry bag strap. Under <strong>$10</strong>.</span>
+              <span class="gear-card-retailer"><a href="https://www.amazon.com/s?k=fox+40+pealess+whistle" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+          <a class="gear-card" href="#" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Creatures of Leisure SUP Leash</span>
+              <span class="gear-card-desc">A leash keeps your board from becoming a hazard to other people if you fall. Get the right length for your board — generally equal to the board length. <strong>~$45</strong></span>
+              <span class="gear-card-retailer"><a href="https://www.amazon.com/s?k=creatures+of+leisure+sup+leash" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+        </div>
+
+        <h3>Dry Bags &amp; Storage</h3>
+        <div class="gear-grid" id="gear-storage">
+          <a class="gear-card" href="https://a.co/d/0g2dZHs0" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Earth Pak Waterproof Dry Bag &mdash; 5L</span>
+              <span class="gear-card-desc">The right size for a board &mdash; keys, phone, sunscreen and a snack without getting in the way. Roll-top seal keeps everything dry.</span>
+              <span class="gear-card-retailer"><a href="https://a.co/d/0g2dZHs0" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+          <a class="gear-card" href="https://a.co/d/0eIAUoEZ" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Earth Pak Waterproof Dry Bag &mdash; 10L</span>
+              <span class="gear-card-desc">A size up for longer days or when you need to bring a change of clothes. Still manageable on a board.</span>
+              <span class="gear-card-retailer"><a href="https://a.co/d/0eIAUoEZ" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+          <a class="gear-card" href="https://a.co/d/07tiIKS4" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">New Wave Swim Buoy &mdash; 15L or 20L</span>
+              <span class="gear-card-desc">Originally designed for open water swimmers, this doubles perfectly as a tow-behind dry bag on a board. Highly visible, lightweight, and the dry bag compartment holds your phone and keys. Available in four bright colors.</span>
+              <span class="gear-card-retailer"><a href="https://a.co/d/07tiIKS4" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+          <a class="gear-card" href="#" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">IP68 Waterproof iPhone Case with MagSafe</span>
+              <span class="gear-card-desc">Military-grade shockproof, full body protection with a built-in lanyard. 100+ bought in the past month. If your phone goes in the water, you want this on it.</span>
+              <span class="gear-card-retailer"><a href="https://www.amazon.com/s?k=IP68+waterproof+iphone+case+magsafe" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+        </div>
+
+        <h3>Audio</h3>
+        <div class="gear-grid" id="gear-audio">
+          <a class="gear-card" href="#" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Shokz OpenSwim Pro</span>
+              <span class="gear-card-desc">Bone conduction headphones designed specifically for swimming and water sports. Waterproof to 2 meters, 32GB MP3 storage, and Bluetooth on land. The successor to Aftershokz. <strong>$229.95</strong></span>
+              <span class="gear-card-retailer"><a href="https://www.rei.com/product/242333/shokz-openswim-pro-headphones" target="_blank" rel="noopener sponsored">REI</a> &bull; <a href="https://www.amazon.com/dp/B0CS3JBP67" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+          <a class="gear-card" href="#" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">JBL Clip 5 Waterproof Bluetooth Speaker</span>
+              <span class="gear-card-desc">Clips to your dry bag or board leash ring. IP67 waterproof, 12 hours of battery, loud enough to hear over wind and water. <strong>~$79</strong></span>
+              <span class="gear-card-retailer"><a href="https://www.rei.com/b/jbl/c/bluetooth-speakers" target="_blank" rel="noopener sponsored">REI</a> &bull; <a href="https://www.amazon.com/s?k=jbl+clip+5" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+        </div>
+
+        <h3>Paddles, Gear &amp; Accessories</h3>
+        <div class="gear-grid" id="gear-accessories">
+          <a class="gear-card" href="#" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Garmin Vivoactive 6</span>
+              <span class="gear-card-desc">The current successor to the Vivoactive 4S, with over 80 sport profiles including paddling, swimming and open water. Real-time pacing guidance, 11-day battery. List price <strong>$299.99</strong>, regularly on sale around $249. The Vivoactive 5 is also excellent if on sale.</span>
+              <span class="gear-card-retailer"><a href="https://www.amazon.com/dp/B0F38GK1QZ" target="_blank" rel="noopener sponsored">Amazon</a> &bull; <a href="https://www.rei.com/b/garmin/c/gps-sports-watches" target="_blank" rel="noopener sponsored">REI</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+          <a class="gear-card" href="#" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Werner Camano SUP Paddle</span>
+              <span class="gear-card-desc">The most recommended mid-range kayak and SUP paddle. Lightweight fiberglass and carbon blend, smooth forward stroke, available in small-shaft for smaller hands. <strong>~$220&ndash;250</strong></span>
+              <span class="gear-card-retailer"><a href="https://www.rei.com/b/werner/c/paddles" target="_blank" rel="noopener sponsored">REI</a> &bull; <a href="https://www.amazon.com/s?k=werner+camano+paddle" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+
+          <a class="gear-card" href="https://www.tamarindoboards.com/product-page/wood-carbon-fiber-paddles" target="_blank" rel="noopener">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Tamarindo Adjustable Carbon Fiber Paddle</span>
+              <span class="gear-card-desc">Tamarindo&rsquo;s own adjustable carbon fiber paddle, sized to match their boards. If you go with a Tamarindo board, picking up the paddle there too keeps everything matched and simplifies shipping. <strong>$199</strong></span>
+              <span class="gear-card-retailer"><a href="https://www.tamarindoboards.com/product-page/wood-carbon-fiber-paddles" target="_blank" rel="noopener">tamarindoboards.com</a> &mdash; direct
+            </div>
+          </a>
+          <a class="gear-card" href="#" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Goodr Float G polarized sunglasses</span>
+              <span class="gear-card-desc">Polarized lenses that cut glare on the water, lightweight, and they float. Under <strong>$35</strong> — one of the best values in outdoor eyewear. Add a floating sunglass cord for extra insurance.</span>
+              <span class="gear-card-retailer"><a href="https://www.amazon.com/s?k=goodr+float+g+polarized" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+          <a class="gear-card" href="#" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Hydro Flask 32oz Wide Mouth</span>
+              <span class="gear-card-desc">Keeps water cold for 24 hours on the water. Wide mouth fits ice. <strong>~$50</strong> at REI. Worth owning one that stays in your car bag permanently.</span>
+              <span class="gear-card-retailer"><a href="https://www.rei.com/b/hydro-flask/c/water-bottles" target="_blank" rel="noopener sponsored">REI</a> &bull; <a href="https://www.amazon.com/s?k=hydro+flask+32oz+wide+mouth" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+          <a class="gear-card" href="#" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">YETI Hopper Flip Soft Cooler</span>
+              <span class="gear-card-desc">Waterproof, straps to your board or kayak, and keeps ice for days. The Flip 8 is the right size for a full day paddle. <strong>~$250</strong> at REI and Backcountry.</span>
+              <span class="gear-card-retailer"><a href="https://www.rei.com/b/yeti/c/coolers" target="_blank" rel="noopener sponsored">REI</a> &bull; <a href="https://www.backcountry.com/yeti" target="_blank" rel="noopener sponsored">Backcountry</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+          <a class="gear-card" href="#" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Cressi Pano 3 Snorkel Set</span>
+              <span class="gear-card-desc">Consistently the top-rated snorkel set for adults. Panoramic mask, Supernova dry snorkel that seals completely when submerged, and travel-size fins. <strong>~$80&ndash;120</strong> depending on configuration.</span>
+              <span class="gear-card-retailer"><a href="https://www.rei.com/b/cressi/c/snorkel-gear" target="_blank" rel="noopener sponsored">REI</a> &bull; <a href="https://www.amazon.com/s?k=cressi+pano+snorkel+set" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+          <a class="gear-card" href="#" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">BPS Storm Sock Neoprene Water Socks &mdash; 3mm</span>
+              <span class="gear-card-desc">The ones in the gear photo. Anti-slip sole, low cut, good for rocky launches like Holden Beach or the Haw River. 3mm keeps feet warm in cooler water. <strong>~$22</strong></span>
+              <span class="gear-card-retailer"><a href="https://www.amazon.com/s?k=BPS+storm+sock+neoprene+water+socks" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+          <a class="gear-card" href="#" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Thinksport SPF 50 Mineral Sunscreen</span>
+              <span class="gear-card-desc">Reef-safe mineral sunscreen popular with open water swimmers. No oxybenzone or octinoxate — matters especially at NC coastal spots. <strong>~$15</strong></span>
+              <span class="gear-card-retailer"><a href="https://www.amazon.com/s?k=thinksport+spf+50" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+          <a class="gear-card" href="#" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Sun Bum SPF 30 Lip Balm</span>
+              <span class="gear-card-desc">Because no one thinks about their lips until they’re burnt. Keep one in the dry bag. <strong>~$5</strong></span>
+              <span class="gear-card-retailer"><a href="https://www.amazon.com/s?k=sun+bum+lip+balm+spf+30" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+        </div>
+
+        <h3>Kayaks &amp; Hybrids</h3>
+        <p class="gear-section-note">If you want to paddle seated as well as standing, a SUP/kayak hybrid inflatable lets you do both without buying two boats. Rolls into a backpack for travel, stores in a closet, and no roof rack needed.</p>
+        <div class="gear-grid" id="gear-kayaks">
+          <a class="gear-card" href="https://www.boteboard.com/products/lowrider-aero-hybrid-paddle-board" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">BOTE LowRider Aero &mdash; SUP + Kayak Hybrid</span>
+              <span class="gear-card-desc">The premium hybrid in BOTE&rsquo;s Rider Series. Converts between stand-up paddling and sit-on-top kayak with a removable seat and a 4-piece carbon/fiberglass SUP+Kayak hybrid paddle included. AeroULTRA construction, 30 lbs, MAGNEPOD magnetic accessory system, compatible with BOTE&rsquo;s Rac system for coolers, rod holders and gear. Rolls into a backpack travel bag. Haw River Canoe &amp; Kayak in Saxapahaw carries BOTE &mdash; worth seeing one in person before you buy. <strong>~$900&ndash;1,100</strong></span>
+              <span class="gear-card-retailer"><a href="https://www.boteboard.com/products/lowrider-aero-hybrid-paddle-board" target="_blank" rel="noopener sponsored">boteboard.com</a> &bull; <a href="https://www.amazon.com/s?k=BOTE+LowRider+Aero" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+          <a class="gear-card" href="https://www.boteboard.com/products/easyrider-aero-hybrid-paddle-board" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">BOTE EasyRider Aero &mdash; Entry-Level Hybrid</span>
+              <span class="gear-card-desc">The more accessible version of the hybrid concept. 10'4&quot;, beginner-friendly stability, includes removable kayak seat and aluminum SUP+Kayak hybrid paddle. MAGNEPOD compatible and Travelink strap ready. A good way to try the hybrid format before committing to the premium model. <strong>~$700&ndash;800</strong></span>
+              <span class="gear-card-retailer"><a href="https://www.boteboard.com/products/easyrider-aero-hybrid-paddle-board" target="_blank" rel="noopener sponsored">boteboard.com</a> &bull; <a href="https://www.amazon.com/dp/B0CXQJWJSM" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+          <a class="gear-card" href="https://www.rei.com/product/233246/oru-kayak-lake-sport-kayak" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Oru Kayak Lake Sport &mdash; 9', 17 lbs</span>
+              <span class="gear-card-desc">The entry-level Oru and lightest folding kayak they make. Built specifically for calm lakes, bays and slow rivers &mdash; exactly the NC flatwater spots on this site. Folds to a compact box that fits in a car trunk. No tools, no roof rack. A great starting point if you want to try the format. <strong>$699</strong></span>
+              <span class="gear-card-retailer"><a href="https://www.rei.com/product/233246/oru-kayak-lake-sport-kayak" target="_blank" rel="noopener sponsored">REI</a> &bull; <a href="https://www.amazon.com/s?k=oru+kayak+lake+sport" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+          <a class="gear-card" href="https://www.rei.com/product/191780/oru-kayak-beach-lt-folding-kayak-12-1" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Oru Kayak Inlet &mdash; 9'8&quot;, 20 lbs</span>
+              <span class="gear-card-desc">One step up from the Lake, with a longer waterline for better tracking and a 275 lb capacity. Still very portable. The sweet spot between entry-level and touring for lakes and calm coastal sounds. <strong>$899</strong></span>
+              <span class="gear-card-retailer"><a href="https://www.rei.com/b/oru-kayak/c/folding-kayaks" target="_blank" rel="noopener sponsored">REI</a> &bull; <a href="https://www.amazon.com/s?k=oru+kayak+inlet" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+          <a class="gear-card" href="https://www.rei.com/product/191780/oru-kayak-beach-lt-folding-kayak-12-1" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Oru Kayak Beach LT &mdash; 12'1&quot;, 25 lbs</span>
+              <span class="gear-card-desc">Top-rated all-around model. Handles lakes, rivers and coastal sounds equally well. Good for day trips and short overnight paddles. 4.6 stars across 177 reviews at REI. The one most paddlers end up wishing they had bought first if they started with a shorter model. <strong>$1,199</strong></span>
+              <span class="gear-card-retailer"><a href="https://www.rei.com/product/191780/oru-kayak-beach-lt-folding-kayak-12-1" target="_blank" rel="noopener sponsored">REI</a> &bull; <a href="https://www.amazon.com/s?k=oru+kayak+beach+lt" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+          <a class="gear-card" href="https://www.rei.com/product/877618/oru-kayak-bay-folding-kayak" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Oru Kayak Bay ST &mdash; 12'3&quot;, 26 lbs</span>
+              <span class="gear-card-desc">The flagship. Best-in-class tracking and performance, handles rivers, lakes and coastal water. Closed-cockpit design with aluminum latches and reinforced strap anchors. 4.7 stars across 178 reviews &mdash; the highest-rated kayak in its category at REI. For someone who will paddle a wide variety of NC waters including the Haw, the sounds, and the barrier island paddling trails, this is the one. <strong>$1,499</strong></span>
+              <span class="gear-card-retailer"><a href="https://www.rei.com/product/877618/oru-kayak-bay-folding-kayak" target="_blank" rel="noopener sponsored">REI</a> &bull; <a href="https://www.amazon.com/s?k=oru+kayak+bay+st" target="_blank" rel="noopener sponsored">Amazon</a> &bull; <a href="https://www.orukayak.com/products/bay-st" target="_blank" rel="noopener">orukayak.com</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+          <p class="gear-section-note" style="margin-top:14px"><strong>Paddles:</strong> The Werner Camano in the Paddles section above works for kayaking too. The Oru kayak comes without a paddle &mdash; budget for one separately, or look at the Inlet bundle which includes a paddle for $1,197.</p>
+        </div>
+
+        <h3>Life Jackets &amp; PFDs</h3>
+        <p class="gear-section-note">North Carolina law requires all paddlers to have a Coast Guard-approved PFD on board. On a SUP, wearing it is the only way it helps. The right PFD is one you will actually keep on &mdash; comfort matters as much as buoyancy.</p>
+        <div class="gear-grid" id="gear-pfds">
+          <a class="gear-card" href="https://www.rei.com/product/151522/nrs-zephyr-inflatable-pfd" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">NRS Zephyr Inflatable Belt PFD &mdash; SUP pick</span>
+              <span class="gear-card-desc">The most popular PFD for stand-up paddleboarding. Wears as a small waist pack and stays completely out of the way while paddling. In the event of a swim, rotate the belt forward and pull the red tab to inflate with CO2 &mdash; 27.8 lbs of flotation instantly. Includes a zippered pocket with key tether and D-ring for your whistle. Type V &mdash; must be worn to meet Coast Guard requirements. Replace the CO2 cartridge after each inflation. <strong>~$150</strong></span>
+              <span class="gear-card-retailer"><a href="https://www.rei.com/product/151522/nrs-zephyr-inflatable-pfd" target="_blank" rel="noopener sponsored">REI</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+          <a class="gear-card" href="https://www.rei.com/product/202776/astral-ev-eight-pfd" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Astral EV-Eight PFD &mdash; Kayak pick</span>
+              <span class="gear-card-desc">The most breathable foam PFD consistently recommended for kayaking in warm climates. High mesh back clears high-back kayak seats like the Oru, so it won&rsquo;t push your head forward. Airescape ventilation system wicks heat and moisture, seven adjustment points for a precise fit. Multiple reviewers describe paddling 40-mile trips and forgetting they were wearing it. Women&rsquo;s-specific Astral Layla also available. <strong>~$130</strong></span>
+              <span class="gear-card-retailer"><a href="https://www.rei.com/product/202776/astral-ev-eight-pfd" target="_blank" rel="noopener sponsored">REI</a> &bull; <a href="https://www.amazon.com/s?k=astral+ev+eight+pfd" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+          <a class="gear-card" href="https://www.rei.com/b/ruffwear/c/dog-life-jackets" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Ruffwear Float Coat / Confluence &mdash; Dog PFD</span>
+              <span class="gear-card-desc">Already listed in the Safety section above, but worth repeating here alongside the human PFDs. If Lina comes on the water, she needs one too. Measure chest girth before ordering &mdash; sizing varies a lot by breed. Float Coat <strong>~$90</strong>, Confluence <strong>~$100</strong></span>
+              <span class="gear-card-retailer"><a href="https://www.rei.com/b/ruffwear/c/dog-life-jackets" target="_blank" rel="noopener sponsored">REI</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+        </div>
+
+        <h3>Transport &amp; Car</h3>
+        <p class="gear-section-note">Always run a bow line from the nose of your board to the front of your car, in addition to your roof straps. At highway speed, lift is real.</p>
+        <div class="gear-grid" id="gear-transport">
+          <a class="gear-card" href="#" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Thule SUP Taxi XT</span>
+              <span class="gear-card-desc">The most popular dedicated SUP carrier. Telescoping design fits boards up to 34" wide, lockable, weather-resistant padding. Fits most factory racks and all Thule crossbars. Note: some reviewers report strap stiffness after first use — the workaround is simple but worth knowing. <strong>~$200</strong></span>
+              <span class="gear-card-retailer"><a href="https://www.rei.com/product/137690/thule-sup-taxi-xt-mount" target="_blank" rel="noopener sponsored">REI</a> &bull; <a href="https://www.amazon.com/dp/B0791YNVXV" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+          <a class="gear-card" href="#" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Foam Block Roof Pads with Tie-Down Straps</span>
+              <span class="gear-card-desc">The budget-friendly alternative if you don't have crossbars or want a no-tools solution. A good set of foam blocks and 15-foot cam straps will safely carry your board for years. Look for sets with hood loops for the front safety line. <strong>~$30&ndash;50</strong></span>
+              <span class="gear-card-retailer"><a href="https://www.amazon.com/s?k=soft+roof+rack+pads+kayak+sup+straps" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+          <a class="gear-card" href="#" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">NRS 1" Tie-Down Cam Straps &mdash; 12 or 15 ft</span>
+              <span class="gear-card-desc">Better than the straps that come with most racks. NRS cam straps are trusted by outfitters and whitewater guides. Always use two straps over the board plus a bow line from the front of the board to the car to prevent lifting at speed. <strong>~$14&ndash;18 each</strong></span>
+              <span class="gear-card-retailer"><a href="https://www.rei.com/b/nrs/c/straps" target="_blank" rel="noopener sponsored">REI</a> &bull; <a href="https://www.amazon.com/s?k=NRS+1+inch+cam+straps+tie+down" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+          <a class="gear-card" href="#" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Malone Stax Pro 2 Kayak and SUP Carrier</span>
+              <span class="gear-card-desc">A more affordable alternative to Thule at about half the price. J-bar style, folds flat when not in use, fits most crossbars. Good for someone who also carries a kayak. <strong>~$100</strong></span>
+              <span class="gear-card-retailer"><a href="https://www.rei.com/b/malone/c/water-sport-carriers" target="_blank" rel="noopener sponsored">REI</a> &bull; <a href="https://www.amazon.com/s?k=malone+stax+pro+2+kayak+carrier" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+          <a class="gear-card" href="#" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Rhino-Rack Nautic SUP and Kayak Roller</span>
+              <span class="gear-card-desc">A loading roller that attaches to your rear crossbar so you can slide the board up from the back rather than lifting it overhead. Worth every penny if you paddle solo and have a larger board. <strong>~$80</strong></span>
+              <span class="gear-card-retailer"><a href="https://www.amazon.com/s?k=rhino+rack+nautic+roller" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+          <a class="gear-card" href="#" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Lasso Lock Security Cable</span>
+              <span class="gear-card-desc">A simple steel cable loop that runs through the board’s leash plug and around your roof rack. Won’t stop a determined thief but will stop an opportunist, and most people forget boards are even stealable until they’re gone. <strong>~$20</strong></span>
+              <span class="gear-card-retailer"><a href="https://www.amazon.com/s?k=lasso+lock+sup+board+cable+lock" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+        </div>
+
+        <h3>Garage &amp; Home Storage</h3>
+        <p class="gear-section-note">Hard boards need to be stored off the floor, out of direct sun, and away from temperature extremes. A good pulley system clears floor space and keeps the board protected. Always mount into ceiling joists, not just drywall.</p>
+        <div class="gear-grid" id="gear-storage-home">
+          <a class="gear-card" href="https://www.rei.com/product/131615/suspenz-ceiling-hoister" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Suspenz Ceiling Hoister &mdash; Best Quality Pick</span>
+              <span class="gear-card-desc">Stainless steel precision pulleys and hardware, self-locking safety cleat that grips instantly if the rope is accidentally released. Purpose-built for watercraft, not repurposed bike hardware. 5-star reviews from paddlers with expensive boards. 4-point lifting system for even weight distribution &mdash; critical for a carbon board with no flex to spare. For a $1,400 board this is the right tier of hardware. <strong>$182.95</strong></span>
+              <span class="gear-card-retailer"><a href="https://www.rei.com/product/131615/suspenz-ceiling-hoister" target="_blank" rel="noopener sponsored">REI</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+          <a class="gear-card" href="https://www.rei.com/product/103775/suspenz-sup-rack" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Suspenz SUP Wall Rack</span>
+              <span class="gear-card-desc">If a ceiling hoist doesn&rsquo;t suit your space, the Suspenz wall rack is the same quality tier. Wide nylon straps cradle the board with no pressure points, powder-coated steel arms, easy one-person load. Reviewers call it the best SUP storage rack made. <strong>$79.95</strong></span>
+              <span class="gear-card-retailer"><a href="https://www.rei.com/product/103775/suspenz-sup-rack" target="_blank" rel="noopener sponsored">REI</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+          <a class="gear-card" href="https://www.amazon.com/s?k=wall+mount+sup+paddleboard+storage+rack+horizontal" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Horizontal Wall Mount Rack</span>
+              <span class="gear-card-desc">If your ceiling is too low or you want the board more accessible, a horizontal wall mount stores the board on its side with foam-padded arms. Good for garages with 8 ft ceilings where a pulley leaves insufficient clearance. Look for padded arms at least 18 inches long and rated for 50+ lbs. <strong>~$30&ndash;50</strong></span>
+              <span class="gear-card-retailer"><a href="https://www.amazon.com/s?k=wall+mount+sup+paddleboard+storage+rack" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+          <a class="gear-card" href="https://www.tamarindoboards.com/product-page/board-bags" target="_blank" rel="noopener">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Tamarindo Board Bag</span>
+              <span class="gear-card-desc">A padded board bag protects the finish when transporting or storing. Tamarindo makes their own bags sized for their boards. Worth having even if the board lives on a wall mount, since it keeps dust and UV off the carbon. <strong>From $79</strong></span>
+              <span class="gear-card-retailer"><a href="https://www.tamarindoboards.com/product-page/board-bags" target="_blank" rel="noopener">tamarindoboards.com</a> &mdash; direct</span>
+            </div>
+          </a>
+        </div>
+
+        <h3>Audio (Alternative Pick)</h3>
+        <div class="gear-grid">
+          <a class="gear-card" href="https://www.amazon.com/dp/B09Q59321N" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Tribit StormBox Micro 2</span>
+              <span class="gear-card-desc">The most popular compact waterproof speaker for outdoor sports. IP67 rated, built-in strap wraps around a board leash ring, handlebar or dry bag. 12 hours of battery, loud enough to hear over wind and water without being obnoxious to other paddlers. Half the price of the JBL Clip. The Micro 3 (IP68, 24 hours) is also available for a few dollars more. <strong>~$40&ndash;50</strong></span>
+              <span class="gear-card-retailer"><a href="https://www.amazon.com/dp/B09Q59321N" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+        </div>
+
+        <h3>Navigation &amp; Phone Mount</h3>
+        <div class="gear-grid">
+          <a class="gear-card" href="https://www.amazon.com/s?k=RAM+mount+waterproof+phone+kayak+SUP" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">RAM Mount Waterproof Phone Holder</span>
+              <span class="gear-card-desc">Mounts to a SUP bungee D-ring or kayak deck line and holds your phone face-up for GPS navigation. RAM is the standard brand for on-water mounts &mdash; the hardware is tougher than Amazon generic versions. Pair with an offline map app like Gaia GPS or OnX before you go out, especially at spots with limited cell signal. <strong>~$30&ndash;50</strong></span>
+              <span class="gear-card-retailer"><a href="https://www.amazon.com/s?k=RAM+mount+waterproof+phone+kayak+SUP" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+        </div>
+
+        <h3>Roof Crossbars</h3>
+        <p class="gear-section-note">The transport picks above assume you have crossbars. If your car doesn&rsquo;t have them, you need a crossbar kit before a rack makes sense. Thule and Yakima both have vehicle-specific fit guides on their websites.</p>
+        <div class="gear-grid">
+          <a class="gear-card" href="https://www.rei.com/b/thule/c/roof-rack-systems" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Thule or Yakima Crossbar Kit</span>
+              <span class="gear-card-desc">Both brands sell vehicle-specific kits that include feet, fit kit and bars. Thule SquareBar or WingBar Evo are the most common. Check their fit guides with your make, model and year before buying &mdash; the right kit is vehicle-specific. REI carries both brands and can help with fit in store. <strong>~$200&ndash;400</strong> depending on vehicle and bar style</span>
+              <span class="gear-card-retailer"><a href="https://www.rei.com/b/thule/c/roof-rack-systems" target="_blank" rel="noopener sponsored">REI &mdash; Thule</a> &bull; <a href="https://www.rei.com/b/yakima/c/roof-rack-systems" target="_blank" rel="noopener sponsored">REI &mdash; Yakima</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+        </div>
+
+        <h3>Cold Weather Paddling</h3>
+        <p class="gear-section-note">NC water temps drop into the 40s and 50s from November through March on Piedmont rivers and lakes. Dress for immersion, not the air temperature.</p>
+        <div class="gear-grid">
+          <a class="gear-card" href="https://www.rei.com/b/nrs/c/paddling-gloves" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">NRS Cove Neoprene Paddling Gloves</span>
+              <span class="gear-card-desc">Neoprene gloves keep hands warm and maintain grip on a wet paddle shaft. NRS is the most trusted brand for paddling-specific gloves &mdash; cut and stitched for dexterity, not just warmth. 2mm neoprene for shoulder season, 3mm for cold water. Fingers stay nimble enough to operate buckles and dry bag closures. <strong>~$30&ndash;45</strong></span>
+              <span class="gear-card-retailer"><a href="https://www.rei.com/b/nrs/c/paddling-gloves" target="_blank" rel="noopener sponsored">REI</a> &bull; <a href="https://www.amazon.com/s?k=NRS+neoprene+paddling+gloves" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+        </div>
+
+        <h3>Kayak Safety Extras</h3>
+        <p class="gear-section-note">For the Oru specifically &mdash; it&rsquo;s a closed-cockpit sit-in kayak, which means a capsize is a more involved situation than falling off a SUP. A paddle float and bilge pump are the two items that make solo self-rescue possible.</p>
+        <div class="gear-grid">
+          <a class="gear-card" href="https://www.rei.com/product/130372/nrs-sea-kayak-paddle-float" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">NRS Sea Kayak Paddle Float</span>
+              <span class="gear-card-desc">Slides over one blade of your paddle and inflates to act as an outrigger, giving you something to push against when re-entering a capsized sit-in kayak from the water alone. Every closed-cockpit kayak paddler should own one and know how to use it before they need it. <strong>~$35&ndash;50</strong></span>
+              <span class="gear-card-retailer"><a href="https://www.rei.com/product/130372/nrs-sea-kayak-paddle-float" target="_blank" rel="noopener sponsored">REI</a> &bull; <a href="https://www.amazon.com/s?k=sea+kayak+paddle+float" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+          <a class="gear-card" href="https://www.rei.com/c/kayak-accessories" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Kayak Bilge Pump</span>
+              <span class="gear-card-desc">After a wet exit and re-entry, the cockpit will have water in it. A hand bilge pump is how you clear it. Small, cheap, and the kind of thing you only think about once &mdash; ideally before you need it. Stomp-style or hand-held both work. <strong>~$15&ndash;25</strong></span>
+              <span class="gear-card-retailer"><a href="https://www.rei.com/c/kayak-accessories" target="_blank" rel="noopener sponsored">REI</a> &bull; <a href="https://www.amazon.com/s?k=kayak+bilge+pump" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+          <a class="gear-card" href="https://www.amazon.com/s?k=adventure+medical+kits+waterproof+paddler" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Adventure Medical Kits Waterproof First Aid Kit</span>
+              <span class="gear-card-desc">Paddler-specific first aid kit in a waterproof dry bag, designed by a physician who paddles. Modular clear pockets let you find what you need fast. Covers cuts, sprains, blisters, stings and more. Sized for a day trip up to multi-day. Especially important at remote accesses like the Black River, Alligator River NWR, and Merchants Millpond where cell signal is limited. <strong>~$30&ndash;60</strong> depending on size</span>
+              <span class="gear-card-retailer"><a href="https://www.rei.com/b/adventure-medical-kits/c/first-aid-kits" target="_blank" rel="noopener sponsored">REI</a> &bull; <a href="https://www.amazon.com/s?k=adventure+medical+kits+waterproof+paddler" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+        </div>
+
+        <h3>Bug Protection</h3>
+        <p class="gear-section-note">Bugs are in the notes for several spots in this dataset &mdash; the Lumber River, Black River, Merchants Millpond and Alligator River NWR especially. Picaridin-based repellent is better for paddling than DEET since it won&rsquo;t damage neoprene, rubber gaskets or plastic gear.</p>
+        <div class="gear-grid">
+          <a class="gear-card" href="https://www.amazon.com/s?k=Sawyer+picaridin+insect+repellent" target="_blank" rel="noopener sponsored">
+            <div class="gear-card-body">
+              <span class="gear-card-name">Sawyer Picaridin Insect Repellent</span>
+              <span class="gear-card-desc">Picaridin is as effective as DEET against mosquitoes and ticks but won&rsquo;t dissolve rubber seals, neoprene seams or plastic kayak fittings. Sawyer is a trusted outdoor brand with a 20% picaridin formula that lasts 8&ndash;12 hours. Odorless and non-greasy. <strong>~$10&ndash;15</strong></span>
+              <span class="gear-card-retailer"><a href="https://www.rei.com/b/sawyer/c/insect-repellent" target="_blank" rel="noopener sponsored">REI</a> &bull; <a href="https://www.amazon.com/s?k=Sawyer+picaridin+insect+repellent" target="_blank" rel="noopener sponsored">Amazon</a> &mdash; affiliate link</span>
+            </div>
+          </a>
+        </div>
+
+        <p class="meta" style="margin-top:32px">
+          Affiliate disclosure: links on this page may earn a small commission at no cost to you.
+          Retailers include Amazon, REI and Backcountry.
+        </p>
+
+        <div class="support-prose" style="margin-top:24px">
+          <p>Put-In is free. If it saved you a wasted drive, consider supporting the site.</p>
+          <a class="btn-support" href="https://www.venmo.com/u/CarrieNTheSwim"
+             target="_blank" rel="noopener">&#128182; Support on Venmo</a>
+        </div>
+      </div>
+    </div><!-- /panel-gear -->
 
   </main>
 </div>
@@ -927,6 +1376,10 @@
             '<div><div class="k">Moonset</div><div class="v">\u2014</div></div>' +
           '</div>' +
           '<div class="moonline" id="moonline"></div>' +
+          (() => { const ms = meteorShowerTonight(); return ms
+            ? '<div class="meteor-line">☄️ <strong>' + ms.name + ' meteor shower — ' + ms.when
+              + '</strong> (~' + ms.rate + ' at peak). ' + ms.note + '</div>'
+            : ''; })() +
           '<p class="lightwarn">In North Carolina an unpowered boat must show a white light between ' +
             'sunset and sunrise. A handheld waterproof torch counts, but it has to be reachable, not ' +
             'buried in a dry bag. Check the gate closing time too, since many launches lock before you finish.</p>' +
@@ -1174,6 +1627,34 @@
   });
 
 
+  // ---------------------------------------------------------------- meteor showers
+  function meteorShowerTonight() {
+    var showers = [
+      { name: "Quadrantid",    month:1,  day:3,  rate:"~120/hr", note:"Peaks sharply — best in the hours around 4am." },
+      { name: "Lyrid",         month:4,  day:22, rate:"~20/hr",  note:"Steady show, best after midnight." },
+      { name: "Eta Aquariid",  month:5,  day:6,  rate:"~50/hr",  note:"Debris from Halley's Comet. Best before dawn." },
+      { name: "Delta Aquariid",month:7,  day:30, rate:"~20/hr",  note:"Good warm-weather shower, best after midnight." },
+      { name: "Perseid",       month:8,  day:12, rate:"~100/hr", note:"The most reliable summer shower. Best after midnight facing northeast. Haw River Canoe & Kayak runs a midnight paddle for this one." },
+      { name: "Orionid",       month:10, day:21, rate:"~20/hr",  note:"Debris from Halley's Comet. Best after midnight." },
+      { name: "Leonid",        month:11, day:17, rate:"~15/hr",  note:"Occasional storm years with thousands per hour. Best after midnight." },
+      { name: "Geminid",       month:12, day:14, rate:"~120/hr", note:"The most active shower of the year. Visible earlier in the evening than most. Worth the cold." },
+      { name: "Ursid",         month:12, day:22, rate:"~10/hr",  note:"Small shower, best after midnight near the winter solstice." }
+    ];
+    var now = new Date(), m = now.getMonth() + 1, d = now.getDate();
+    for (var i = 0; i < showers.length; i++) {
+      var sh = showers[i];
+      var peak = new Date(now.getFullYear(), sh.month - 1, sh.day);
+      var diff = Math.round((now - peak) / 86400000);
+      if (diff >= -2 && diff <= 2) {
+        var when = diff < 0 ? ("peaks in " + (-diff) + ((-diff) > 1 ? " days" : " day"))
+                 : diff === 0 ? "peaks tonight"
+                 : ("peaked " + diff + (diff > 1 ? " days ago" : " day ago"));
+        return { name: sh.name, rate: sh.rate, when: when, note: sh.note };
+      }
+    }
+    return null;
+  }
+
   // ---------------------------------------------------------------- sun and moon
   // Standard low-precision solar and lunar position formulae. Sunset and civil
   // twilight land within about a minute; moonrise and moonset within a few, which
@@ -1304,7 +1785,7 @@
 
 
   function showTab(name) {
-    ["spots","about","partners"].forEach(function(t) {
+    ["spots","about","partners","gear"].forEach(function(t) {
       var pan = document.getElementById("panel-" + t);
       var btn = document.getElementById("tab-" + t);
       if (pan) pan.classList.toggle("active", t === name);
@@ -1357,7 +1838,7 @@
         const key = {'sel-region':'region','sel-water':'waterType','sel-rapids':'rapids','sel-carry':'carry'}[id];
         $(id).addEventListener("change", () => { state[key] = $(id).value; renderList(); });
       });
-      ["spots","about","partners"].forEach(function(t) {
+      ["spots","about","partners","gear"].forEach(function(t) {
         var btn = document.getElementById("tab-" + t);
         if (btn) btn.addEventListener("click", function() { showTab(t); });
       });
