@@ -496,6 +496,7 @@
         <!-- GEAR TAB HIDDEN UNTIL READY
         <button id="tab-gear"     class="">GEAR</button>
         -->
+        <button id="tab-submit" class="">SUBMIT A SPOT</button>
       </nav>
     </div>
   </header>
@@ -538,6 +539,12 @@
           <option value="">Any</option>
           <option value="short">Short (&lt;100 yd)</option>
           <option value="long">Long carry flagged</option>
+        </select>
+        <span class="droplabel">Sort</span>
+        <select class="dropsel" id="sel-sort">
+          <option value="az">A – Z</option>
+          <option value="county">County A – Z</option>
+          <option value="water">Water type</option>
         </select>
       </div>
       <div class="filters" id="filters" role="group" aria-label="Filter spots"></div>
@@ -1207,6 +1214,55 @@
       </div>
     </div><!-- /panel-gear -->
 
+    <!-- SUBMIT A SPOT -->
+    <div id="panel-submit" class="tabpanel">
+      <div class="prose">
+        <h2>Submit a Spot</h2>
+        <p>Know a paddling access that isn’t on Put-In yet? Share it here. Every submission is reviewed before anything goes live. The more detail you include, the more useful it is. GPS coordinates are especially helpful.</p>
+        <p>You can also use this form to report a closed access, changed hours, a new fee, or any other correction to an existing spot.</p>
+        <form class="contact-form" id="submit-form"
+              action="https://formspree.io/f/xdenydyp" method="POST"
+              onsubmit="handleSubmitForm(event)">
+          <input type="hidden" name="subject" value="Spot Submission">
+          <label>Spot name or description
+            <input type="text" name="spot_name" placeholder="e.g. Haw River at Swepsonville" required>
+          </label>
+          <label>Water body
+            <input type="text" name="water_body" placeholder="e.g. Haw River, Jordan Lake, Bogue Sound">
+          </label>
+          <label>County
+            <input type="text" name="county" placeholder="e.g. Alamance, Carteret">
+          </label>
+          <label>Type of submission
+            <select name="submission_type">
+              <option value="New spot">New spot</option>
+              <option value="Correction">Correction to existing spot</option>
+              <option value="Closed access">Closed or restricted access</option>
+              <option value="Hours or fee change">Hours or fee change</option>
+              <option value="Other">Other</option>
+            </select>
+          </label>
+          <label>Coordinates <span style="font-weight:400;color:var(--ink-soft)">(optional but very helpful)</span>
+            <input type="text" name="coordinates" placeholder="e.g. 35.9123, -79.4567">
+          </label>
+          <label>Notes
+            <textarea name="notes" placeholder="Hours, fees, parking, hazards, directions, what makes it worth knowing about…" required></textarea>
+          </label>
+          <label>Your name <span style="font-weight:400;color:var(--ink-soft)">(optional)</span>
+            <input type="text" name="submitter_name" placeholder="Optional">
+          </label>
+          <label>Your email <span style="font-weight:400;color:var(--ink-soft)">(so we can follow up if needed)</span>
+            <input type="email" name="email" placeholder="you@example.com" autocomplete="email">
+          </label>
+          <button type="submit" class="contact-submit">Submit spot</button>
+          <div class="contact-success" id="submit-success">
+            ✓ Submitted! Thank you — we review every suggestion.
+          </div>
+        </form>
+        <p class="meta" style="margin-top:24px">Submissions are reviewed before anything goes live. We read every one.</p>
+      </div>
+    </div><!-- /panel-submit -->
+
   </main>
 
   <footer class="site-footer">
@@ -1320,7 +1376,7 @@
   ];
 
   // ---------------------------------------------------------------- state
-  const state = { q:"", active:new Set(), favs:new Set(), notes:{}, open:null, region:"", waterType:"", rapids:"", carry:"" };
+  const state = { q:"", active:new Set(), favs:new Set(), notes:{}, open:null, region:"", waterType:"", rapids:"", carry:"", sortBy:"az" };
 
   const $ = id => document.getElementById(id);
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;" }[c]));
@@ -1407,7 +1463,14 @@
     else if (state.rapids === "2") found = found.filter(s => s.rapids && s.rapids[1] <= 2);
     if (state.carry === "short") found = found.filter(s => s.carryYards === null || s.carryYards < 100);
     else if (state.carry === "long") found = found.filter(s => s.carryYards !== null && s.carryYards >= 150);
-    found.sort((a, b) => a.name.localeCompare(b.name));
+    if (state.sortBy === "county") {
+      found.sort((a,b) => (a.county||"").localeCompare(b.county||"") || a.name.localeCompare(b.name));
+    } else if (state.sortBy === "water") {
+      const wOrd = {"Flatwater":0,"River":1,"Sound":2,"Ocean":3};
+      found.sort((a,b) => ((wOrd[a.type]||9)-(wOrd[b.type]||9)) || a.name.localeCompare(b.name));
+    } else {
+      found.sort((a,b) => a.name.localeCompare(b.name));
+    }
     const count = found.length;
     $("count").textContent = count + (count === 1 ? " spot" : " spots");
     var _pl2 = $("partner-label");
@@ -1915,7 +1978,7 @@
 
 
   function showTab(name) {
-    ["spots","about","partners"].forEach(function(t) {
+    ["spots","about","partners","submit"].forEach(function(t) {
       var pan = document.getElementById("panel-" + t);
       var btn = document.getElementById("tab-" + t);
       if (pan) pan.classList.toggle("active", t === name);
@@ -1933,6 +1996,17 @@
     state.partnerFilter = { field: field, value: value };
     showTab("spots");
     renderList();
+  }
+
+  // ---------------------------------------------------------------- submit spot form
+  function handleSubmitForm(e) {
+    e.preventDefault();
+    var form = document.getElementById("submit-form");
+    var success = document.getElementById("submit-success");
+    fetch(form.action, { method:"POST", body:new FormData(form), headers:{"Accept":"application/json"} })
+      .then(r => { if (r.ok) { success.style.display="block"; form.reset(); }
+                   else { success.textContent="Something went wrong. Please try again."; success.style.display="block"; } })
+      .catch(() => { success.textContent="Something went wrong. Please try again."; success.style.display="block"; });
   }
 
   // ---------------------------------------------------------------- contact form
@@ -1985,11 +2059,11 @@
       renderFilters();
       renderKey();
 
-      ["sel-region","sel-water","sel-rapids","sel-carry"].forEach(id => {
-        const key = {'sel-region':'region','sel-water':'waterType','sel-rapids':'rapids','sel-carry':'carry'}[id];
+      ["sel-region","sel-water","sel-rapids","sel-carry","sel-sort"].forEach(id => {
+        const key = {'sel-region':'region','sel-water':'waterType','sel-rapids':'rapids','sel-carry':'carry','sel-sort':'sortBy'}[id];
         $(id).addEventListener("change", () => { state[key] = $(id).value; renderList(); });
       });
-      ["spots","about","partners"].forEach(function(t) {
+      ["spots","about","partners","submit"].forEach(function(t) {
         var btn = document.getElementById("tab-" + t);
         if (btn) btn.addEventListener("click", function() { showTab(t); });
       });
