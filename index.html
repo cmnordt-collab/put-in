@@ -613,7 +613,7 @@
         <div class="support-prose">
           <p>Every contribution helps keep the data current and the site running.</p>
           <a class="btn-support" href="https://www.venmo.com/u/CarrieNTheSwim" target="_blank" rel="noopener">
-            &#128182; Support on Venmo
+            Support on Venmo
           </a>
         </div>
 
@@ -1201,7 +1201,7 @@
         <div class="support-prose" style="margin-top:24px">
           <p>Put-In is free. If it saved you a wasted drive, consider supporting the site.</p>
           <a class="btn-support" href="https://www.venmo.com/u/CarrieNTheSwim"
-             target="_blank" rel="noopener">&#128182; Support on Venmo</a>
+             target="_blank" rel="noopener">Support on Venmo</a>
         </div>
       </div>
     </div><!-- /panel-gear -->
@@ -1213,13 +1213,13 @@
       <div class="footer-section">
         <span class="footer-label">Contact &amp; Feedback</span>
         <p class="footer-text">Have a correction, a spot to suggest, or just want to say hello?</p>
-        <a class="footer-contact" href="#" onclick="showTab('about');setTimeout(function(){var el=document.getElementById('contact-section');if(el)el.scrollIntoView({behavior:'smooth'});},200);return false;">&#9993; Send a message or correction</a>
+        <a class="footer-contact" href="#" id="footer-contact-link">&#9993; Send a message or correction</a>
       </div>
       <hr class="footer-divider">
       <div class="footer-section">
         <span class="footer-label">Support the site</span>
         <p class="footer-text">Put-In is free. If it saved you a wasted drive, consider supporting the site.</p>
-        <a class="btn-venmo" href="https://www.venmo.com/u/CarrieNTheSwim" target="_blank" rel="noopener">&#128182; Support on Venmo</a>
+        <a class="btn-venmo" href="https://www.venmo.com/u/CarrieNTheSwim" target="_blank" rel="noopener">Support on Venmo</a>
       </div>
       <hr class="footer-divider">
       <p class="footer-copy">Put-In &mdash; NC Paddling Access &mdash; Data sourced from managing agencies. Blank fields mean unverified, not absent. Paddle within your skill level.</p>
@@ -1997,6 +1997,15 @@
           e.preventDefault();
           showTab(this.dataset.tab);
         });
+      });
+      var fcl = document.getElementById("footer-contact-link");
+      if (fcl) fcl.addEventListener("click", function(e) {
+        e.preventDefault();
+        showTab("about");
+        setTimeout(function() {
+          var el = document.getElementById("contact-section");
+          if (el) el.scrollIntoView({ behavior: "smooth" });
+        }, 250);
       });
       renderList();
       const c = $("count");
