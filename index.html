@@ -621,7 +621,7 @@
           <h3>Get in Touch</h3>
           <p>Have a correction, a spot to suggest, or just want to say hello? Use the form below. Your email is only used to reply and will never be shared.</p>
           <form class="contact-form" id="contact-form"
-                action="https://formspree.io/f/YOURFORMID" method="POST"
+                action="https://formspree.io/f/xdenydyp" method="POST"
                 onsubmit="handleContactSubmit(event)">
             <label>Your name
               <input type="text" name="name" placeholder="Optional" autocomplete="name">
@@ -1939,13 +1939,6 @@
     var form = document.getElementById("contact-form");
     var success = document.getElementById("contact-success");
     var endpoint = form.action;
-    if (endpoint.indexOf("YOURFORMID") !== -1) {
-      // Formspree not yet configured — show placeholder message
-      e.preventDefault();
-      success.style.display = "block";
-      form.reset();
-      return;
-    }
     e.preventDefault();
     var data = new FormData(form);
     fetch(endpoint, {
