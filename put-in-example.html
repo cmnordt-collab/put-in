@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Put-In: NC Paddling Locations</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f5f5;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      color: #1a5490;
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+    }
+
+    .subtitle {
+      color: #666;
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+
+    .location-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .location-card {
+      background: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-left: 4px solid #1a5490;
+    }
+
+    .location-card h2 {
+      color: #1a5490;
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .location-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .region {
+      display: inline-block;
+      background: #e3f2fd;
+      color: #1a5490;
+      padding: 0.3rem 0.7rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .temperature {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: bold;
+      color: #d32f2f;
+      font-size: 1.1rem;
+    }
+
+    .temperature.loading {
+      color: #999;
+      font-weight: normal;
+      font-size: 0.95rem;
+    }
+
+    .temp-icon {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .description {
+      color: #666;
+      line-height: 1.5;
+      font-size: 0.95rem;
+      margin-top: 1rem;
+    }
+
+    .status {
+      margin-top: 0.75rem;
+      font-size: 0.85rem;
+      color: #999;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .temperature.loading {
+        animation: pulse 1.5s ease-in-out infinite;
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🛶 Put-In</h1>
+    <p class="subtitle">Real-time water temperatures at North Carolina paddling locations</p>
+
+    <div class="location-grid">
+      <!-- Inland Rivers (USGS) -->
+      <div class="location-card">
+        <h2>Haw River</h2>
+        <div class="location-meta">
+          <span class="region">Piedmont</span>
+          <div class="temperature loading" id="temp-haw-river">
+            <span class="temp-icon">🌊</span>
+            <span>Loading...</span>
+          </div>
+        </div>
+        <p class="description">
+          Class I-II rapid sections near Graham. Popular beginner to intermediate run.
+        </p>
+        <div class="status">USGS Site: 02096500</div>
+      </div>
+
+      <div class="location-card">
+        <h2>Cape Fear River</h2>
+        <div class="location-meta">
+          <span class="region">Piedmont</span>
+          <div class="temperature loading" id="temp-cape-fear">
+            <span class="temp-icon">🌊</span>
+            <span>Loading...</span>
+          </div>
+        </div>
+        <p class="description">
+          Multiple sections available. Lower sections near Wilmington are tidal.
+        </p>
+        <div class="status">USGS Site: 02105769</div>
+      </div>
+
+      <div class="location-card">
+        <h2>Neuse River</h2>
+        <div class="location-meta">
+          <span class="region">Central</span>
+          <div class="temperature loading" id="temp-neuse-river">
+            <span class="temp-icon">🌊</span>
+            <span>Loading...</span>
+          </div>
+        </div>
+        <p class="description">
+          Long meandering run through Raleigh area. Mild current with occasional shoals.
+        </p>
+        <div class="status">USGS Site: 02089500</div>
+      </div>
+
+      <!-- Coastal/Sounds (NOAA) -->
+      <div class="location-card">
+        <h2>Pamlico Sound</h2>
+        <div class="location-meta">
+          <span class="region">Coastal</span>
+          <div class="temperature loading" id="temp-pamlico">
+            <span class="temp-icon">🌊</span>
+            <span>Loading...</span>
+          </div>
+        </div>
+        <p class="description">
+          Large open sound. Check wind conditions before heading out. Excellent for kayaking.
+        </p>
+        <div class="status">NOAA Station: 8656483</div>
+      </div>
+
+      <div class="location-card">
+        <h2>Neuse Estuary</h2>
+        <div class="location-meta">
+          <span class="region">Coastal</span>
+          <div class="temperature loading" id="temp-neuse-estuary">
+            <span class="temp-icon">🌊</span>
+            <span>Loading...</span>
+          </div>
+        </div>
+        <p class="description">
+          Tidal waters near New Bern. Access via multiple ramps. Moderate current.
+        </p>
+        <div class="status">NOAA Station: 8655242</div>
+      </div>
+
+      <div class="location-card">
+        <h2>Core Sound</h2>
+        <div class="location-meta">
+          <span class="region">Coastal</span>
+          <div class="temperature loading" id="temp-core-sound">
+            <span class="temp-icon">🌊</span>
+            <span>Loading...</span>
+          </div>
+        </div>
+        <p class="description">
+          Shallow sound between Core Banks and mainland. Calm water ideal for beginners.
+        </p>
+        <div class="status">NOAA Station: 8656529</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Import and initialize the temperature module -->
+  <script type="module">
+    // Import module (adjust path as needed in your project)
+    import {
+      updateTemperatureDisplay,
+      updateAllTemperatures
+    } from './water-temperature-module.js';
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Define location mapping: element ID → site/station info
+      const locations = {
+        'temp-haw-river': { siteId: '02096500', source: 'usgs' },
+        'temp-cape-fear': { siteId: '02105769', source: 'usgs' },
+        'temp-neuse-river': { siteId: '02089500', source: 'usgs' },
+        'temp-pamlico': { siteId: '8656483', source: 'noaa' },
+        'temp-neuse-estuary': { siteId: '8655242', source: 'noaa' },
+        'temp-core-sound': { siteId: '8656529', source: 'noaa' }
+      };
+
+      // Fetch all temperatures in parallel
+      await updateAllTemperatures(locations);
+
+      // Refresh every 30 minutes
+      setInterval(() => {
+        updateAllTemperatures(locations);
+      }, 30 * 60 * 1000);
+    });
+  </script>
+</body>
+</html>
