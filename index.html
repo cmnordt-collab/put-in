@@ -1,4 +1,15 @@
+<html lang="en">
 <title>Put-In — Where Should I Paddle in NC?</title>
+<meta name="description" content="Put-In is a free guide to public paddling access in North Carolina — 239 spots across 61 counties with water quality links, river gauge data, hazard notes, and environmental partner information.">
+<meta property="og:title" content="Put-In — Where Should I Paddle in NC?">
+<meta property="og:description" content="Free guide to public paddling access in NC. 239 spots with water quality, hazard notes, and conditions.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://cmnordt-collab.github.io/put-in/">
+<meta property="og:image" content="https://cmnordt-collab.github.io/put-in/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#14606D">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   :root {
@@ -53,11 +64,15 @@
     pointer-events: none;
   }
   .tabnav { display:flex; gap:0; margin-top:12px;
-            border-bottom:2px solid rgba(255,255,255,.2); }
+            border-bottom:2px solid rgba(255,255,255,.2);
+            overflow-x:auto; -webkit-overflow-scrolling:touch;
+            scrollbar-width:none; }
+  .tabnav::-webkit-scrollbar { display:none; }
   .tabnav button { padding:7px 18px; background:none; border:none; color:#fff;
                    font-weight:600; font-size:13px; letter-spacing:.06em;
                    cursor:pointer; border-bottom:3px solid transparent;
-                   margin-bottom:-2px; opacity:.55; transition:opacity .15s; }
+                   margin-bottom:-2px; opacity:.55; transition:opacity .15s;
+                   white-space:nowrap; flex-shrink:0; }
   .tabnav button.active { opacity:1; border-bottom-color:#fff; }
   .tabpanel { display:none; }
   .tabpanel.active { display:block; }
@@ -492,6 +507,18 @@
   @media (max-width: 560px) {
     .row { grid-template-columns: 1fr; gap: 1px; }
     .row dt { font-size: 12px; }
+    .masthead-inner { padding: 10px 12px 8px; }
+    .search-bar { font-size: 15px; }
+    .chip { font-size: 11px; padding: 4px 10px; }
+    .droprow { gap: 6px; }
+    .dropsel { font-size: 12px; padding: 4px 6px; }
+    .droplabel { font-size: 11px; }
+    .card { padding: 10px 12px; }
+    .card-name { font-size: 14px; }
+    .gear-grid { grid-template-columns: 1fr; }
+    .contact-form input, .contact-form select, .contact-form textarea { font-size: 16px; }
+    .prose { padding: 0 4px; }
+    .near-me-bar { flex-wrap: wrap; }
   }
   @media (prefers-reduced-motion: no-preference) {
     .card, .chip, .gauge { transition: border-color .14s ease, background .14s ease, color .14s ease; }
@@ -660,7 +687,7 @@
                 action="https://formspree.io/f/xdenydyp" method="POST"
                 onsubmit="handleContactSubmit(event)">
             <label>Your name
-              <input type="text" name="name" placeholder="Optional" autocomplete="name">
+              <input type="text" name="name" id="cf-name" placeholder="Optional" autocomplete="name">
             </label>
             <label>Subject
               <select name="subject">
@@ -671,13 +698,13 @@
               </select>
             </label>
             <label>Spot name <span style="font-weight:400;color:var(--ink-soft)">(if relevant)</span>
-              <input type="text" name="spot_name" placeholder="e.g. Farrington Point, Jordan Lake">
+              <input type="text" name="spot_name" id="cf-spot" placeholder="e.g. Farrington Point, Jordan Lake">
             </label>
             <label>Message
-              <textarea name="message" placeholder="Tell us what's wrong, what's missing, or what you found..." required></textarea>
+              <textarea name="message" id="cf-message" placeholder="Tell us what's wrong, what's missing, or what you found..." required></textarea>
             </label>
             <label>Your email <span style="font-weight:400;color:var(--ink-soft)">(so we can reply)</span>
-              <input type="email" name="email" placeholder="you@example.com" autocomplete="email">
+              <input type="email" name="email" id="cf-email" placeholder="you@example.com" autocomplete="email">
             </label>
             <button type="submit" class="contact-submit">Send message</button>
             <div class="contact-success" id="contact-success">
@@ -814,16 +841,16 @@
               onsubmit="handleSubmitForm(event)">
           <input type="hidden" name="subject" value="Spot Submission">
           <label>Spot name or description
-            <input type="text" name="spot_name" placeholder="e.g. Haw River at Swepsonville" required>
+            <input type="text" name="spot_name" id="sf-spot" placeholder="e.g. Haw River at Swepsonville" required>
           </label>
           <label>Water body
-            <input type="text" name="water_body" placeholder="e.g. Haw River, Jordan Lake, Bogue Sound">
+            <input type="text" name="water_body" id="sf-water" placeholder="e.g. Haw River, Jordan Lake, Bogue Sound">
           </label>
           <label>County
-            <input type="text" name="county" placeholder="e.g. Alamance, Carteret">
+            <input type="text" name="county" id="sf-county" placeholder="e.g. Alamance, Carteret">
           </label>
           <label>Type of submission
-            <select name="submission_type">
+            <select name="submission_type" id="sf-type">
               <option value="New spot">New spot</option>
               <option value="Correction">Correction to existing spot</option>
               <option value="Closed access">Closed or restricted access</option>
@@ -832,16 +859,16 @@
             </select>
           </label>
           <label>Coordinates <span style="font-weight:400;color:var(--ink-soft)">(optional but very helpful)</span>
-            <input type="text" name="coordinates" placeholder="e.g. 35.9123, -79.4567">
+            <input type="text" name="coordinates" id="sf-coords" placeholder="e.g. 35.9123, -79.4567">
           </label>
           <label>Notes
-            <textarea name="notes" placeholder="Hours, fees, parking, hazards, directions, what makes it worth knowing about…" required></textarea>
+            <textarea name="notes" id="sf-notes" placeholder="Hours, fees, parking, hazards, directions, what makes it worth knowing about…" required></textarea>
           </label>
           <label>Your name <span style="font-weight:400;color:var(--ink-soft)">(optional)</span>
-            <input type="text" name="submitter_name" placeholder="Optional">
+            <input type="text" name="submitter_name" id="sf-name" placeholder="Optional">
           </label>
           <label>Your email <span style="font-weight:400;color:var(--ink-soft)">(so we can follow up if needed)</span>
-            <input type="email" name="email" placeholder="you@example.com" autocomplete="email">
+            <input type="email" name="email" id="sf-email" placeholder="you@example.com" autocomplete="email">
           </label>
           <button type="submit" class="contact-submit">Submit spot</button>
           <div class="contact-success" id="submit-success">
@@ -1657,7 +1684,7 @@
 
   // ---------------------------------------------------------------- boot
   async function loadSpots() {
-    const res = await fetch("data/spots.json", { cache: "no-cache" });
+    const res = await fetch("data/spots.json");
     if (!res.ok) throw new Error("HTTP " + res.status);
     const payload = await res.json();
     SPOTS = payload.spots.map(adapt).filter(s => s.id && s.name);
