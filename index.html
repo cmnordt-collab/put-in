@@ -1,6 +1,6 @@
 <html lang="en">
 <title>Put-In — Where Should I Paddle in NC?</title>
-<meta name="description" content="Put-In is a free guide to public paddling access in North Carolina — 239 spots across 61 counties with water quality links, river gauge data, hazard notes, and environmental partner information.">
+<meta name="description" content="Put-In is a free guide to public paddling access in North Carolina — 239 spots with water quality links, river gauge data, hazard notes, and environmental partner information.">
 <meta property="og:title" content="Put-In — Where Should I Paddle in NC?">
 <meta property="og:description" content="Free guide to public paddling access in NC. 239 spots with water quality, hazard notes, and conditions.">
 <meta property="og:type" content="website">
@@ -121,7 +121,7 @@
                  color:#fff; border-radius:6px; text-decoration:none;
                  font-weight:700; font-size:14px; }
     footer.site-footer { background:var(--paper-2); color:var(--ink); padding:32px 16px; margin-top:0; border-top:2px solid var(--rule); }
-  .footer-inner { max-width:680px; margin:0 auto; display:flex; flex-direction:column; gap:20px; }
+  .footer-inner { max-width:680px; margin:0 auto; display:flex; flex-direction:column; gap:12px; }
   .footer-section { display:flex; flex-direction:column; gap:8px; align-items:center; text-align:center; }
   .footer-label { font-size:11px; letter-spacing:.1em; text-transform:uppercase;
                   color:var(--chan); font-weight:700; }
@@ -373,7 +373,8 @@
   .coord-val { font-family:var(--mono); color:var(--ink); background:var(--paper-2);
                padding:5px 10px; border-radius:5px; border:1px solid var(--rule); }
   .coord-copy { padding:5px 12px; background:var(--chan); color:#fff; border:none;
-                border-radius:5px; font-size:12px; font-weight:600; cursor:pointer; }
+                border-radius:5px; font-size:12px; font-weight:600; cursor:pointer; opacity:0; transition:opacity .15s; }
+  .coord-row:hover .coord-copy { opacity:1; }
   .coord-copy:hover { opacity:.88; }
   .coord-nav { color:var(--chan); font-weight:600; text-decoration:none; font-size:13px; }
   .coord-nav:hover { text-decoration:underline; }
@@ -903,7 +904,7 @@
         <div class="ri"><span class="tag tag-live">LIVE</span>A curated gear guide with honest, tested picks</div>
 
         <h3>In progress</h3>
-        <div class="ri"><span class="tag tag-wip">IN PROGRESS</span>Expanding spot coverage across NC, currently 239 spots across 75 counties</div>
+        <div class="ri"><span class="tag tag-wip">IN PROGRESS</span>Expanding spot coverage across NC, currently 239 spots</div>
         <div class="ri"><span class="tag tag-wip">IN PROGRESS</span>Cross-checking every access against official NCWRC and state records</div>
         <div class="ri"><span class="tag tag-wip">IN PROGRESS</span>Adding events from the Riverkeepers and monitoring organizations</div>
 
@@ -943,7 +944,7 @@
         <a class="btn-venmo" href="https://www.venmo.com/u/CarrieNTheSwim" target="_blank" rel="noopener">Support on Venmo</a>
       </div>
       <hr class="footer-divider">
-      <p class="footer-copy">Put-In, NC Paddling Access, Data sourced from managing agencies. Blank fields mean unverified, not absent. Paddle within your skill level, go with a group, and share your plan before you go.</p>
+      <p class="footer-copy">Put-In | NC Paddling Access. Data sourced from managing agencies. Blank fields mean unverified, not absent. Paddle within your skill level, go with a group, and share your plan before you go.</p>
     </div>
   </footer>
 </div>
