@@ -411,6 +411,26 @@
 
   .wqline { display: flex; align-items: center; gap: 9px; font-size: 14px; }
   .wqblock { display:flex; flex-direction:column; gap:10px; }
+  .btn-algae { display:inline-block; padding:8px 16px; background:#2e7d32;
+               color:#fff; border-radius:6px; text-decoration:none;
+               font-size:13px; font-weight:700; margin-top:8px; display:block; }
+  .btn-algae:hover { opacity:.88; }
+  .near-me-bar { display:flex; align-items:center; gap:10px; margin:0 0 8px; }
+  .btn-near-me { padding:7px 14px; background:#14606D; color:#fff;
+                 border:none; border-radius:6px; font-size:13px; font-weight:700;
+                 cursor:pointer; }
+  .btn-near-me:hover { opacity:.88; }
+  .near-me-note { font-size:12px; color:var(--ink-soft); }
+  .roadmap-box { margin-top:32px; padding:16px; background:var(--paper-2);
+                 border-radius:8px; border-left:3px solid var(--chan); }
+  .roadmap-box h3 { margin:0 0 8px; font-size:14px; color:var(--chan);
+                    text-transform:uppercase; letter-spacing:.05em; }
+  .ri { font-size:13px; color:var(--ink); margin:5px 0; }
+  .tag { display:inline-block; font-size:10px; font-weight:700;
+         padding:1px 5px; border-radius:3px; margin-right:5px; vertical-align:middle; }
+  .tag-live { background:#e8f5e9; color:#2e7d32; }
+  .tag-wip  { background:#fff3e0; color:#e65100; }
+  .tag-future { background:#e3f2fd; color:#1565c0; }
   .btn-swimguide { display:inline-block; padding:10px 18px; background:var(--chan);
                    color:#fff; border:none; border-radius:6px;
                    text-decoration:none; font-weight:700; font-size:13.5px;
@@ -508,6 +528,10 @@
         </div>
       </div>
 
+      <div class="near-me-bar">
+        <button class="btn-near-me" id="btn-near-me">&#128205; Near Me</button>
+        <span class="near-me-note" id="near-me-note"></span>
+      </div>
       <div class="droprow">
         <span class="droplabel">Region</span>
         <select class="dropsel" id="sel-region">
@@ -542,6 +566,7 @@
           <option value="az">A – Z</option>
           <option value="county">County A – Z</option>
           <option value="water">Water type</option>
+          <option value="near">Nearest first</option>
         </select>
       </div>
       <div class="filters" id="filters" role="group" aria-label="Filter spots"></div>
@@ -653,6 +678,24 @@
               &#10003; Message sent! Thank you &mdash; we'll be in touch if we have questions.
             </div>
           </form>
+        <div class="roadmap-box">
+          <h3>What’s coming</h3>
+          <p style="font-size:13px;color:var(--ink-soft);margin:0 0 10px;">Put-In is built in the open. Here’s what’s live, in progress, and planned.</p>
+          <div class="ri"><span class="tag tag-live">LIVE</span>Water quality links via Swim Guide and Waterkeepers Carolina</div>
+          <div class="ri"><span class="tag tag-live">LIVE</span>USGS river gauge data and NWS weather in every spot</div>
+          <div class="ri"><span class="tag tag-live">LIVE</span>Meteor shower alerts in the Light &amp; Moon section</div>
+          <div class="ri"><span class="tag tag-live">LIVE</span>Algal bloom &amp; fish kill dashboard link for lake and reservoir spots &mdash; public NCDEQ data</div>
+          <div class="ri"><span class="tag tag-live">LIVE</span>GPS &ldquo;Near Me&rdquo; &mdash; sort spots by distance from your current location</div>
+          <div class="ri"><span class="tag tag-live">LIVE</span>Spot submission and correction forms</div>
+          <div class="ri"><span class="tag tag-wip">IN PROGRESS</span>Expanding spot coverage across NC &mdash; currently 199 spots, 61 counties</div>
+          <div class="ri"><span class="tag tag-wip">IN PROGRESS</span>Cross-checking all NCWRC access areas against official state records</div>
+          <div class="ri"><span class="tag tag-future">FUTURE</span>Trip journals &mdash; log your paddles (requires user accounts)</div>
+          <div class="ri"><span class="tag tag-future">FUTURE</span>Route sharing &mdash; save and share paddle routes (requires backend storage)</div>
+          <div class="ri"><span class="tag tag-future">FUTURE</span>Offline maps &mdash; download spots for no-signal areas</div>
+          <div class="ri"><span class="tag tag-future">FUTURE</span>Live algal bloom alerts tied to specific spots via NCDEQ API</div>
+          <div class="ri"><span class="tag tag-future">FUTURE</span>Water quality change alerts for saved spots</div>
+          <p style="font-size:12px;color:var(--ink-soft);margin:10px 0 0;">Features marked Future require server infrastructure with ongoing costs. Put-In will always be free. <a href="https://www.venmo.com/u/CarrieNTheSwim" target="_blank" rel="noopener">Support on Venmo</a> helps make them happen sooner.</p>
+        </div>
         </div>
 
       </div>
@@ -916,7 +959,7 @@
   ];
 
   // ---------------------------------------------------------------- state
-  const state = { q:"", active:new Set(), favs:new Set(), notes:{}, open:null, region:"", waterType:"", rapids:"", carry:"", sortBy:"az" };
+  const state = { q:"", active:new Set(), favs:new Set(), notes:{}, open:null, region:"", waterType:"", rapids:"", carry:"", sortBy:"az", nearMe:false, nearLat:0, nearLon:0 };
 
   const $ = id => document.getElementById(id);
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;" }[c]));
@@ -1003,7 +1046,18 @@
     else if (state.rapids === "2") found = found.filter(s => s.rapids && s.rapids[1] <= 2);
     if (state.carry === "short") found = found.filter(s => s.carryYards === null || s.carryYards < 100);
     else if (state.carry === "long") found = found.filter(s => s.carryYards !== null && s.carryYards >= 150);
-    if (state.sortBy === "county") {
+    function haversine(a) {
+      if (!a.latitude || !a.longitude) return 9999;
+      var R=3958.8, dLat=(a.latitude-state.nearLat)*Math.PI/180,
+          dLon=(a.longitude-state.nearLon)*Math.PI/180,
+          x=Math.sin(dLat/2)*Math.sin(dLat/2)+
+            Math.cos(state.nearLat*Math.PI/180)*Math.cos(a.latitude*Math.PI/180)*
+            Math.sin(dLon/2)*Math.sin(dLon/2);
+      return R*2*Math.atan2(Math.sqrt(x),Math.sqrt(1-x));
+    }
+    if (state.sortBy === "near" && state.nearMe) {
+      found.sort((a,b) => haversine(a)-haversine(b));
+    } else if (state.sortBy === "county") {
       found.sort((a,b) => (a.county||"").localeCompare(b.county||"") || a.name.localeCompare(b.name));
     } else if (state.sortBy === "water") {
       const wOrd = {"Flatwater":0,"River":1,"Sound":2,"Ocean":3};
@@ -1024,6 +1078,11 @@
     }
 
     $("cards").innerHTML = found.map(s => {
+      var distLabel = "";
+      if (state.nearMe && s.latitude && s.longitude) {
+        var mi = haversine(s);
+        distLabel = '<span style="font-size:11px;color:var(--ink-soft);font-weight:400;margin-left:6px">' + mi.toFixed(1) + ' mi</span>';
+      }
       const tags = [s.type];
       if (s.motors === true) tags.push("Motors allowed");
       if (s.motors === false) tags.push("No motors");
@@ -1119,6 +1178,10 @@
         '<div class="wqblock">' +
           '<a class="btn-swimguide" href="https://waterkeeperscarolina.org/swim-guide/"' +
             ' target="_blank" rel="noopener">Check NC water quality on Swim Guide →</a>' +
+          (s.type === 'Flatwater'
+            ? '<a class="btn-algae" href="https://ncdenr.maps.arcgis.com/apps/dashboards/7543be4dc8194e6e9c215079d976e716"'
+              + ' target="_blank" rel="noopener">&#127807; NC algal bloom &amp; fish kill reports →</a>'
+            : '') +
           (s.wq ? '<p class="wq-credit">Monitoring Provided By: ' +
             (s.wqUrl ? '<a href="' + esc(s.wqUrl) + '" target="_blank" rel="noopener">' +
             esc(s.wq) + '</a>' : esc(s.wq)) + '.</p>'
@@ -1606,6 +1669,28 @@
       ["spots","about","partners","submit","gear"].forEach(function(t) {
         var btn = document.getElementById("tab-" + t);
         if (btn) btn.addEventListener("click", function() { showTab(t); });
+      });
+      var nmBtn = $("btn-near-me");
+      if (nmBtn) nmBtn.addEventListener("click", function() {
+        var note = $("near-me-note");
+        if (!navigator.geolocation) { note.textContent = "Location not supported by your browser."; return; }
+        nmBtn.textContent = "Finding…";
+        navigator.geolocation.getCurrentPosition(
+          function(pos) {
+            state.nearLat = pos.coords.latitude;
+            state.nearLon = pos.coords.longitude;
+            state.nearMe = true;
+            state.sortBy = "near";
+            var sel = $("sel-sort"); if (sel) sel.value = "near";
+            nmBtn.textContent = "\u2714 Near Me";
+            note.textContent = "Showing closest first. Change sort to reset.";
+            renderList();
+          },
+          function() {
+            nmBtn.textContent = "\u{1F4CD} Near Me";
+            note.textContent = "Location denied. Enable in browser settings.";
+          }
+        );
       });
       document.querySelectorAll(".tab-link").forEach(function(a) {
         a.addEventListener("click", function(e) {
