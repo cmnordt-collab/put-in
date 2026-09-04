@@ -16,10 +16,10 @@
     --paper:      #E9F0EE;
     --paper-2:    #F8FBFA;
     --ink:        #0B2A31;
-    --ink-soft:   #52737A;
+    --ink-soft:   #4D6D74;
     --contour:    #C2D9D4;
     --channel:    #14606D;
-    --channel-2:  #2C939C;
+    --channel-2:  #1A6E78;
     --sand:       #D8C4A0;
     --flag-green: #2C7A4F;
     --flag-red:   #A63B2D;
@@ -133,7 +133,7 @@
   .footer-copy { font-size:11.5px; color:var(--ink-soft); text-align:center;
                  padding-top:4px; }
   .masthead-inner { position: relative; max-width: 940px; margin: 0 auto; }
-  .masthead .eyebrow { color: #A9D2CF; }
+  .masthead .eyebrow { color: #C4E4E1; }
   .masthead h1 {
     margin: 6px 0 4px;
     font-size: clamp(30px, 6vw, 46px);
@@ -425,10 +425,11 @@
                border-left: 2px solid var(--amber); padding-left: 10px; }
 
   .wqline { display: flex; align-items: center; gap: 9px; font-size: 14px; }
-  .wqblock { display:flex; flex-direction:column; gap:10px; }
-  .btn-algae { display:inline-block; padding:8px 16px; background:#2e7d32;
+  .wqblock { display:flex; flex-direction:column; gap:8px; align-items:flex-start; }
+  .btn-algae { display:inline-block; padding:9px 16px; background:#196870;
                color:#fff; border-radius:6px; text-decoration:none;
-               font-size:13px; font-weight:700; margin-top:8px; display:block; }
+               font-size:13px; font-weight:600; align-self:flex-start;
+               white-space:nowrap; }
   .btn-algae:hover { opacity:.88; }
   .near-me-bar { display:flex; align-items:center; gap:10px; margin:12px 0 8px; }
   .btn-near-me { padding:7px 14px; background:#14606D; color:#fff;
@@ -452,12 +453,12 @@
   .tag-live { background:#e8f5e9; color:#2e7d32; }
   .tag-wip  { background:#fff3e0; color:#e65100; }
   .tag-future { background:#e3f2fd; color:#1565c0; }
-  .btn-swimguide { display:inline-block; padding:10px 18px; background:var(--chan);
-                   color:#fff; border:none; border-radius:6px;
-                   text-decoration:none; font-weight:700; font-size:13.5px;
-                   align-self:flex-start; }
+  .btn-swimguide { display:inline-block; padding:9px 16px; background:var(--chan);
+                   color:#fff; border-radius:6px;
+                   text-decoration:none; font-weight:600; font-size:13px;
+                   align-self:flex-start; white-space:nowrap; }
   .btn-swimguide:hover { opacity:.85; }
-  .wq-credit { font-size:13px; color:var(--ink-soft); }
+  .wq-credit { font-size:13px; color:var(--ink); }
   .wq-credit a { color:var(--chan); }
   .dot { width: 11px; height: 11px; border-radius: 50%; flex: none; }
   .dot.green { background: var(--flag-green); }
@@ -1213,7 +1214,7 @@
         '<div class="wqblock">' +
           '<a class="btn-swimguide" href="https://waterkeeperscarolina.org/swim-guide/"' +
             ' target="_blank" rel="noopener">Check NC water quality on Swim Guide →</a>' +
-          '<a class="btn-swimguide" style="margin-top:6px;background:#1a7a2e;" href="https://waterkeeperscarolina.org/find-your-waterkeeper/"' +
+          '<a class="btn-swimguide" style="background:#196870;" href="https://waterkeeperscarolina.org/find-your-waterkeeper/"' +
             ' target="_blank" rel="noopener">Find your Waterkeeper →</a>' +
           (s.type === 'Flatwater'
             ? '<a class="btn-algae" href="https://ncdenr.maps.arcgis.com/apps/dashboards/7543be4dc8194e6e9c215079d976e716"'
