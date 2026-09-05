@@ -74,7 +74,9 @@
    "verification_source": "https://raleighnc.gov/river-access",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Piedmont"
+   "region": "Piedmont",
+   "usgs_site_id": "02087500",
+   "noaa_station_id": null
   },
   {
    "spot_id": "avalon-beach-ramp-kdh",
@@ -106,7 +108,9 @@
    "verification_source": "https://www.saltchef.com/catch_fish/NC/Dare/boat_ramps.html",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Coast"
+   "region": "Coast",
+   "usgs_site_id": null,
+   "noaa_station_id": "8651370"
   },
   {
    "spot_id": "badin-lake-ramp",
@@ -391,7 +395,9 @@
    "verification_source": "https://www.deq.nc.gov/about/divisions/nc-coastal-reserve/reserve-sites/kitty-hawk-woods-reserve",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Coast"
+   "region": "Coast",
+   "usgs_site_id": null,
+   "noaa_station_id": "8651370"
   },
   {
    "spot_id": "yadkin-boones-cave",
@@ -421,7 +427,9 @@
    "verification_source": "https://www.yadkinriverkeeper.org/yadkin-river-access",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Piedmont"
+   "region": "Piedmont",
+   "usgs_site_id": "02116500",
+   "noaa_station_id": null
   },
   {
    "spot_id": "brices-creek-croatan",
@@ -484,7 +492,9 @@
    "verification_source": "https://www.hawrivertrail.org/paddle-trail-overview",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Piedmont"
+   "region": "Piedmont",
+   "usgs_site_id": "02096960",
+   "noaa_station_id": null
   },
   {
    "spot_id": "wilson-creek-brown-mountain",
@@ -543,10 +553,10 @@
    "verification_source": "https://raleighnc.gov/river-access",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Piedmont"
+   "region": "Piedmont",
+   "usgs_site_id": "02087500",
+   "noaa_station_id": null
   },
-  {
-   "spot_id": "yadkin-elkin-burch-station",
    "name": "Burch Station / Elkin River Access",
    "water_body": "Yadkin River",
    "water_type": "River",
@@ -609,7 +619,9 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.lowerhaw.org/activities",
    "access_type": "Public agency",
-   "region": "Piedmont"
+   "region": "Piedmont",
+   "usgs_site_id": "02096960",
+   "noaa_station_id": null
   },
   {
    "spot_id": "haw-bynum-mill",
@@ -642,7 +654,9 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.lowerhaw.org/activities",
    "access_type": "Public agency",
-   "region": "Piedmont"
+   "region": "Piedmont",
+   "usgs_site_id": "02096960",
+   "noaa_station_id": null
   },
   {
    "spot_id": "cahooque-creek-landing",
@@ -803,7 +817,9 @@
    "verification_source": "https://www.ncparks.gov/state-parks/carolina-beach-state-park",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Coast"
+   "region": "Coast",
+   "usgs_site_id": null,
+   "noaa_station_id": "8658120"
   },
   {
    "spot_id": "carolina-beach-annie-drive",
@@ -832,7 +848,9 @@
    "verification_source": "https://www.ncwildlife.org",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Coast"
+   "region": "Coast",
+   "usgs_site_id": null,
+   "noaa_station_id": "8658120"
   },
   {
    "spot_id": "currituck-carova-beach",
@@ -864,7 +882,9 @@
    "verification_source": "https://www.currituckcountync.gov",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Coast"
+   "region": "Coast",
+   "usgs_site_id": null,
+   "noaa_station_id": "8651370"
   },
   {
    "spot_id": "cedar-point-wildlife-ramp",
@@ -987,7 +1007,9 @@
    "verification_source": "https://www.ncwildlife.gov/boating/boating-access-areas",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Piedmont"
+   "region": "Piedmont",
+   "usgs_site_id": "03525609",
+   "noaa_station_id": null
   },
   {
    "spot_id": "harris-crosspoint",
@@ -1198,7 +1220,9 @@
    "verification_source": "https://www.townofduck.com",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Coast"
+   "region": "Coast",
+   "usgs_site_id": null,
+   "noaa_station_id": "8651370"
   },
   {
    "spot_id": "dutchman-creek-southport",
@@ -1290,7 +1314,9 @@
    "verification_source": "https://www.ncwildlife.gov/boating/boating-access-areas",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Coast"
+   "region": "Coast",
+   "usgs_site_id": null,
+   "noaa_station_id": "8654467"
   },
   {
    "spot_id": "endless-river-adventures",
@@ -1342,7 +1368,9 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.enoriver.org/wp-content/uploads/2022/04/Paddling-the-Eno-River-long-version.pdf",
    "access_type": "Public agency",
-   "region": "Piedmont"
+   "region": "Piedmont",
+   "usgs_site_id": "02085070",
+   "noaa_station_id": null
   },
   {
    "spot_id": "eno-red-mill-ncwrc",
@@ -1374,7 +1402,9 @@
    "verification_source": "https://www.ncwildlife.org",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Piedmont"
+   "region": "Piedmont",
+   "usgs_site_id": "02085070",
+   "noaa_station_id": null
   },
   {
    "spot_id": "eno-cabelands",
@@ -1407,7 +1437,9 @@
    "verification_source": "https://www.ncparks.gov/state-parks/eno-river-state-park",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Piedmont"
+   "region": "Piedmont",
+   "usgs_site_id": "02085070",
+   "noaa_station_id": null
   },
   {
    "spot_id": "eno-cole-mill",
@@ -1434,7 +1466,9 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.ncparks.gov/state-parks/eno-river-state-park",
    "access_type": "Public agency",
-   "region": "Piedmont"
+   "region": "Piedmont",
+   "usgs_site_id": "02085070",
+   "noaa_station_id": null
   },
   {
    "spot_id": "eno-cole-mill-access",
@@ -1468,7 +1502,9 @@
    "verification_source": "https://www.ncparks.gov/state-parks/eno-river-state-park",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Piedmont"
+   "region": "Piedmont",
+   "usgs_site_id": "02085070",
+   "noaa_station_id": null
   },
   {
    "spot_id": "eno-fews-ford",
@@ -1500,7 +1536,9 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.ncparks.gov/state-parks/eno-river-state-park",
    "access_type": "Public agency",
-   "region": "Piedmont"
+   "region": "Piedmont",
+   "usgs_site_id": "02085070",
+   "noaa_station_id": null
   },
   {
    "spot_id": "eno-pleasant-green",
@@ -1534,7 +1572,9 @@
    "verification_source": "https://www.ncparks.gov/state-parks/eno-river-state-park",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Piedmont"
+   "region": "Piedmont",
+   "usgs_site_id": "02085070",
+   "noaa_station_id": null
   },
   {
    "spot_id": "eno-pump-station",
@@ -1568,7 +1608,9 @@
    "verification_source": "https://www.ncparks.gov/state-parks/eno-river-state-park",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Piedmont"
+   "region": "Piedmont",
+   "usgs_site_id": "02085070",
+   "noaa_station_id": null
   },
   {
    "spot_id": "lumber-fair-bluff",
@@ -1630,7 +1672,9 @@
    "verification_source": "https://www.ncwildlife.gov/boating/boating-access-areas",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Coast"
+   "region": "Coast",
+   "usgs_site_id": "02083500",
+   "noaa_station_id": null
   },
   {
    "spot_id": "neuse-falls-dam",
@@ -1661,7 +1705,9 @@
    "verification_source": "https://raleighnc.gov/river-access",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Piedmont"
+   "region": "Piedmont",
+   "usgs_site_id": "02087500",
+   "noaa_station_id": null
   },
   {
    "spot_id": "falls-bw-wells",
@@ -2115,7 +2161,9 @@
    "verification_source": "https://frenchbroadpaddle.com",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Mountains"
+   "region": "Mountains",
+   "usgs_site_id": "03451500",
+   "noaa_station_id": null
   },
   {
    "spot_id": "glenburnie-park-nb",
@@ -2208,7 +2256,9 @@
    "verification_source": "https://www.ncwildlife.gov/boating/boating-access-areas",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Coast"
+   "region": "Coast",
+   "usgs_site_id": "02089000",
+   "noaa_station_id": null
   },
   {
    "spot_id": "goose-creek-sp",
@@ -2409,7 +2459,9 @@
    "verification_source": "https://soundrivers.org/port-terminal-kayak-launch-now-open-for-launching/",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Coast"
+   "region": "Coast",
+   "usgs_site_id": "02083500",
+   "noaa_station_id": null
   },
   {
    "spot_id": "roanoke-hamilton",
@@ -2440,7 +2492,9 @@
    "verification_source": "https://www.ncwildlife.gov/boating/boating-access-areas",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Coast"
+   "region": "Coast",
+   "usgs_site_id": "02080500",
+   "noaa_station_id": null
   },
   {
    "spot_id": "hammocks-beach-ferry",
@@ -2561,7 +2615,9 @@
    "verification_source": "https://frenchbroadpaddle.com",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Mountains"
+   "region": "Mountains",
+   "usgs_site_id": "03451500",
+   "noaa_station_id": null
   },
   {
    "spot_id": "harkers-island-ramp",
@@ -2592,7 +2648,9 @@
    "verification_source": "https://www.saltchef.com/catch_fish/NC/Carteret/boat_ramps.html",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Coast"
+   "region": "Coast",
+   "usgs_site_id": null,
+   "noaa_station_id": "8656483"
   },
   {
    "spot_id": "chowan-harrellsville",
@@ -2621,7 +2679,9 @@
    "verification_source": "https://www.ncwildlife.gov/boating/boating-access-areas",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Coast"
+   "region": "Coast",
+   "usgs_site_id": null,
+   "noaa_station_id": "8654467"
   },
   {
    "spot_id": "harris-lake-park",
@@ -3504,7 +3564,9 @@
    "verification_source": "https://www.ncwildlife.gov/boating/boating-access-areas",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Coast"
+   "region": "Coast",
+   "usgs_site_id": "02089000",
+   "noaa_station_id": null
   },
   {
    "spot_id": "lake-benson",
@@ -4279,7 +4341,9 @@
    "verification_source": "https://www.ncwildlife.gov/boating/boating-access-areas",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Piedmont"
+   "region": "Piedmont",
+   "usgs_site_id": "03525609",
+   "noaa_station_id": null
   },
   {
    "spot_id": "catawba-lookout-shoals",
@@ -4629,7 +4693,9 @@
    "private_launch": "Yes, for a small per person fee",
    "rentals": "Kayaks and paddleboards on site. Aquatic Adventures runs guided trips and full moon paddles from here.",
    "access_type": "Private business",
-   "region": "Piedmont"
+   "region": "Piedmont",
+   "usgs_site_id": "03525609",
+   "noaa_station_id": null
   },
   {
    "spot_id": "yadkin-hwy49-tuckertown",
@@ -4814,7 +4880,9 @@
    "private_launch": "Customers only",
    "rentals": "Canoes and kayaks with shuttle service. Two-hour and five-mile float options.",
    "access_type": "Private outfitter",
-   "region": "Piedmont"
+   "region": "Piedmont",
+   "usgs_site_id": "02087500",
+   "noaa_station_id": null
   },
   {
    "spot_id": "new-river-elk-shoals",
@@ -5138,7 +5206,9 @@
    "verification_source": "https://www.ncwildlife.gov/boating/boating-access-areas",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Coast"
+   "region": "Coast",
+   "usgs_site_id": null,
+   "noaa_station_id": "8654467"
   },
   {
    "spot_id": "pea-island-kayak-launch",
@@ -5169,7 +5239,9 @@
    "verification_source": "https://www.fws.gov/refuge/pea-island",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Coast"
+   "region": "Coast",
+   "usgs_site_id": null,
+   "noaa_station_id": "8654467"
   },
   {
    "spot_id": "pee-dee-rockingham",
@@ -5230,7 +5302,9 @@
    "verification_source": "https://files.nc.gov/nc-wildlife/2024-10/Boating%20Access%20Areas%20Full%20and%20Partial%20Closures.csv",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Mountains"
+   "region": "Mountains",
+   "usgs_site_id": "03451500",
+   "noaa_station_id": null
   },
   {
    "spot_id": "perquimans-hertford",
@@ -5485,7 +5559,9 @@
    "verification_source": "https://raleighnc.gov/river-access",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Piedmont"
+   "region": "Piedmont",
+   "usgs_site_id": "02087500",
+   "noaa_station_id": null
   },
   {
    "spot_id": "tar-port-terminal",
@@ -5515,7 +5591,9 @@
    "verification_source": "https://soundrivers.org/port-terminal-kayak-launch-now-open-for-launching/",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Coast"
+   "region": "Coast",
+   "usgs_site_id": "02083500",
+   "noaa_station_id": null
   },
   {
    "spot_id": "radio-island-beach",
@@ -5547,7 +5625,9 @@
    "swim_area_here": "Yes, calm shallow water",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Coast"
+   "region": "Coast",
+   "usgs_site_id": null,
+   "noaa_station_id": "8656483"
   },
   {
    "spot_id": "ramseur-lake",
@@ -5758,7 +5838,9 @@
    "verification_source": "https://www.ncwildlife.gov/boating/boating-access-areas",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Piedmont"
+   "region": "Piedmont",
+   "usgs_site_id": "02080500",
+   "noaa_station_id": null
   },
   {
    "spot_id": "river-park-north",
@@ -5915,7 +5997,9 @@
    "verification_source": "https://www.ncwildlife.gov/boating/boating-access-areas",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Coast"
+   "region": "Coast",
+   "usgs_site_id": "02080500",
+   "noaa_station_id": null
   },
   {
    "spot_id": "robertson-millpond",
@@ -6039,7 +6123,9 @@
    "verification_source": "https://www.ncwildlife.org",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Coast"
+   "region": "Coast",
+   "usgs_site_id": null,
+   "noaa_station_id": "8654467"
   },
   {
    "spot_id": "salem-lake",
@@ -6254,7 +6340,9 @@
    "verification_source": "https://www.ncwildlife.gov/boating/boating-access-areas",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Coast"
+   "region": "Coast",
+   "usgs_site_id": null,
+   "noaa_station_id": "8655242"
   },
   {
    "spot_id": "surf-city-soundside-park",
@@ -6613,7 +6701,9 @@
    "verification_source": "https://www.gogastonnc.org/post/paddling-the-catawba-and-south-fork-rivers-and-lakes-in-gaston-county",
    "rentals": "Kayaks, paddleboards, canoes and pontoons. An annual kayak membership covers a guest.",
    "access_type": "Private business",
-   "region": "Piedmont"
+   "region": "Piedmont",
+   "usgs_site_id": "03525609",
+   "noaa_station_id": null
   },
   {
    "spot_id": "yadkin-tanglewood",
@@ -6823,7 +6913,9 @@
    "private_launch": "Unknown, the site is built around its own hire fleet",
    "rentals": "Flatwater kayaks and paddleboards included in the activity pass. Life jacket provided.",
    "access_type": "Nonprofit, day pass required",
-   "region": "Piedmont"
+   "region": "Piedmont",
+   "usgs_site_id": "03525609",
+   "noaa_station_id": null
   },
   {
    "spot_id": "haw-us64",
@@ -7106,7 +7198,9 @@
    "verification_source": "https://www.ncwildlife.gov/boating/boating-access-areas",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Coast"
+   "region": "Coast",
+   "usgs_site_id": "02080500",
+   "noaa_station_id": null
   },
   {
    "spot_id": "eno-west-point",
@@ -7168,7 +7262,9 @@
    "verification_source": "https://frenchbroadpaddle.com",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Mountains"
+   "region": "Mountains",
+   "usgs_site_id": "03451500",
+   "noaa_station_id": null
   },
   {
    "spot_id": "umstead-crabtree-creek",
@@ -7342,7 +7438,9 @@
    "verification_source": "https://www.yadkinriverkeeper.org/yadkin-river-access",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Piedmont"
+   "region": "Piedmont",
+   "usgs_site_id": "02102000",
+   "noaa_station_id": null
   }
  ]
 }
