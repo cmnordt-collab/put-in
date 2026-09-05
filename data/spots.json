@@ -74,9 +74,7 @@
    "verification_source": "https://raleighnc.gov/river-access",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Piedmont",
-   "usgs_site_id": "02087500",
-   "noaa_station_id": null
+   "region": "Piedmont"
   },
   {
    "spot_id": "avalon-beach-ramp-kdh",
@@ -108,9 +106,7 @@
    "verification_source": "https://www.saltchef.com/catch_fish/NC/Dare/boat_ramps.html",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Coast",
-   "usgs_site_id": null,
-   "noaa_station_id": "8651370"
+   "region": "Coast"
   },
   {
    "spot_id": "badin-lake-ramp",
@@ -395,9 +391,7 @@
    "verification_source": "https://www.deq.nc.gov/about/divisions/nc-coastal-reserve/reserve-sites/kitty-hawk-woods-reserve",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Coast",
-   "usgs_site_id": null,
-   "noaa_station_id": "8651370"
+   "region": "Coast"
   },
   {
    "spot_id": "yadkin-boones-cave",
@@ -427,9 +421,7 @@
    "verification_source": "https://www.yadkinriverkeeper.org/yadkin-river-access",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Piedmont",
-   "usgs_site_id": "02116500",
-   "noaa_station_id": null
+   "region": "Piedmont"
   },
   {
    "spot_id": "brices-creek-croatan",
@@ -492,9 +484,7 @@
    "verification_source": "https://www.hawrivertrail.org/paddle-trail-overview",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Piedmont",
-   "usgs_site_id": "02096960",
-   "noaa_station_id": null
+   "region": "Piedmont"
   },
   {
    "spot_id": "wilson-creek-brown-mountain",
@@ -553,10 +543,10 @@
    "verification_source": "https://raleighnc.gov/river-access",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Piedmont",
-   "usgs_site_id": "02087500",
-   "noaa_station_id": null
+   "region": "Piedmont"
   },
+  {
+   "spot_id": "yadkin-elkin-burch-station",
    "name": "Burch Station / Elkin River Access",
    "water_body": "Yadkin River",
    "water_type": "River",
@@ -619,9 +609,7 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.lowerhaw.org/activities",
    "access_type": "Public agency",
-   "region": "Piedmont",
-   "usgs_site_id": "02096960",
-   "noaa_station_id": null
+   "region": "Piedmont"
   },
   {
    "spot_id": "haw-bynum-mill",
@@ -654,9 +642,7 @@
    "last_verified": "2026-07-30",
    "verification_source": "https://www.lowerhaw.org/activities",
    "access_type": "Public agency",
-   "region": "Piedmont",
-   "usgs_site_id": "02096960",
-   "noaa_station_id": null
+   "region": "Piedmont"
   },
   {
    "spot_id": "cahooque-creek-landing",
@@ -817,9 +803,7 @@
    "verification_source": "https://www.ncparks.gov/state-parks/carolina-beach-state-park",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Coast",
-   "usgs_site_id": null,
-   "noaa_station_id": "8658120"
+   "region": "Coast"
   },
   {
    "spot_id": "carolina-beach-annie-drive",
@@ -848,9 +832,7 @@
    "verification_source": "https://www.ncwildlife.org",
    "private_launch": "Yes",
    "access_type": "Public agency",
-   "region": "Coast",
-   "usgs_site_id": null,
-   "noaa_station_id": "8658120"
+   "region": "Coast"
   },
   {
    "spot_id": "currituck-carova-beach",
