@@ -553,8 +553,9 @@
 
   @media (min-width: 860px) {
     .layout-container { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
-    .left-panel { display: flex; flex-direction: column; overflow-y: auto; max-height: 100vh; }
-    .right-panel { position: sticky; top: 22px; height: calc(100vh - 44px); margin-top: 0; }
+    .left-panel { grid-column: 1; grid-row: 1; display: flex; flex-direction: column; overflow-y: auto; max-height: 100vh; }
+    #detail-view { grid-column: 1; grid-row: 1; }
+    .right-panel { grid-column: 2; grid-row: 1; position: sticky; top: 22px; height: calc(100vh - 44px); margin-top: 0; }
     .searchrow { position: sticky; top: 0; background: var(--paper); z-index: 10; padding-top: 4px; }
     .resultcount { position: sticky; top: 52px; background: var(--paper); z-index: 9; }
   }
@@ -969,6 +970,8 @@
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
     markersLayer = L.layerGroup().addTo(map);
+    setTimeout(function() { map.invalidateSize(); }, 100);
+    window.addEventListener("resize", function() { if (map) map.invalidateSize(); });
   }
 
   function renderMapMarkers(list) {
