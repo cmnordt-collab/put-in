@@ -973,6 +973,7 @@
       lat: r.latitude !== undefined ? Number(r.latitude) : null,
       lon: r.longitude !== undefined ? Number(r.longitude) : null,
       gage: r.usgs_gage_id || null, type: r.water_type || null,
+      usgsTemp: r.usgs_site_id || null, noaaTemp: r.noaa_station_id || null,
       rapids: rapids, motors: motors, motorText: motorRaw,
       park: yesish(r.part_of_park), parkName: r.park_name || null,
       camping: yesish(r.camping_available), campingType: r.camping_type || null,
@@ -1165,6 +1166,63 @@
     }).join("");
   }
 
+  // ---------------------------------------------------------------- water temperature fetchers
+  const celsiusToFahrenheit = (celsius) => {
+    return Math.round((celsius * 1.8 + 32) * 10) / 10;
+  };
+
+  const fetchUSGSTemperature = async (siteNumber) => {
+    try {
+      const url = new URL('https://waterservices.usgs.gov/nwis/iv/');
+      url.searchParams.append('sites', siteNumber);
+      url.searchParams.append('parameterCd', '00010');
+      url.searchParams.append('format', 'json');
+      const response = await fetch(url);
+      if (!response.ok) return 'Temp Unavailable';
+      const data = await response.json();
+      const values = data?.value?.timeSeries?.[0]?.values?.[0]?.value;
+      if (!values || values.length === 0) return 'Temp Unavailable';
+      const latestReading = values[values.length - 1];
+      const celsius = parseFloat(latestReading?.value);
+      if (isNaN(celsius)) return 'Temp Unavailable';
+      const fahrenheit = celsiusToFahrenheit(celsius);
+      return `${fahrenheit}°F`;
+    } catch (error) {
+      console.error(`USGS fetch error:`, error);
+      return 'Temp Unavailable';
+    }
+  };
+
+  const fetchNOAATemperature = async (stationId) => {
+    try {
+      const url = new URL('https://api.tidesandcurrents.noaa.gov/api/prod/datagetter/');
+      url.searchParams.append('station', stationId);
+      url.searchParams.append('product', 'water_temperature');
+      url.searchParams.append('units', 'english');
+      url.searchParams.append('format', 'json');
+      url.searchParams.append('application', 'Put-In');
+      const response = await fetch(url);
+      if (!response.ok) return 'Temp Unavailable';
+      const data = await response.json();
+      if (data?.error) return 'Temp Unavailable';
+      const payload = data?.data;
+      if (!Array.isArray(payload) || payload.length === 0) return 'Temp Unavailable';
+      const latestReading = payload[payload.length - 1];
+      const fahrenheit = parseFloat(latestReading?.t);
+      if (isNaN(fahrenheit)) return 'Temp Unavailable';
+      return `${fahrenheit}°F`;
+    } catch (error) {
+      console.error(`NOAA fetch error:`, error);
+      return 'Temp Unavailable';
+    }
+  };
+
+  const fetchWaterTemperature = async (siteId, source = 'usgs') => {
+    if (source === 'usgs') return fetchUSGSTemperature(siteId);
+    if (source === 'noaa') return fetchNOAATemperature(siteId);
+    return 'Invalid Source';
+  };
+
   // ---------------------------------------------------------------- render: detail
   function renderDetail(id) {
     const s = SPOTS.find(x => x.id === id);
@@ -1200,7 +1258,7 @@
           '<div class="livegrid" id="live">' +
             '<div><div class="k">Air temp</div><div class="v">\u2014</div></div>' +
             '<div><div class="k">Wind</div><div class="v">\u2014</div></div>' +
-            '<div><div class="k">Water temp</div><div class="v">\u2014</div></div>' +
+            '<div><div class="k">Water temp</div><div class="v" id="watertemp">Loading…</div></div>' +
             '<div><div class="k">Gage height</div><div class="v">\u2014</div></div>' +
           '</div>' +
           '<p class="livenote" id="livenote">Checking the National Weather Service and USGS\u2026</p>' +
@@ -1405,6 +1463,20 @@
       $("saved").textContent = "Saved";
       saveSoon();
     });
+
+    // Fetch water temperature if site IDs exist
+    const fetchAndDisplayWaterTemp = async () => {
+      const waterTempEl = $("watertemp");
+      if (!waterTempEl) return;
+      let temp = 'Not recorded';
+      if (s.usgsTemp) {
+        temp = await fetchWaterTemperature(s.usgsTemp, 'usgs');
+      } else if (s.noaaTemp) {
+        temp = await fetchWaterTemperature(s.noaaTemp, 'noaa');
+      }
+      waterTempEl.textContent = temp;
+    };
+    fetchAndDisplayWaterTemp();
 
     fetchConditions(s);
     renderLight(s);
