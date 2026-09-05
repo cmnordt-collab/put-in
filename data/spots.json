@@ -557,6 +557,8 @@
    "usgs_site_id": "02087500",
    "noaa_station_id": null
   },
+  {
+   "spot_id": "yadkin-elkin-burch-station",
    "name": "Burch Station / Elkin River Access",
    "water_body": "Yadkin River",
    "water_type": "River",
