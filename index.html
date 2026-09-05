@@ -18,6 +18,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon-180x180.png">
 <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <style>
   :root {
     --paper:      #E9F0EE;
@@ -538,6 +539,25 @@
   @media (prefers-reduced-motion: no-preference) {
     .card, .chip, .gauge { transition: border-color .14s ease, background .14s ease, color .14s ease; }
   }
+
+  /* ---------- two-panel layout: map + hover sync ---------- */
+  .right-panel { height: 60vh; min-height: 320px; margin-top: 14px; }
+  #overview-map { width: 100%; height: 100%; border-radius: 8px; border: 1.5px solid var(--contour); }
+  .card.map-hover { border-color: var(--channel-2); box-shadow: 0 0 0 2px var(--channel-2) inset; }
+
+  @media (max-width: 1023px) {
+    .right-panel { display: none; }
+    .layout-container.show-map .left-panel { display: none; }
+    .layout-container.show-map .right-panel { display: block; }
+  }
+
+  @media (min-width: 1024px) {
+    .layout-container { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+    .left-panel { display: flex; flex-direction: column; overflow-y: auto; max-height: 100vh; }
+    .right-panel { position: sticky; top: 22px; height: calc(100vh - 44px); margin-top: 0; }
+    .searchrow { position: sticky; top: 0; background: var(--paper); z-index: 10; padding-top: 4px; }
+    .resultcount { position: sticky; top: 52px; background: var(--paper); z-index: 9; }
+  }
 </style>
 
 <div id="app">
@@ -565,11 +585,18 @@
         <button id="tab-coming" class="">WHAT’S COMING</button>
       </nav>
     </div>
+     </div>
   </header>
 
-  <main class="wrap">
+  <!-- MOBILE: Tab toggle for Map/List view -->
+  <div class="mobile-view-toggle" id="mobile-view-toggle">
+    <button class="toggle-btn active" data-view="list">📋 List View</button>
+    <button class="toggle-btn" data-view="map">🗺️ Map View</button>
+  </div>
+
+  <main class="wrap main-layout">
     <div id="panel-spots" class="tabpanel active">
-    <div id="list-view">
+    <div class="layout-container"><div class="left-panel" id="list-view">
       <div class="searchrow">
         <div class="searchfield">
           <span aria-hidden="true">⌕</span>
@@ -581,6 +608,7 @@
         <button class="btn-near-me" id="btn-near-me">📍 Find Nearby</button>
         <span class="near-me-note" id="near-me-note"></span>
       </div>
+      <div class="filter-section">
       <div class="droprow">
         <span class="droplabel">Region</span>
         <select class="dropsel" id="sel-region">
@@ -642,6 +670,10 @@
     </div>
 
     <div id="detail-view" hidden></div>
+
+    <div class="right-panel" id="map-view">
+      <div id="overview-map"></div>
+    </div>
     </div><!-- /panel-spots -->
 
     <!-- ABOUT -->
@@ -920,11 +952,59 @@
   </footer>
 </div>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 (function () {
   // ---------------------------------------------------------------- data
   // rapids: 0 = flatwater. Ranges stored as [min, max].
   let SPOTS = [];   // filled from data/spots.json at load
+  let map, markersLayer, markerRefs = {};
+
+  function initMap() {
+    var el = document.getElementById("overview-map");
+    if (!el || typeof L === "undefined") return;
+    map = L.map(el, { scrollWheelZoom: true }).setView([35.6, -79.4], 7);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+    markersLayer = L.layerGroup().addTo(map);
+  }
+
+  function renderMapMarkers(list) {
+    if (!markersLayer) return;
+    markersLayer.clearLayers();
+    markerRefs = {};
+    var pts = [];
+    list.forEach(function(s) {
+      if (s.lat == null || s.lon == null || isNaN(s.lat) || isNaN(s.lon)) return;
+      var m = L.circleMarker([s.lat, s.lon], {
+        radius: 7, weight: 2, color: "#14606D", fillColor: "#1A6E78", fillOpacity: 0.85
+      }).addTo(markersLayer);
+      m.bindTooltip(s.name, { direction: "top" });
+      m.on("click", function() { state.open = s.id; renderDetail(s.id); });
+      m.on("mouseover", function() { highlightCard(s.id, true); });
+      m.on("mouseout", function() { highlightCard(s.id, false); });
+      markerRefs[s.id] = m;
+      pts.push([s.lat, s.lon]);
+    });
+    if (pts.length && map) {
+      try { map.fitBounds(pts, { padding: [24, 24], maxZoom: 11 }); } catch (e) {}
+    }
+  }
+
+  function highlightCard(id, on) {
+    var card = document.querySelector('.card[data-open="' + id + '"]');
+    if (card) card.classList.toggle("map-hover", on);
+  }
+
+  function highlightMarker(id, on) {
+    var m = markerRefs[id];
+    if (!m) return;
+    m.setStyle(on
+      ? { radius: 10, fillColor: "#A9761B", color: "#A9761B" }
+      : { radius: 7, fillColor: "#1A6E78", color: "#14606D" });
+  }
 
   const CLASS_KEY = [
     ["I",   "Easy",         "Fast moving water with small waves and few obstructions. Low risk, easy self-rescue."],
@@ -1129,6 +1209,7 @@
       $("cards").innerHTML =
         '<div class="empty"><p>Nothing matches yet.</p>' +
         '<span>Loosen a filter, or try searching by county or water body.</span></div>';
+      renderMapMarkers([]);
       return;
     }
 
@@ -1164,6 +1245,7 @@
         '</button>'
       );
     }).join("");
+    renderMapMarkers(found);
   }
 
   // ---------------------------------------------------------------- water temperature fetchers
@@ -1593,6 +1675,15 @@
     }
   });
 
+  $("cards").addEventListener("mouseover", e => {
+    const card = e.target.closest("[data-open]");
+    if (card) highlightMarker(card.dataset.open, true);
+  });
+  $("cards").addEventListener("mouseout", e => {
+    const card = e.target.closest("[data-open]");
+    if (card) highlightMarker(card.dataset.open, false);
+  });
+
   $("keytoggle").addEventListener("click", () => {
     const body = $("keybody");
     const open = body.classList.toggle("open");
@@ -1855,6 +1946,18 @@
     try {
       renderFilters();
       renderKey();
+      initMap();
+
+      document.querySelectorAll(".toggle-btn").forEach(function(btn) {
+        btn.addEventListener("click", function() {
+          document.querySelectorAll(".toggle-btn").forEach(function(b) { b.classList.remove("active"); });
+          btn.classList.add("active");
+          var view = btn.dataset.view;
+          var lc = document.querySelector(".layout-container");
+          if (lc) lc.classList.toggle("show-map", view === "map");
+          if (view === "map" && map) setTimeout(function() { map.invalidateSize(); }, 60);
+        });
+      });
 
       ["sel-region","sel-water","sel-rapids","sel-carry","sel-sort"].forEach(id => {
         const key = {'sel-region':'region','sel-water':'waterType','sel-rapids':'rapids','sel-carry':'carry','sel-sort':'sortBy'}[id];
