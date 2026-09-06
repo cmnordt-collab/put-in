@@ -50,8 +50,8 @@
   /* ---------- shared type ---------- */
   .eyebrow {
     font-family: var(--mono);
-    font-size: 10px;
-    letter-spacing: 0.18em;
+    font-size: 11.5px;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
     color: var(--ink-soft);
   }
@@ -77,7 +77,7 @@
             scrollbar-width:none; }
   .tabnav::-webkit-scrollbar { display:none; }
   .tabnav button { padding:7px 18px; background:none; border:none; color:#fff;
-                   font-weight:600; font-size:13px; letter-spacing:.06em;
+                   font-weight:600; font-size:14.5px; letter-spacing:.05em;
                    cursor:pointer; border-bottom:3px solid transparent;
                    margin-bottom:-2px; opacity:.55; transition:opacity .15s;
                    white-space:nowrap; flex-shrink:0; }
@@ -152,7 +152,7 @@
   .masthead p {
     margin: 0;
     max-width: 46ch;
-    font-size: 14px;
+    font-size: 15.5px;
     color: #C6E1DE;
   }
 
@@ -187,8 +187,8 @@
   .filters { display: flex; gap: 7px; flex-wrap: wrap; margin-top: 12px; }
   .chip {
     font-family: var(--mono);
-    font-size: 10.5px;
-    letter-spacing: 0.1em;
+    font-size: 12px;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     padding: 7px 11px;
     background: transparent;
@@ -252,8 +252,8 @@
   }
   .card:hover .gauge { border-right-color: var(--channel-2); }
 
-  .card h3 { margin: 0 0 2px; font-size: 16.5px; font-weight: 600; letter-spacing: -0.01em; }
-  .card .sub { margin: 0 0 9px; font-size: 13px; color: var(--ink-soft); }
+  .card h3 { margin: 0 0 2px; font-size: 18.5px; font-weight: 600; letter-spacing: -0.01em; }
+  .card .sub { margin: 0 0 9px; font-size: 14.5px; color: var(--ink-soft); }
   .taglist { display: flex; flex-wrap: wrap; gap: 6px; }
   .tag {
     font-family: var(--mono); font-size: 10px;
@@ -274,8 +274,8 @@
   /* roman numeral rapids badge */
   .classbadge {
     display: inline-flex; align-items: center; justify-content: center;
-    min-width: 30px; height: 22px; padding: 0 7px;
-    font-family: var(--mono); font-size: 11px; font-weight: 600;
+    min-width: 32px; height: 24px; padding: 0 7px;
+    font-family: var(--mono); font-size: 12.5px; font-weight: 600;
     letter-spacing: 0.06em;
     border-radius: 2px;
     color: var(--paper-2);
@@ -316,7 +316,7 @@
     font-size: 14px;
   }
   .row:last-child { border-bottom: none; }
-  .row dt { color: var(--ink-soft); font-size: 13px; }
+  .row dt { color: var(--ink-soft); font-size: 14.5px; }
   .row dd { margin: 0; }
   .yes { color: var(--flag-green); font-weight: 600; }
   .no  { color: var(--flag-red); font-weight: 600; }
@@ -334,8 +334,9 @@
   .livenote { margin: 12px 0 0; font-size: 12.5px; color: var(--ink-soft); }
   .unrec { color: var(--ink-soft); font-style: italic; opacity: 0.75; }
   .droprow { display:flex; align-items:center; gap:8px; margin-bottom:10px; flex-wrap:wrap; }
-  .droplabel { font-size:12px; color:var(--ink-soft); white-space:nowrap; }
-  .dropsel { font-size:12.5px; padding:5px 8px; border:1px solid var(--rule);
+  .dropgroup { display:inline-flex; align-items:center; gap:6px; }
+  .droplabel { font-size:13.5px; color:var(--ink-soft); white-space:nowrap; }
+  .dropsel { font-size:14px; padding:6px 8px; border:1px solid var(--rule);
              border-radius:20px; background:var(--paper); color:var(--ink);
              cursor:pointer; appearance:none; -webkit-appearance:none;
              background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%2314606D'/%3E%3C/svg%3E");
@@ -457,7 +458,7 @@
     box-shadow:0 2px 12px rgba(0,0,0,.2); cursor:pointer;
     display:none; }
   #add-to-home-btn:hover { opacity:.88; }
-  .near-me-note { font-size:12px; color:var(--ink-soft); }
+  .near-me-note { font-size:13.5px; color:var(--ink-soft); }
   .roadmap-box { margin-top:32px; padding:16px; background:var(--paper-2);
                  border-radius:8px; border-left:3px solid var(--chan); }
   .roadmap-box h3 { margin:0 0 8px; font-size:14px; color:var(--chan);
@@ -499,7 +500,7 @@
     width: 100%; display: flex; align-items: center; justify-content: space-between;
     gap: 12px; padding: 14px 16px;
     background: none; border: none; cursor: pointer;
-    font-family: var(--mono); font-size: 11px;
+    font-family: var(--mono); font-size: 12.5px;
     letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink);
   }
   .keytoggle:focus-visible { outline: 2px solid var(--channel-2); outline-offset: -2px; }
@@ -508,16 +509,16 @@
   .keyrow {
     display: grid; grid-template-columns: 46px 1fr; gap: 12px;
     padding: 9px 0; border-top: 1px dotted var(--contour);
-    font-size: 13.5px;
+    font-size: 14.5px;
   }
-  .keyrow strong { display: block; font-size: 13.5px; }
-  .keyrow p { margin: 1px 0 0; color: var(--ink-soft); font-size: 13px; }
-  .keyfoot { margin: 12px 0 0; font-size: 12.5px; color: var(--ink-soft); }
+  .keyrow strong { display: block; font-size: 14.5px; }
+  .keyrow p { margin: 1px 0 0; color: var(--ink-soft); font-size: 14px; }
+  .keyfoot { margin: 12px 0 0; font-size: 13.5px; color: var(--ink-soft); }
 
   .disclaimer {
     margin-top: 22px; padding: 13px 15px;
     background: transparent; border: 1px dashed var(--contour); border-radius: 3px;
-    font-size: 12.5px; color: var(--ink-soft);
+    font-size: 13.5px; color: var(--ink-soft);
   }
 
   @media (max-width: 560px) {
@@ -525,10 +526,10 @@
     .row dt { font-size: 12px; }
     .masthead-inner { padding: 10px 12px 8px; }
     .search-bar { font-size: 15px; }
-    .chip { font-size: 11px; padding: 4px 10px; }
+    .chip { font-size: 12.5px; padding: 5px 11px; }
     .droprow { gap: 6px; }
-    .dropsel { font-size: 12px; padding: 4px 6px; }
-    .droplabel { font-size: 11px; }
+    .dropsel { font-size: 13.5px; padding: 5px 6px; }
+    .droplabel { font-size: 12.5px; }
     .card { padding: 10px 12px; }
     .card-name { font-size: 14px; }
     .gear-grid { grid-template-columns: 1fr; }
@@ -559,6 +560,7 @@
     .searchrow { position: sticky; top: 0; background: var(--paper); z-index: 10; padding-top: 4px; }
     .resultcount { position: sticky; top: 52px; background: var(--paper); z-index: 9; }
   }
+  .taglist .tag { font-size: 11.5px; padding: 4px 8px; }
 </style>
 
 <div id="app">
@@ -611,41 +613,41 @@
       </div>
       <div class="filter-section">
       <div class="droprow">
-        <span class="droplabel">Region</span>
+        <span class="dropgroup"><span class="droplabel">Region</span>
         <select class="dropsel" id="sel-region">
           <option value="">All</option>
           <option value="Piedmont">Piedmont</option>
           <option value="Mountains">Mountains</option>
           <option value="Coast">Coast</option>
-        </select>
-        <span class="droplabel">Water type</span>
+        </select></span>
+        <span class="dropgroup"><span class="droplabel">Water type</span>
         <select class="dropsel" id="sel-water">
           <option value="">All</option>
           <option value="Flatwater">Lake / Flatwater</option>
           <option value="River">River</option>
           <option value="Sound">Sound / Bay</option>
           <option value="Ocean">Ocean / Inlet</option>
-        </select>
-        <span class="droplabel">Rapids</span>
+        </select></span>
+        <span class="dropgroup"><span class="droplabel">Rapids</span>
         <select class="dropsel" id="sel-rapids">
           <option value="">Any</option>
           <option value="flat">Flatwater only</option>
           <option value="1">Class I max</option>
           <option value="2">Class II max</option>
-        </select>
-        <span class="droplabel">Carry</span>
+        </select></span>
+        <span class="dropgroup"><span class="droplabel">Carry</span>
         <select class="dropsel" id="sel-carry">
           <option value="">Any</option>
           <option value="short">Short (&lt;100 yd)</option>
           <option value="long">Long carry flagged</option>
-        </select>
-        <span class="droplabel">Sort</span>
+        </select></span>
+        <span class="dropgroup"><span class="droplabel">Sort</span>
         <select class="dropsel" id="sel-sort">
           <option value="az">A – Z</option>
           <option value="county">County A – Z</option>
           <option value="water">Water type</option>
           <option value="near">Nearest first</option>
-        </select>
+        </select></span>
       </div>
       <div class="filters" id="filters" role="group" aria-label="Filter spots"></div>
 
