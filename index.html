@@ -1020,7 +1020,15 @@
 
   function highlightCard(id, on) {
     var card = document.querySelector('.card[data-open="' + id + '"]');
-    if (card) card.classList.toggle("map-hover", on);
+    if (!card) return;
+    card.classList.toggle("map-hover", on);
+    if (on) {
+      var listEl = document.getElementById("list-view");
+      var cardRect = card.getBoundingClientRect();
+      var listRect = listEl.getBoundingClientRect();
+      var offscreen = cardRect.top < listRect.top || cardRect.bottom > listRect.bottom;
+      if (offscreen) card.scrollIntoView({ block: "center", behavior: "smooth" });
+    }
   }
 
   function highlightMarker(id, on) {
