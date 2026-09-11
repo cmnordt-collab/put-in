@@ -580,6 +580,21 @@
     .resultcount { position: sticky; top: 52px; background: var(--paper); z-index: 9; }
   }
   .taglist .tag { font-size: 11.5px; padding: 4px 8px; }
+
+  /* ---------- data badges: region + water type ---------- */
+  .badge-region, .badge-water {
+    font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.06em;
+    text-transform: uppercase; font-weight: 700;
+    padding: 4px 8px; border-radius: 3px; color: #fff;
+  }
+  .badge-region.region-piedmont  { background: var(--flag-green); }
+  .badge-region.region-mountains { background: #8A5D10; }
+  .badge-region.region-coast     { background: var(--channel); }
+
+  .badge-water.water-flatwater { background: #4F92C4; }
+  .badge-water.water-river     { background: #2E5F8A; }
+  .badge-water.water-sound     { background: #3FA7B3; }
+  .badge-water.water-ocean     { background: #46586B; }
 </style>
 
 <div id="app">
@@ -1171,6 +1186,17 @@
   }
   const yn = b => b ? '<span class="yes">Yes</span>' : '<span class="no">No</span>';
 
+  function regionBadge(region) {
+    if (!region) return "";
+    const cls = "region-" + region.toLowerCase();
+    return '<span class="badge-region ' + cls + '">' + esc(region) + '</span>';
+  }
+  function waterBadge(type) {
+    if (!type) return "";
+    const cls = "water-" + type.toLowerCase();
+    return '<span class="badge-water ' + cls + '">' + esc(type) + '</span>';
+  }
+
   function matches(s) {
     const q = state.q.trim().toLowerCase();
     if (q) {
@@ -1252,7 +1278,7 @@
         var mi = haversine(s);
         distLabel = '<span style="font-size:11px;color:var(--ink-soft);font-weight:400;margin-left:6px">' + mi.toFixed(1) + ' mi</span>';
       }
-      const tags = [s.type];
+      const tags = [];
       if (s.motors === true) tags.push("Motors allowed");
       if (s.motors === false) tags.push("No motors");
       if (s.camping) tags.push("Camping");
@@ -1266,7 +1292,7 @@
               .filter(Boolean).map(esc).join(' &middot; ') + '</p>' +
             (s.privateLaunch && /^no/i.test(s.privateLaunch)
               ? '<div class="nolaunch">No private boats. Hire only.</div>' : '') +
-            '<div class="taglist">' + badge(s.rapids) +
+            '<div class="taglist">' + badge(s.rapids) + regionBadge(s.region) + waterBadge(s.type) +
               tags.map(t => '<span class="tag">' + esc(t) + '</span>').join("") +
             '</div>' +
           '</div>' +
