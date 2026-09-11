@@ -543,33 +543,15 @@
   }
 
   /* ---------- two-panel layout: map + hover sync ---------- */
-  .right-panel { height: 60vh; min-height: 320px; margin-top: 14px; }
+  /* Below 1000px: list on top, map stacked underneath, both always visible (no toggle). */
+  /* At/above 1000px: list and map side by side, map sticky. */
+  .right-panel { height: 50vh; min-height: 320px; margin-top: 20px; }
   #overview-map { width: 100%; height: 100%; border-radius: 8px; border: 1.5px solid var(--contour); }
   .card.map-hover { border-color: var(--channel-2); box-shadow: 0 0 0 2px var(--channel-2) inset; }
 
-  .mobile-view-toggle { display: flex; gap: 8px; margin: 14px 24px 0; }
-  .toggle-btn {
-    flex: 1;
-    padding: 10px 14px;
-    font-family: var(--sans); font-size: 14px; font-weight: 600;
-    background: var(--paper-2); color: var(--ink-soft);
-    border: 1.5px solid var(--contour); border-radius: 6px;
-    cursor: pointer;
-  }
-  .toggle-btn.active { background: var(--channel); color: var(--paper-2); border-color: var(--channel); }
-  .toggle-btn:focus-visible { outline: 2px solid var(--channel-2); outline-offset: 2px; }
+  .mobile-view-toggle { display: none; }
 
-  @media (max-width: 859px) {
-    .right-panel { display: none; }
-    .layout-container.show-map .left-panel { display: none; }
-    .layout-container.show-map .right-panel { display: block; }
-  }
-
-  @media (min-width: 860px) {
-    .mobile-view-toggle { display: none; }
-  }
-
-  @media (min-width: 860px) {
+  @media (min-width: 1000px) {
     .layout-container { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
     .left-panel { grid-column: 1; grid-row: 1; display: flex; flex-direction: column; overflow-y: auto; max-height: 100vh; }
     .left-panel[hidden] { display: none; }
@@ -580,6 +562,21 @@
     .resultcount { position: sticky; top: 52px; background: var(--paper); z-index: 9; }
   }
   .taglist .tag { font-size: 11.5px; padding: 4px 8px; }
+
+  /* ---------- data badges: region + water type ---------- */
+  .badge-region, .badge-water {
+    font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.06em;
+    text-transform: uppercase; font-weight: 700;
+    padding: 4px 8px; border-radius: 3px; color: #fff;
+  }
+  .badge-region.region-piedmont  { background: var(--flag-green); }
+  .badge-region.region-mountains { background: #8A5D10; }
+  .badge-region.region-coast     { background: var(--channel); }
+
+  .badge-water.water-flatwater { background: #4F92C4; }
+  .badge-water.water-river     { background: #2E5F8A; }
+  .badge-water.water-sound     { background: #3FA7B3; }
+  .badge-water.water-ocean     { background: #46586B; }
 </style>
 
 <div id="app">
@@ -1171,6 +1168,17 @@
   }
   const yn = b => b ? '<span class="yes">Yes</span>' : '<span class="no">No</span>';
 
+  function regionBadge(region) {
+    if (!region) return "";
+    const cls = "region-" + region.toLowerCase();
+    return '<span class="badge-region ' + cls + '">' + esc(region) + '</span>';
+  }
+  function waterBadge(type) {
+    if (!type) return "";
+    const cls = "water-" + type.toLowerCase();
+    return '<span class="badge-water ' + cls + '">' + esc(type) + '</span>';
+  }
+
   function matches(s) {
     const q = state.q.trim().toLowerCase();
     if (q) {
@@ -1252,7 +1260,7 @@
         var mi = haversine(s);
         distLabel = '<span style="font-size:11px;color:var(--ink-soft);font-weight:400;margin-left:6px">' + mi.toFixed(1) + ' mi</span>';
       }
-      const tags = [s.type];
+      const tags = [];
       if (s.motors === true) tags.push("Motors allowed");
       if (s.motors === false) tags.push("No motors");
       if (s.camping) tags.push("Camping");
@@ -1266,7 +1274,7 @@
               .filter(Boolean).map(esc).join(' &middot; ') + '</p>' +
             (s.privateLaunch && /^no/i.test(s.privateLaunch)
               ? '<div class="nolaunch">No private boats. Hire only.</div>' : '') +
-            '<div class="taglist">' + badge(s.rapids) +
+            '<div class="taglist">' + badge(s.rapids) + regionBadge(s.region) + waterBadge(s.type) +
               tags.map(t => '<span class="tag">' + esc(t) + '</span>').join("") +
             '</div>' +
           '</div>' +
