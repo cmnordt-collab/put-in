@@ -302,7 +302,7 @@
     font-size: clamp(24px, 5vw, 34px);
     font-weight: 600; letter-spacing: -0.025em; line-height: 1.06;
   }
-  .detail-head .sub { margin: 0; font-size: 14px; color: var(--ink-soft); }
+  .detail-head .sub { margin: 0; font-size: 15.5px; color: var(--ink-soft); }
 
   section.block { border-bottom: 1px solid var(--contour); padding: 18px 0 16px; }
   section.block > .eyebrow { display: block; margin-bottom: 12px; }
@@ -314,10 +314,10 @@
     gap: 12px;
     padding: 6px 0;
     border-bottom: 1px dotted var(--contour);
-    font-size: 14px;
+    font-size: 15.5px;
   }
   .row:last-child { border-bottom: none; }
-  .row dt { color: var(--ink-soft); font-size: 14.5px; }
+  .row dt { color: var(--ink-soft); font-size: 16px; }
   .row dd { margin: 0; }
   .yes { color: var(--flag-green); font-weight: 600; }
   .no  { color: var(--flag-red); font-weight: 600; }
@@ -330,10 +330,10 @@
     padding: 14px 16px;
   }
   .livegrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(108px, 1fr)); gap: 14px; }
-  .livegrid .k { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); }
-  .livegrid .v { font-family: var(--mono); font-size: 20px; font-variant-numeric: tabular-nums; margin-top: 2px; }
-  .livenote { margin: 12px 0 0; font-size: 12.5px; color: var(--ink-soft); }
-  .unrec { color: var(--ink-soft); font-style: italic; opacity: 0.75; }
+  .livegrid .k { font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); }
+  .livegrid .v { font-family: var(--mono); font-size: 23px; font-variant-numeric: tabular-nums; margin-top: 2px; }
+  .livenote { margin: 12px 0 0; font-size: 14px; color: var(--ink-soft); }
+  .unrec { color: var(--ink-soft); font-style: italic; opacity: 0.85; }
   .droprow { display:flex; align-items:center; gap:8px; margin-bottom:10px; flex-wrap:wrap; }
   .dropgroup { display:inline-flex; align-items:center; gap:6px; }
   .droplabel { font-size:13.5px; color:var(--ink-soft); white-space:nowrap; }
@@ -349,7 +349,7 @@
   .spot-map iframe { width:100%; height:100%; border:none; }
   .cell-warn { margin:8px 0 0; padding:8px 14px; background:rgba(201,143,26,.10);
                border-left:3px solid var(--flag-amber); border-radius:4px;
-               font-size:13px; line-height:1.5; }
+               font-size:14.5px; line-height:1.5; }
   .backbar { display:flex; align-items:center; gap:12px; margin-bottom:18px; flex-wrap:wrap; }
   .share-btn { font-size:14px; font-weight:600; padding:8px 16px; border-radius:6px;
                background:var(--paper-2); border:1px solid var(--rule); color:var(--chan);
@@ -363,7 +363,7 @@
   .nolaunch-block { display:inline-block; margin:4px 0; padding:6px 12px;
                     background:rgba(201,143,26,.18); border-left:3px solid var(--flag-amber);
                     border-radius:4px; font-size:13px; font-weight:600; color:#8A5D10; }
-  .notes-hint { font-size:11.5px; color:var(--ink-soft); margin:6px 0 0; }
+  .notes-hint { font-size:13px; color:var(--ink-soft); margin:6px 0 0; }
   .coord-row { display:flex; align-items:center; gap:10px; margin-top:8px;
                flex-wrap:wrap; font-size:13px; }
   .coord-val { font-family:var(--mono); color:var(--ink); background:var(--paper-2);
@@ -420,7 +420,7 @@
   .classbadge.unk { background: transparent; color: var(--ink-soft);
                     border: 1px dashed var(--rule); }
   .hazblock { background: rgba(201, 143, 26, 0.05); margin-inline: -22px; padding-inline: 22px; }
-  .hazfoot { margin: 10px 0 0; font-size: 12px; line-height: 1.5; color: var(--ink-soft); }
+  .hazfoot { margin: 10px 0 0; font-size: 13.5px; line-height: 1.5; color: var(--ink-soft); }
   .prov { margin: 10px 0 0; font-size: 11.5px; color: var(--ink-soft); }
   .loading, .loadfail { padding: 40px 4px; font-size: 14px; color: var(--ink-soft); line-height: 1.6; }
   .loadfail b { color: var(--ink); display: block; margin-bottom: 6px; }
@@ -438,7 +438,7 @@
   .moondisc i { position: absolute; inset: 0; background: #E8DFC8; display: block; }
   .moontext { font-size: 12.5px; line-height: 1.5; color: var(--ink-soft); }
   .moontext b { color: var(--ink); font-weight: 600; }
-  .lightwarn { margin: 12px 0 0; font-size: 12px; line-height: 1.5; color: var(--ink-soft);
+  .lightwarn { margin: 12px 0 0; font-size: 13.5px; line-height: 1.5; color: var(--ink-soft);
                border-left: 2px solid var(--amber); padding-left: 10px; }
 
   .wqline { display: flex; align-items: center; gap: 9px; font-size: 14px; }
@@ -1200,11 +1200,11 @@
   }
 
   function haversine(a) {
-    if (a.lat == null || a.lon == null) return 9999;
-    var R=3958.8,dLat=(a.lat-state.nearLat)*Math.PI/180,
-        dLon=(a.lon-state.nearLon)*Math.PI/180,
+    if (!a.latitude || !a.longitude) return 9999;
+    var R=3958.8,dLat=(a.latitude-state.nearLat)*Math.PI/180,
+        dLon=(a.longitude-state.nearLon)*Math.PI/180,
         x=Math.sin(dLat/2)*Math.sin(dLat/2)+
-          Math.cos(state.nearLat*Math.PI/180)*Math.cos(a.lat*Math.PI/180)*
+          Math.cos(state.nearLat*Math.PI/180)*Math.cos(a.latitude*Math.PI/180)*
           Math.sin(dLon/2)*Math.sin(dLon/2);
     return R*2*Math.atan2(Math.sqrt(x),Math.sqrt(1-x));
   }
@@ -1256,7 +1256,7 @@
 
     $("cards").innerHTML = found.map(s => {
       var distLabel = "";
-      if (state.nearMe && s.lat != null && s.lon != null) {
+      if (state.nearMe && s.latitude && s.longitude) {
         var mi = haversine(s);
         distLabel = '<span style="font-size:11px;color:var(--ink-soft);font-weight:400;margin-left:6px">' + mi.toFixed(1) + ' mi</span>';
       }
@@ -1269,7 +1269,7 @@
         '<button class="card" type="button" data-open="' + s.id + '">' +
           '<div class="gauge" aria-hidden="true"></div>' +
           '<div>' +
-            '<h3>' + esc(s.name) + distLabel + '</h3>' +
+            '<h3>' + esc(s.name) + '</h3>' +
             '<p class="sub">' + [s.water, s.town, s.county ? s.county + ' County' : null]
               .filter(Boolean).map(esc).join(' &middot; ') + '</p>' +
             (s.privateLaunch && /^no/i.test(s.privateLaunch)
