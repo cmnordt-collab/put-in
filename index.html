@@ -1017,16 +1017,20 @@
     }
   }
 
+  var hoverScrollTimer = null;
   function highlightCard(id, on) {
     var card = document.querySelector('.card[data-open="' + id + '"]');
     if (!card) return;
     card.classList.toggle("map-hover", on);
+    if (hoverScrollTimer) { clearTimeout(hoverScrollTimer); hoverScrollTimer = null; }
     if (on) {
-      var listEl = document.getElementById("list-view");
-      var cardRect = card.getBoundingClientRect();
-      var listRect = listEl.getBoundingClientRect();
-      var offscreen = cardRect.top < listRect.top || cardRect.bottom > listRect.bottom;
-      if (offscreen) card.scrollIntoView({ block: "center", behavior: "smooth" });
+      hoverScrollTimer = setTimeout(function() {
+        var listEl = document.getElementById("list-view");
+        var cardRect = card.getBoundingClientRect();
+        var listRect = listEl.getBoundingClientRect();
+        var offscreen = cardRect.top < listRect.top || cardRect.bottom > listRect.bottom;
+        if (offscreen) card.scrollIntoView({ block: "center", behavior: "smooth" });
+      }, 350);
     }
   }
 
@@ -1202,11 +1206,11 @@
   }
 
   function haversine(a) {
-    if (!a.latitude || !a.longitude) return 9999;
-    var R=3958.8,dLat=(a.latitude-state.nearLat)*Math.PI/180,
-        dLon=(a.longitude-state.nearLon)*Math.PI/180,
+    if (a.lat == null || a.lon == null) return 9999;
+    var R=3958.8,dLat=(a.lat-state.nearLat)*Math.PI/180,
+        dLon=(a.lon-state.nearLon)*Math.PI/180,
         x=Math.sin(dLat/2)*Math.sin(dLat/2)+
-          Math.cos(state.nearLat*Math.PI/180)*Math.cos(a.latitude*Math.PI/180)*
+          Math.cos(state.nearLat*Math.PI/180)*Math.cos(a.lat*Math.PI/180)*
           Math.sin(dLon/2)*Math.sin(dLon/2);
     return R*2*Math.atan2(Math.sqrt(x),Math.sqrt(1-x));
   }
@@ -1258,7 +1262,7 @@
 
     $("cards").innerHTML = found.map(s => {
       var distLabel = "";
-      if (state.nearMe && s.latitude && s.longitude) {
+      if (state.nearMe && s.lat != null && s.lon != null) {
         var mi = haversine(s);
         distLabel = '<span style="font-size:11px;color:var(--ink-soft);font-weight:400;margin-left:6px">' + mi.toFixed(1) + ' mi</span>';
       }
@@ -1271,7 +1275,7 @@
         '<button class="card" type="button" data-open="' + s.id + '">' +
           '<div class="gauge" aria-hidden="true"></div>' +
           '<div>' +
-            '<h3>' + esc(s.name) + '</h3>' +
+            '<h3>' + esc(s.name) + distLabel + '</h3>' +
             '<p class="sub">' + [s.water, s.town, s.county ? s.county + ' County' : null]
               .filter(Boolean).map(esc).join(' &middot; ') + '</p>' +
             (s.privateLaunch && /^no/i.test(s.privateLaunch)
@@ -1417,7 +1421,7 @@
       '<section class="block">' +
         '<span class="eyebrow">Water quality</span>' +
         '<div class="wqblock">' +
-          '<a class="btn-swimguide" href="https://waterkeeperscarolina.org/swim-guide/"' +
+          '<a class="btn-swimguide" href="https://www.theswimguide.org/find"' +
             ' target="_blank" rel="noopener">Check NC water quality on Swim Guide →</a>' +
           '<a class="btn-swimguide" style="background:#196870;" href="https://waterkeeperscarolina.org/find-your-waterkeeper/"' +
             ' target="_blank" rel="noopener">Find your Waterkeeper →</a>' +
