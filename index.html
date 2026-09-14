@@ -1959,6 +1959,28 @@
   }
   window.filterByPartner = filterByPartner;
 
+  // Keeps partner-card counts in sync with the real dataset instead of
+  // hand-typed numbers going stale. Mirrors the same substring match
+  // renderList() uses for state.partnerFilter.
+  function renderPartnerCounts() {
+    document.querySelectorAll(".partner-filter-btn[onclick]").forEach(function(btn) {
+      var m = btn.getAttribute("onclick").match(/filterByPartner\('(\w+)','([^']+)'\)/);
+      if (!m) return;
+      var field = m[1], value = m[2], needle = value.toLowerCase();
+      var n = SPOTS.filter(function(s) {
+        var v = field === "wq" ? s.wq : s.agency;
+        return v && v.toLowerCase().indexOf(needle) !== -1;
+      }).length;
+      btn.textContent = "View " + n + (n === 1 ? " spot →" : " spots →");
+      var card = btn.closest(".partner-card");
+      var pc = card && card.querySelector(".pcount");
+      if (pc) {
+        var suffix = / IN THE DATASET$/i.test(pc.textContent) ? " IN THE DATASET" : " MONITORED";
+        pc.textContent = n + (n === 1 ? " SPOT" : " SPOTS") + suffix;
+      }
+    });
+  }
+
   // ---------------------------------------------------------------- submit spot form
   function handleSubmitForm(e) {
     e.preventDefault();
@@ -2030,6 +2052,7 @@
     }
     try {
       renderFilters();
+      renderPartnerCounts();
       renderKey();
       initMap();
 
